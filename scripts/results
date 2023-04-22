@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# echo benchmark results
+print_results() {
+    echo -e "results:\n"
+
+    for ((i=0; i < ${#NAMES[@]}; i++))
+    do
+        echo "$( cyan ${NAMES[$i]} ) -> $( yellow $( time_unit ${MEANS[$i]} )) (std. $( time_unit ${STDS[$i]} ))"
+    done
+
+    echo ""
+}
+
+# generate the readme file contents
+generate_readme() {
+    echo "## ${BENCHMARK_NAME^}"
+
+    if [[ $DESCRIPTION ]]
+    then
+        echo -e "$DESCRIPTION"
+    fi
+
+    echo -e "| tested code | mean <sub><sup>($ITERATIONS iter.)</sup></sub> | std <sub><sup>($RUNS runs)</sup></sub> |\n|-|-|-|"
+
+    for ((i=0; i < ${#NAMES[@]}; i++))
+    do
+        echo "[**${NAMES[$i]}**](/${JS_FILES[$i]})|$( time_unit ${MEANS[$i]} )|$( time_unit ${STDS[$i]} )|"
+    done
+
+    echo -e "\n<sub>system<br><b>Node: </b> $NODE_VERSION <br><b>CPU: </b>$CPU_INFO</sub>"
+}

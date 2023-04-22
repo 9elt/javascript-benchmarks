@@ -1,0 +1,114 @@
+#!/bin/bash
+
+source ./scripts/metadata
+source ./scripts/utils
+source ./scripts/javascript
+source ./scripts/results
+
+# base benchmark directory
+BASE_DIR="benchmarks"
+
+# benchmark directory
+BENCHMARK_DIR="$BASE_DIR/$1"
+
+dir_exists_or_exit "$BENCHMARK_DIR"
+
+# load benchmark config
+source $( config_or_default "$BENCHMARK_DIR/config" )
+
+BENCHMARK_NAME=$( parse_dirname $BENCHMARK_DIR )
+
+echo -e "\nrunning: $( cyan "$BENCHMARK_NAME")\n"
+
+# javascript files in directory
+ALL_JS_FILES=("$BENCHMARK_DIR"/*.js)
+
+# benchmark snippet files
+# first one is and empty run to calculate
+# the benchmark cost
+JS_FILES=("_empty_run")
+
+# snippets names
+NAMES=()
+
+# code available to the benchmark
+AVAILABLE_CODE=""
+
+for FILE in "${ALL_JS_FILES[@]}"
+do
+    NAME=$( parse_filename $FILE )
+
+    if [[ $NAME = "_available" ]]
+    then
+        AVAILABLE_CODE=$( cat "$FILE" )
+    else
+        # store file path
+        JS_FILES+=("$FILE")
+        # save file name
+        NAMES+=("$NAME")
+    fi
+done
+
+# empty run mean result
+EMPTY_RUN_MEAN=0
+
+# snippets results
+MEANS=()
+STDS=()
+
+# for each javascript file
+for FILE in "${JS_FILES[@]}"
+do
+    NAME=$( parse_filename $FILE )
+
+    RESULTS=()
+
+    CODE=""
+
+    # parse file code
+    if [[ "$FILE" != "_empty_run" ]]
+    then
+        CODE=$( cat "$FILE" )
+    fi
+
+    # generate javascript code
+    BENCHMARK=$( js_benchmark "$AVAILABLE_CODE" "$CODE" "$ITERATIONS" )
+
+    for i in $( seq 1 $RUNS )
+    do
+        show_progress "$NAME" "$i" "$RUNS"
+        # run javascript
+        RESULTS+=($( node -e "$BENCHMARK" ))
+    done
+
+    SND=($( normal_disrtribution "${RESULTS[@]}" ))
+
+    if [[ "$FILE" != "_empty_run" ]]
+    then
+        MEANS+=("${SND[0]}")
+        STDS+=("${SND[1]}")
+    else
+        EMPTY_RUN_MEAN=$( rounded_sub "${SND[@]}" )
+    fi
+
+done
+
+clear_progress
+
+# adjust results for benchmark cose
+
+ADJ_MEANS=()
+
+for MEAN in "${MEANS[@]}"
+do
+    ADJ_MEANS+=($( rounded_sub "$MEAN" "$EMPTY_RUN_MEAN" ))
+done
+
+MEANS=("${ADJ_MEANS[@]}")
+
+# echo "$EMPTY_RUN_MEAN"
+
+# echo benchmark data
+print_results
+
+generate_readme > "$BENCHMARK_DIR/README.md"

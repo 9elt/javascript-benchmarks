@@ -1,0 +1,33 @@
+#!/bin/bash
+
+js_benchmark() {
+
+    AVAILABLE_CODE=$1
+
+    CODE=$2
+
+    ITERATIONS=$3
+
+    echo "$AVAILABLE_CODE
+
+    let benchmark_start = new Date().getTime();
+
+    for (let iteration = 0; iteration < $ITERATIONS; iteration++) {
+        $CODE
+    }
+
+    console.clear()
+    console.log(new Date().getTime() - benchmark_start);"
+}
+
+normal_disrtribution() {
+  echo $( node ./scripts/js/snd.mjs "${@}" )
+}
+
+rounded_sub() {
+  echo $( node ./scripts/js/sub.mjs "${@}" )
+}
+
+time_unit() {
+  echo $( node ./scripts/js/unit.mjs "$1" )
+}

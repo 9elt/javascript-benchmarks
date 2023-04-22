@@ -1,0 +1,46 @@
+#!/bin/bash
+
+dir_exists_or_exit() {
+    if [[ ! -d "$1" ]]
+    then
+        echo "$1 directory does not exist" 
+        exit 1
+    fi
+}
+
+config_or_default() {
+    if [[ ! -f "$1" ]]
+    then
+        echo "scripts/config"
+    else
+        echo "$1"
+    fi
+}
+
+parse_filename() {
+    echo "$1" | sed -r "s/.+\/(.+)\..+/\1/"  | tr "-" " "
+}
+
+parse_dirname() {
+    echo $(basename "$1") | tr "-" " "
+}
+
+black() {
+    echo -ne "\x1b[1;90m${@}\x1b[0m"
+}
+
+cyan() {
+    echo -ne "\x1b[1;36m${@}\x1b[0m"
+}
+
+yellow() {
+    echo -ne "\x1b[1;33m${@}\x1b[0m"
+}
+
+show_progress() {
+    echo -ne "> $( yellow "$1" ) -> $( yellow "$2" ) / $3 runs   \\r"
+}
+
+clear_progress() {
+    echo -ne "                                       \\r"
+}
