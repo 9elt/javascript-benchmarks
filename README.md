@@ -4,6 +4,7 @@ A collection of javascript benchmarks to quickly end any performance discussion.
 
 ## benchmarks
 
+* [**Array iteration**](/benchmarks/array-iteration)
 * [**Dynamic assignment**](/benchmarks/dynamic-assignment)
 * [**String manipulation**](/benchmarks/string-manipulation)
 

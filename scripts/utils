@@ -42,5 +42,5 @@ show_progress() {
 }
 
 clear_progress() {
-    echo -ne "                                       \\r"
+    echo -ne "                                                         \\r"
 }

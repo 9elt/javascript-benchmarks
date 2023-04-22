@@ -1,0 +1,1 @@
+array.forEach(v => v * 2)
