@@ -25,7 +25,8 @@ generate_readme() {
 
     for ((i=0; i < ${#NAMES[@]}; i++))
     do
-        echo "[**${NAMES[$i]}**](/${JS_FILES[$i]})|$( time_unit ${MEANS[$i]} )|$( time_unit ${STDS[$i]} )|"
+        NEXT=$(( $i + 1 ))
+        echo "[**${NAMES[$i]}**](/${JS_FILES[$NEXT]})|$( time_unit ${MEANS[$i]} )|$( time_unit ${STDS[$i]} )|"
     done
 
     echo -e "\n<sub>system<br><b>Node: </b> $NODE_VERSION <br><b>CPU: </b>$CPU_INFO</sub>"
