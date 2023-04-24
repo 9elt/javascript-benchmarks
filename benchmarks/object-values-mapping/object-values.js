@@ -1,0 +1,1 @@
+let values = Object.values(obj)

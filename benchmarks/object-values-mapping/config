@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# benchmark description
+DESCRIPTION="Mapping object values"
+
+# number of benchmark runs
+RUNS=100
+
+# number of iterations in a benchmark run
+ITERATIONS=1_000_000
+
+# related benchmarks
+RELATED_BENCHMAKRS=()
