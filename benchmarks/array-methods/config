@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# benchmark description
+DESCRIPTION="Comparing array iterating methods"
+
+# number of benchmark runs
+RUNS=10
+
+# number of iterations in a benchmark run
+ITERATIONS=1_000_000
