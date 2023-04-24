@@ -1,1 +1,1 @@
-array.map(() => {})
+array.map(v => {})

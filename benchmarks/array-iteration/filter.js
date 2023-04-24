@@ -1,1 +1,1 @@
-array.filter(() => {})
+array.filter(v => {})

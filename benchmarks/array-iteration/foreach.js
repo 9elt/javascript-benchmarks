@@ -1,1 +1,1 @@
-array.forEach(() => {})
+array.forEach(v => {})
