@@ -1,1 +1,1 @@
-array.forEach(v => v * 2)
+array.forEach(() => {})

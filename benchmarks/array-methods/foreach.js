@@ -1,1 +1,0 @@
-array.forEach(v => v)

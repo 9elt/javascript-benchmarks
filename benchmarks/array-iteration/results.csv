@@ -1,5 +1,7 @@
 name,result,std
-foreach,357.5,25.8
-for in,27647.3,261.9
-for,308.3,21.6
-for of,1125.6,19.2
+filter,49.6,3.0
+foreach,49.6,0.4
+for in,2398.1,70.6
+for,41.6,3.5
+for of,79.8,4.1
+map,179.1,15.2

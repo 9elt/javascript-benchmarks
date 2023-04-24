@@ -1,3 +1,1 @@
-for (const i in array) {
-    array[i] * 2
-}
+for (const i in array) {}

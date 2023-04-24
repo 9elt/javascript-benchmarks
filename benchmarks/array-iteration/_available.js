@@ -4,4 +4,4 @@
  * and will not be measured during the benchmark
  * 
  */
-let array = Array.from(Array(1_000).keys())
+let array = Array.from(Array(100).keys())

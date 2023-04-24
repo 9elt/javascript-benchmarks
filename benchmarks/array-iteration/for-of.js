@@ -1,3 +1,1 @@
-for (const v of array) {
-    v * 2
-}
+for (const v of array) {}

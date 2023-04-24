@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # benchmark description
-DESCRIPTION="Comparing array iteration methods"
+DESCRIPTION="Comparing different ways of iterating arrays"
 
 # number of benchmark runs
 RUNS=10
