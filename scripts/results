@@ -28,7 +28,17 @@ generate_readme() {
         echo -e "<tr></tr><tr><td>\n\n[**${NAMES[$i]}**](/${JS_FILES[$i]})\n\n\`\`\`javascript\n$( cat ${JS_FILES[$i]} )\n\`\`\`\n\n</td><td><b>$( time_unit ${MEANS[$i]} )</b></td><td>$( time_unit ${STDS[$i]} )</td></tr>"
     done
 
-    echo -e "</tbody></table>\n<sub>system<br><b>Node: </b> $NODE_VERSION <br><b>CPU: </b>$CPU_INFO</sub>"
+    echo "</tbody></table>"
+
+    echo -ne "\nrelated:"
+
+    for R in "${RELATED_BENCHMAKRS[@]}"
+    do
+        RNAME=$( parse_filename $R )
+        echo -ne " [**${RNAME^}**](/benchmarks/$R) "
+    done
+
+    echo -e "\n\n<sub>system<br><b>Node: </b> $NODE_VERSION <br><b>CPU: </b>$CPU_INFO</sub>"
 }
 
 generate_csv() {

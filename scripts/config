@@ -5,3 +5,6 @@ RUNS=100
 
 # number of iterations in a benchmark run
 ITERATIONS=10_000_000
+
+# related benchmarks
+RELATED_BENCHMAKRS=()
