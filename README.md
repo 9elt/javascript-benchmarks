@@ -8,6 +8,7 @@ A collection of javascript benchmarks to quickly end any performance discussion.
 
 * [**Array concatenation**](/benchmarks/array-concatenation)
 * [**Array iteration**](/benchmarks/array-iteration)
+* [**Big array concatenation**](/benchmarks/big-array-concatenation)
 * [**Dynamic assignment**](/benchmarks/dynamic-assignment)
 * [**String manipulation**](/benchmarks/string-manipulation)
 
