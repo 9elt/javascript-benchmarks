@@ -41,6 +41,11 @@ show_progress() {
     echo -ne "> $( yellow "$1" ) -> $( yellow "$2" ) / $3 runs   \\r"
 }
 
+clear_line() {
+    echo -ne "                                                   \\r"
+}
+
 clear_progress() {
-    echo -ne "                                                         \\r"
+    echo -ne "$( cyan "$1" ) -> $( cyan "OK" )                   \\r"
+    echo ""
 }

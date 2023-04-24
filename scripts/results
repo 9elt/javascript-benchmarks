@@ -2,7 +2,7 @@
 
 # echo benchmark results
 print_results() {
-    echo -e "results:\n"
+    echo -e "\nresults:\n"
 
     for ((i=0; i < ${#NAMES[@]}; i++))
     do
@@ -21,13 +21,13 @@ generate_readme() {
         echo -e "$DESCRIPTION"
     fi
 
-    echo -e "| tested code | mean <sub><sup>($ITERATIONS iter.)</sup></sub> | std <sub><sup>($RUNS runs)</sup></sub> |\n|-|-|-|"
+    echo "<table><thead><tr><th>tested code</th><th>result <sub><sup>($ITERATIONS times)</sup></sub></th><th>std <sub><sup>($RUNS samples)</sup></sub></th></tr></thead><tbody>"
 
     for ((i=0; i < ${#NAMES[@]}; i++))
     do
         NEXT=$(( $i + 1 ))
-        echo "[**${NAMES[$i]}**](/${JS_FILES[$NEXT]})|$( time_unit ${MEANS[$i]} )|$( time_unit ${STDS[$i]} )|"
+        echo -e "<tr></tr><tr><td>\n\n[**${NAMES[$i]}**](/${JS_FILES[$NEXT]})\n\n\`\`\`javascript\n$( cat ${JS_FILES[$NEXT]} )\n\`\`\`\n\n</td><td><b>$( time_unit ${MEANS[$i]} )</b></td><td>$( time_unit ${STDS[$i]} )</td></tr>"
     done
 
-    echo -e "\n<sub>system<br><b>Node: </b> $NODE_VERSION <br><b>CPU: </b>$CPU_INFO</sub>"
+    echo -e "</tbody></table>\n<sub>system<br><b>Node: </b> $NODE_VERSION <br><b>CPU: </b>$CPU_INFO</sub>"
 }

@@ -1,7 +1,5 @@
-let object = { 
-  value: "bar"
-}
+let object = { foo: "bar" }
 
 if (iteration > 5_000_000) {
-  object.value = "foo"
+  object.foo = "foo"
 }

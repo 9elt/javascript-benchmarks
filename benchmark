@@ -81,6 +81,13 @@ do
         RESULTS+=($( node -e "$BENCHMARK" ))
     done
 
+    if [[ "$FILE" != "_empty_run" ]]
+    then
+        clear_progress "$NAME"
+    else
+        clear_line
+    fi
+
     SND=($( normal_disrtribution "${RESULTS[@]}" ))
 
     if [[ "$FILE" != "_empty_run" ]]
@@ -92,8 +99,6 @@ do
     fi
 
 done
-
-clear_progress
 
 # adjust results for benchmark cose
 
