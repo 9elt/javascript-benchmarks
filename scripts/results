@@ -6,7 +6,7 @@ print_results() {
 
     for ((i=0; i < ${#NAMES[@]}; i++))
     do
-        echo "$( cyan ${NAMES[$i]} ) -> $( yellow $( time_unit ${MEANS[$i]} )) (std. $( time_unit ${STDS[$i]} ))"
+        echo "$( bold ${NAMES[$i]} ) -> $( cyan $( time_unit ${MEANS[$i]} )) (std. $( time_unit ${STDS[$i]} ))"
     done
 
     echo ""
@@ -25,9 +25,60 @@ generate_readme() {
 
     for ((i=0; i < ${#NAMES[@]}; i++))
     do
-        NEXT=$(( $i + 1 ))
-        echo -e "<tr></tr><tr><td>\n\n[**${NAMES[$i]}**](/${JS_FILES[$NEXT]})\n\n\`\`\`javascript\n$( cat ${JS_FILES[$NEXT]} )\n\`\`\`\n\n</td><td><b>$( time_unit ${MEANS[$i]} )</b></td><td>$( time_unit ${STDS[$i]} )</td></tr>"
+        echo -e "<tr></tr><tr><td>\n\n[**${NAMES[$i]}**](/${JS_FILES[$i]})\n\n\`\`\`javascript\n$( cat ${JS_FILES[$i]} )\n\`\`\`\n\n</td><td><b>$( time_unit ${MEANS[$i]} )</b></td><td>$( time_unit ${STDS[$i]} )</td></tr>"
     done
 
     echo -e "</tbody></table>\n<sub>system<br><b>Node: </b> $NODE_VERSION <br><b>CPU: </b>$CPU_INFO</sub>"
+}
+
+generate_csv() {
+    echo "name,result,std"
+    for ((i=0; i < ${#NAMES[@]}; i++))
+    do
+        echo -e "${NAMES[$i]},${MEANS[$i]},${STDS[$i]}"
+    done
+}
+
+update_global_readme() {
+    echo -e "
+# Javascript Benchmarks
+
+A collection of javascript benchmarks to quickly end any performance discussion.
+
+## benchmarks
+
+"
+
+ALL_BENCHMARKS=(benchmarks/*)
+
+for BENCHMARK in "${ALL_BENCHMARKS[@]}"
+do
+
+    BNAME=$( parse_dirname $BENCHMARK )
+
+    if [[ "$BNAME" = "example" ]]
+    then
+        continue
+    fi
+
+    echo "* [**${BNAME^}**](/$BENCHMARK)"
+
+done
+
+    echo -e "
+## usage
+
+\`\`\`
+$ git clone https://github.com/9elt/js-benchmarks
+$ cd js-benchmarks
+$ mkdir benchmarks/my-benchmark
+\`\`\`
+
+create some js snippets inside \`benchmarks/my-benchmark\` like in [**this example**](/benchmarks/example)
+
+\`\`\`
+$ bash benchmark my-benchmark
+\`\`\`
+
+the \`README.md\` file will be auto-generated"
 }

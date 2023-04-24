@@ -13,7 +13,7 @@ if (iteration > 5_000_000) {
 }
 ```
 
-</td><td><b>13.4 ms</b></td><td>5.5 ms</td></tr>
+</td><td><b>11.3 ms</b></td><td>5.4 ms</td></tr>
 <tr></tr><tr><td>
 
 [**ternary operator**](/benchmarks/dynamic-assignment/ternary-operator.js)
@@ -24,6 +24,6 @@ let object = {
 }
 ```
 
-</td><td><b>7.8 ms</b></td><td>4.3 ms</td></tr>
+</td><td><b>5.4 ms</b></td><td>3.9 ms</td></tr>
 </tbody></table>
 <sub>system<br><b>Node: </b> v19.8.1 <br><b>CPU: </b>Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)</sub>

@@ -1,11 +1,8 @@
 #!/bin/bash
 
-js_benchmark() {
-
+generate_benchmark() {
     AVAILABLE_CODE=$1
-
     CODE=$2
-
     ITERATIONS=$3
 
     echo "$AVAILABLE_CODE
