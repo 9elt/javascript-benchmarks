@@ -30,7 +30,10 @@ generate_readme() {
 
     echo "</tbody></table>"
 
-    echo -ne "\nrelated:"
+    if [[ "$RELATED_BENCHMAKRS" ]]
+    then
+        echo -ne "\nrelated:"
+    fi
 
     for R in "${RELATED_BENCHMAKRS[@]}"
     do
