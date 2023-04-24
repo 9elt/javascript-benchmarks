@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # benchmark description
-DESCRIPTION="Comparing array concat method to spread operator"
+DESCRIPTION="Mapping object keys"
 
 # number of benchmark runs
-RUNS=10
+RUNS=100
 
 # number of iterations in a benchmark run
 ITERATIONS=1_000_000
 
 # related benchmarks
-RELATED_BENCHMAKRS=("array-concatenation")
+RELATED_BENCHMAKRS=("object-values-mapping")

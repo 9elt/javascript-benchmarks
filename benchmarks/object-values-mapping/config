@@ -10,4 +10,4 @@ RUNS=100
 ITERATIONS=1_000_000
 
 # related benchmarks
-RELATED_BENCHMAKRS=()
+RELATED_BENCHMAKRS=("object-keys-mapping")
