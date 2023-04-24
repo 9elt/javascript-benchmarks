@@ -1,3 +1,3 @@
 /**
- * code to benchmark
+ * second snippet to benchmark
  */

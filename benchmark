@@ -16,11 +16,6 @@ do
         BNAME="$BENCHMARK"
     fi
 
-    if [[ "$BNAME" = "example" ]]
-    then
-        continue
-    fi
-
     bash ./scripts/benchmark "$BNAME"
 
 done
