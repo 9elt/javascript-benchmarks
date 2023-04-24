@@ -1,3 +1,4 @@
 name,result,std
-concat,207.3,14.0
-spread,48.2,3.3
+concat,182.7,15.9
+mutation,59.2,7.0
+spread,44.4,4.3
