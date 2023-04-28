@@ -13,7 +13,7 @@ for (const key in obj) {
 }
 ```
 
-</td><td><b>52.9 ms</b></td><td>5.2 ms</td></tr>
+</td><td><b>51.5 ms</b></td><td>4.7 ms</td></tr>
 <tr></tr><tr><td>
 
 [**object values**](/benchmarks/object-values-mapping/object-values.js)
@@ -22,9 +22,9 @@ for (const key in obj) {
 let values = Object.values(obj)
 ```
 
-</td><td><b>151.9 ms</b></td><td>12.6 ms</td></tr>
+</td><td><b>158.6 ms</b></td><td>13.2 ms</td></tr>
 </tbody></table>
 
-related: [**Object keys mapping**](/benchmarks/object-keys-mapping) 
+related: [**Object keys mapping**](/benchmarks/object-keys-mapping)  [**Array iteration**](/benchmarks/array-iteration) 
 
 <sub>system<br><b>Node: </b> v19.8.1 <br><b>CPU: </b>Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)</sub>

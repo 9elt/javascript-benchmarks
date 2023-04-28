@@ -9,6 +9,7 @@ A collection of javascript benchmarks to quickly end any performance discussion.
 * [**Array concatenation**](/benchmarks/array-concatenation)
 * [**Array iteration**](/benchmarks/array-iteration)
 * [**Dynamic assignment**](/benchmarks/dynamic-assignment)
+* [**Json**](/benchmarks/json)
 * [**Object keys mapping**](/benchmarks/object-keys-mapping)
 * [**Object values mapping**](/benchmarks/object-values-mapping)
 * [**String manipulation**](/benchmarks/string-manipulation)

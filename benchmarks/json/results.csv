@@ -1,0 +1,5 @@
+name,result,std
+json parse,351.5,24.3
+json parse realistic,1492.4,27.4
+json stringify,273.2,14.4
+json stringify realistic,1413.9,26.7

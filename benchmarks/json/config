@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # benchmark description
-DESCRIPTION="Mapping object values"
+DESCRIPTION="testing JSON methods with objects of different size"
 
 # number of benchmark runs
-RUNS=100
+RUNS=10
 
 # number of iterations in a benchmark run
 ITERATIONS=1_000_000
 
 # related benchmarks
-RELATED_BENCHMAKRS=("object-keys-mapping" "array-iteration")
+RELATED_BENCHMAKRS=()
