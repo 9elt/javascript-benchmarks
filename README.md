@@ -1,7 +1,7 @@
 
-# Javascript Benchmarks
+# JavaScript Benchmarks
 
-A collection of javascript benchmarks to quickly end any performance discussion.
+A bash script to repeatedly and consistently benchmark javascript code 
 
 ## benchmarks
 
@@ -22,10 +22,10 @@ $ cd js-benchmarks
 $ mkdir benchmarks/my-benchmark
 ```
 
-create some js snippets inside `benchmarks/my-benchmark` like in [**this example**](/benchmarks/example)
+create some **code snippets** inside *benchmarks/my-benchmark* and a `config` like in [**this example**](/benchmarks/example)
 
 ```
 $ bash benchmark my-benchmark
 ```
 
-the `README.md` file will be auto-generated
+`README.md`, `results.csv` files will be auto-generated
