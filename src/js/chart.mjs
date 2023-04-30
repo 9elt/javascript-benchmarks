@@ -22,6 +22,7 @@ let svg = `
     .chart .w {
       fill: none;
       stroke: #eee5;
+      stroke: #333;
       stroke-width: 0.1;
     }
     .chart .c {
@@ -29,6 +30,7 @@ let svg = `
     }
     .chart .t {
       font-size: 2px;
+      font-weight: bold;
       fill: #1af;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     }
@@ -43,42 +45,42 @@ let svg = `
   <!--<rect class="bg" width="128" height="32" rx="0.15"/>-->
   <rect 
     class="w"
-    x="2"
+    x="0"
     y="2"
-    width="${(8 * 3) * values.length - 5}"
-    height="28"
-    rx="0.15"
+    width="${(8 * 3) * values.length - 6}"
+    height="29"
+    rx="0.1"
   />
 
   ${values.map((v, i) => `
 
-  <text x="${(i * 5 + i * 18) + 3}" y="30" class="t">${n(Object.keys(data.results)[i])}</text>
+  <text x="${(i * 5 + i * 18) + 1}" y="30" class="t">${n(Object.keys(data.results)[i])}</text>
 
   <rect 
     class="c" 
-    x="${(i * 5 + i * 18) + 3}" 
+    x="${(i * 5 + i * 18) + 1}" 
     y="${y(v.simple.mean)}" 
     height="${h(v.simple.mean)}" 
     width="5" 
-    rx="0.25"
+    rx="0.1"
   />
 
   <rect 
     class="c" 
-    x="${(i * 5 + i * 18) + 9}" 
+    x="${(i * 5 + i * 18) + 6 + 1}" 
     y="${y(v.realistic.mean)}" 
     height="${h(v.realistic.mean)}" 
     width="5"
-    rx="0.25"
+    rx="0.1"
   />
 
   <rect 
     class="c" 
-    x="${(i * 5 + i * 18) + 15}" 
+    x="${(i * 5 + i * 18) + 12 + 1}" 
     y="${y(v.edge_case.mean)}" 
     height="${h(v.edge_case.mean)}"
     width="5"
-    rx="0.25"
+    rx="0.1"
   />`).join("")}
 
 </svg>

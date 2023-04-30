@@ -7,6 +7,7 @@
     .chart .w {
       fill: none;
       stroke: #eee5;
+      stroke: #333;
       stroke-width: 0.1;
     }
     .chart .c {
@@ -14,6 +15,7 @@
     }
     .chart .t {
       font-size: 2px;
+      font-weight: bold;
       fill: #1af;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     }
@@ -28,71 +30,71 @@
   <!--<rect class="bg" width="128" height="32" rx="0.15"/>-->
   <rect 
     class="w"
-    x="2"
+    x="0"
     y="2"
-    width="43"
-    height="28"
-    rx="0.15"
+    width="42"
+    height="29"
+    rx="0.1"
   />
 
   
 
-  <text x="3" y="30" class="t">snippet 1</text>
+  <text x="1" y="30" class="t">snippet 1</text>
 
   <rect 
     class="c" 
-    x="3" 
-    y="22.931510835901328" 
-    height="5.068489164098674" 
+    x="1" 
+    y="24.31456832701231" 
+    height="3.685431672987688" 
     width="5" 
-    rx="0.25"
+    rx="0.1"
   />
 
   <rect 
     class="c" 
-    x="9" 
-    y="20.095427308969775" 
-    height="7.904572691030227" 
+    x="7" 
+    y="21.83847427955827" 
+    height="6.161525720441729" 
     width="5"
-    rx="0.25"
+    rx="0.1"
   />
 
   <rect 
     class="c" 
-    x="15" 
+    x="13" 
+    y="9.610118208898054" 
+    height="18.389881791101946"
+    width="5"
+    rx="0.1"
+  />
+
+  <text x="24" y="30" class="t">snippet 2</text>
+
+  <rect 
+    class="c" 
+    x="24" 
+    y="22.985413096451627" 
+    height="5.014586903548373" 
+    width="5" 
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="30" 
+    y="20.61635876088882" 
+    height="7.3836412391111805" 
+    width="5"
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="36" 
     y="4" 
     height="24"
     width="5"
-    rx="0.25"
-  />
-
-  <text x="26" y="30" class="t">snippet 2</text>
-
-  <rect 
-    class="c" 
-    x="26" 
-    y="21.795358083917982" 
-    height="6.204641916082019" 
-    width="5" 
-    rx="0.25"
-  />
-
-  <rect 
-    class="c" 
-    x="32" 
-    y="19.02874594474317" 
-    height="8.971254055256829" 
-    width="5"
-    rx="0.25"
-  />
-
-  <rect 
-    class="c" 
-    x="38" 
-    y="4.16651400107704" 
-    height="23.83348599892296"
-    width="5"
-    rx="0.25"
+    rx="0.1"
   />
 
 </svg>
