@@ -15,6 +15,7 @@
     .chart .t {
       font-size: 2px;
       fill: #1af;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     }
     .chart path {
       fill: none;
@@ -41,8 +42,8 @@
   <rect 
     class="c" 
     x="3" 
-    y="27.081823084521265" 
-    height="0.9181769154787356" 
+    y="26.910835780788293" 
+    height="1.0891642192117055" 
     width="5" 
     rx="0.25"
   />
@@ -50,8 +51,8 @@
   <rect 
     class="c" 
     x="9" 
-    y="26.446276193599882" 
-    height="1.553723806400117" 
+    y="26.08880007736582" 
+    height="1.9111999226341772" 
     width="5"
     rx="0.25"
   />
@@ -59,8 +60,8 @@
   <rect 
     class="c" 
     x="15" 
-    y="23.721461779320457" 
-    height="4.278538220679545"
+    y="22.93047034831126" 
+    height="5.069529651688739"
     width="5"
     rx="0.25"
   />
@@ -70,8 +71,8 @@
   <rect 
     class="c" 
     x="26" 
-    y="23.39903082326271" 
-    height="4.600969176737291" 
+    y="23.402153915985217" 
+    height="4.597846084014785" 
     width="5" 
     rx="0.25"
   />
@@ -79,8 +80,8 @@
   <rect 
     class="c" 
     x="32" 
-    y="20.536367426993614" 
-    height="7.463632573006387" 
+    y="18.47613564716395" 
+    height="9.523864352836048" 
     width="5"
     rx="0.25"
   />

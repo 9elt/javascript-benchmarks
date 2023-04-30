@@ -30,6 +30,7 @@ let svg = `
     .chart .t {
       font-size: 2px;
       fill: #1af;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     }
     .chart path {
       fill: none;

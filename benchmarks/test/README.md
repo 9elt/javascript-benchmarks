@@ -32,18 +32,18 @@ for (let i = 0; i < 1_000; i++) {
 </td>
 
 <td>
-    <b>422 μs </b>
-    (std. 343 μs)
+    <b>451 μs </b>
+    (std. 359 μs)
 </td>
 
 <td>
-    <b>715 μs </b>
-    (std. 345 μs)
+    <b>791 μs </b>
+    (std. 346 μs)
 </td>
 
 <td>
-    <b>1.97 ms </b>
-    (std. 303 μs)
+    <b>2.10 ms </b>
+    (std. 419 μs)
 </td>
 
 </tr>
@@ -66,18 +66,18 @@ for (let i = 0; i < 1_000; i++) {
 </td>
 
 <td>
-    <b>2.12 ms </b>
-    (std. 318 μs)
+    <b>1.90 ms </b>
+    (std. 294 μs)
 </td>
 
 <td>
-    <b>3.43 ms </b>
-    (std. 384 μs)
+    <b>3.94 ms </b>
+    (std. 884 μs)
 </td>
 
 <td>
-    <b>11.04 ms </b>
-    (std. 528 μs)
+    <b>9.93 ms </b>
+    (std. 601 μs)
 </td>
 
 </tr>
