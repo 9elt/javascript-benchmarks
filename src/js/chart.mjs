@@ -66,7 +66,7 @@ let svg = `
     height="${h(v.edge_case.mean)}"
     width="5"
     rx="0.25"
-  />`)}
+  />`).join("")}
 
 </svg>
 

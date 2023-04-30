@@ -53,7 +53,7 @@ ${data.results[key].code}
     (std. ${unit(data.results[key].edge_case.std)})
 </td>
 
-</tr>`)}
+</tr>`).join("")}
 
 </tbody>
 </table>
