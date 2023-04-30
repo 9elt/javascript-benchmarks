@@ -7,21 +7,20 @@
     .chart .w {
       fill: none;
       stroke: #eee5;
-      stroke: #333;
       stroke-width: 0.1;
     }
     .chart .c {
-      fill: #1af;
+      fill: #2f81f7;
     }
     .chart .t {
       font-size: 2px;
       font-weight: bold;
-      fill: #1af;
+      fill: #2f81f7;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     }
     .chart path {
       fill: none;
-      stroke: #1af;
+      stroke: #2f81f7;
       stroke-linejoin: round;
       stroke-linecap: round;
     }
@@ -32,7 +31,7 @@
     class="w"
     x="0"
     y="2"
-    width="42"
+    width="90"
     height="29"
     rx="0.1"
   />
@@ -44,8 +43,8 @@
   <rect 
     class="c" 
     x="1" 
-    y="24.31456832701231" 
-    height="3.685431672987688" 
+    y="24.00945893468348" 
+    height="3.990541065316522" 
     width="5" 
     rx="0.1"
   />
@@ -53,8 +52,8 @@
   <rect 
     class="c" 
     x="7" 
-    y="21.83847427955827" 
-    height="6.161525720441729" 
+    y="21.28307638161547" 
+    height="6.716923618384531" 
     width="5"
     rx="0.1"
   />
@@ -62,8 +61,8 @@
   <rect 
     class="c" 
     x="13" 
-    y="9.610118208898054" 
-    height="18.389881791101946"
+    y="9.151706035629175" 
+    height="18.848293964370825"
     width="5"
     rx="0.1"
   />
@@ -73,8 +72,8 @@
   <rect 
     class="c" 
     x="24" 
-    y="22.985413096451627" 
-    height="5.014586903548373" 
+    y="23.126142968172108" 
+    height="4.8738570318278915" 
     width="5" 
     rx="0.1"
   />
@@ -82,8 +81,8 @@
   <rect 
     class="c" 
     x="30" 
-    y="20.61635876088882" 
-    height="7.3836412391111805" 
+    y="19.95305989220637" 
+    height="8.046940107793633" 
     width="5"
     rx="0.1"
   />
@@ -93,6 +92,64 @@
     x="36" 
     y="4" 
     height="24"
+    width="5"
+    rx="0.1"
+  />
+
+  <text x="47" y="30" class="t">snippet 3</text>
+
+  <rect 
+    class="c" 
+    x="47" 
+    y="23.392926634092934" 
+    height="4.607073365907067" 
+    width="5" 
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="53" 
+    y="18.71897009544189" 
+    height="9.28102990455811" 
+    width="5"
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="59" 
+    y="4.281994271493861" 
+    height="23.71800572850614"
+    width="5"
+    rx="0.1"
+  />
+
+  <text x="70" y="30" class="t">snippet 4</text>
+
+  <rect 
+    class="c" 
+    x="70" 
+    y="23.210896835469818" 
+    height="4.789103164530183" 
+    width="5" 
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="76" 
+    y="20.596565901526333" 
+    height="7.403434098473667" 
+    width="5"
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="82" 
+    y="4.757190037887735" 
+    height="23.242809962112265"
     width="5"
     rx="0.1"
   />

@@ -32,18 +32,18 @@ for (let i = 0; i < 1_000; i++) {
 </td>
 
 <td>
-    <b>407 μs </b>
-    (std. 277 μs)
+    <b>421 μs </b>
+    (std. 319 μs)
 </td>
 
 <td>
-    <b>680 μs </b>
-    (std. 286 μs)
+    <b>709 μs </b>
+    (std. 260 μs)
 </td>
 
 <td>
-    <b>2.03 ms </b>
-    (std. 373 μs)
+    <b>1.99 ms </b>
+    (std. 365 μs)
 </td>
 
 </tr>
@@ -62,18 +62,78 @@ for (let i = 0; i < 1_000; i++) {
 </td>
 
 <td>
-    <b>554 μs </b>
-    (std. 259 μs)
+    <b>515 μs </b>
+    (std. 320 μs)
 </td>
 
 <td>
-    <b>815 μs </b>
-    (std. 336 μs)
+    <b>850 μs </b>
+    (std. 398 μs)
 </td>
 
 <td>
-    <b>2.65 ms </b>
-    (std. 439 μs)
+    <b>2.53 ms </b>
+    (std. 356 μs)
+</td>
+
+</tr>
+<tr></tr><tr>
+
+<td>
+
+[**snippet 3**](/benchmarks/test/snippet-3.js)
+
+```javascript
+for (let i = 0; i < 1_000; i++) {
+    JSON.parse(json)
+}
+```
+
+</td>
+
+<td>
+    <b>486 μs </b>
+    (std. 267 μs)
+</td>
+
+<td>
+    <b>980 μs </b>
+    (std. 459 μs)
+</td>
+
+<td>
+    <b>2.50 ms </b>
+    (std. 355 μs)
+</td>
+
+</tr>
+<tr></tr><tr>
+
+<td>
+
+[**snippet 4**](/benchmarks/test/snippet-4.js)
+
+```javascript
+for (let i = 0; i < 1_000; i++) {
+    JSON.parse(json)
+}
+```
+
+</td>
+
+<td>
+    <b>506 μs </b>
+    (std. 272 μs)
+</td>
+
+<td>
+    <b>782 μs </b>
+    (std. 303 μs)
+</td>
+
+<td>
+    <b>2.45 ms </b>
+    (std. 381 μs)
 </td>
 
 </tr>

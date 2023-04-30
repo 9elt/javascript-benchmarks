@@ -22,21 +22,20 @@ let svg = `
     .chart .w {
       fill: none;
       stroke: #eee5;
-      stroke: #333;
       stroke-width: 0.1;
     }
     .chart .c {
-      fill: #1af;
+      fill: #2f81f7;
     }
     .chart .t {
       font-size: 2px;
       font-weight: bold;
-      fill: #1af;
+      fill: #2f81f7;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     }
     .chart path {
       fill: none;
-      stroke: #1af;
+      stroke: #2f81f7;
       stroke-linejoin: round;
       stroke-linecap: round;
     }
