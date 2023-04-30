@@ -2,14 +2,18 @@
 <svg class="chart" viewBox="0 0 128 32" xmlns="http://www.w3.org/2000/svg">
   <style>
     .chart .bg {
-      fill: #eee;
+      fill: #eee5;
     }
     .chart .w {
       fill: none;
-      stroke: #888;
+      stroke: #eee5;
       stroke-width: 0.1;
     }
     .chart .c {
+      fill: #1af;
+    }
+    .chart .t {
+      font-size: 2px;
       fill: #1af;
     }
     .chart path {
@@ -20,15 +24,25 @@
     }
   </style>
 
-  <!--<rect class="bg" width="128" height="32" rx="0.25"/>-->
-  <rect class="w" x="2" y="2" width="43" height="28" rx="0.25"/>
+  <!--<rect class="bg" width="128" height="32" rx="0.15"/>-->
+  <rect 
+    class="w"
+    x="2"
+    y="2"
+    width="43"
+    height="28"
+    rx="0.15"
+  />
 
   
+
+  <text x="3" y="30" class="t">snippet 1</text>
+
   <rect 
     class="c" 
     x="3" 
-    y="27.0701670057224" 
-    height="0.9298329942776006" 
+    y="27.081823084521265" 
+    height="0.9181769154787356" 
     width="5" 
     rx="0.25"
   />
@@ -36,8 +50,8 @@
   <rect 
     class="c" 
     x="9" 
-    y="26.619608325694546" 
-    height="1.3803916743054523" 
+    y="26.446276193599882" 
+    height="1.553723806400117" 
     width="5"
     rx="0.25"
   />
@@ -45,16 +59,19 @@
   <rect 
     class="c" 
     x="15" 
-    y="24.01235563005792" 
-    height="3.9876443699420774"
+    y="23.721461779320457" 
+    height="4.278538220679545"
     width="5"
     rx="0.25"
   />
+
+  <text x="26" y="30" class="t">snippet 2</text>
+
   <rect 
     class="c" 
     x="26" 
-    y="23.557832204248683" 
-    height="4.442167795751318" 
+    y="23.39903082326271" 
+    height="4.600969176737291" 
     width="5" 
     rx="0.25"
   />
@@ -62,8 +79,8 @@
   <rect 
     class="c" 
     x="32" 
-    y="20.725774151898673" 
-    height="7.274225848101328" 
+    y="20.536367426993614" 
+    height="7.463632573006387" 
     width="5"
     rx="0.25"
   />
