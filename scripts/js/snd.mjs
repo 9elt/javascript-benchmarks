@@ -1,6 +1,6 @@
 import { node_args, rnd, output } from "./utils.mjs"
 
-const snd = (arr) => {
+export const snd = (arr) => {
   const μ = arr.reduce((a, b) => a + b) / arr.length
   return {
     mean: μ,

@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Generate the javascript benchmark code
+#
+# $1 => javascript snippet code
+# $2 => normal distribution samples
+# $3 => available code
+# $4 => benchmark version: simple, realistic, edge-case
+# $5 => benchmark name
+# $6 => file path
+benchmark() {
+    echo "
+    const _snd = (arr) => {
+    const μ = arr.reduce((a, b) => a + b) / arr.length
+        return {
+            mean: μ,
+            std: Math.sqrt(arr.map(x => Math.pow(x - μ, 2)).reduce((a, b) => a + b) / arr.length)
+        }
+    }
+
+    $3
+
+    const _results = [];
+
+    for (let _i = 0; _i < $2 ; _i++) {
+
+        const _start = performance.now();
+
+        $1
+
+        const _end = performance.now();
+
+        _results.push(_end - _start);
+    }
+
+    const _result = {
+        version: '$4',
+        name: '$5',
+        file_path: '/$6',
+        code: \`$1\`,
+        result: _snd(_results),
+    }
+
+    console.clear();
+    console.log(JSON.stringify(_result));"
+}

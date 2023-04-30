@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# number of benchmark runs
+SAMPLES=10
+
+DESCRIPTION="A test benchmark"
+
+RELATED="test,test2"

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Generate javascript benchmark code
+#
+# $1 => javascript snippet code
+# $2 => normal distribution samples
+# $3 => available code
+benchmark() {
+    echo "
+    import { snd as _snd } from "./snd.mjs"
+
+    $3
+
+    const _results = [];
+
+    for (let _i = 0; _i < $2 ; _i++) {
+
+        const _start = performance.now();
+
+        $1
+
+        const _end = performance.now();
+
+        _results.push(_end - _start);
+    }
+
+    const _result = _snd(_results);
+
+    console.clear();
+    console.log(JSON.stringify(_result));"
+}

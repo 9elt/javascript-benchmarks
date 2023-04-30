@@ -1,0 +1,2 @@
+let object = { foo: "bar", bar: "foo", name: "sure", user: "sure", sure: { foo: "bar", bar: "foo", name: "sure", user: "sure", sure: { foo: "bar", bar: "foo", name: "sure", user: "sure" } } }
+let json = JSON.stringify(object)

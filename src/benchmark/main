@@ -1,0 +1,78 @@
+#!/bin/bash
+
+source ./src/benchmark/utils
+source ./src/benchmark/metadata
+source ./src/benchmark/wrapper
+
+# base benchmark directory
+BASE_DIR="benchmarks"
+
+# benchmark directory
+BENCHMARK_DIR="$BASE_DIR/$1"
+
+BENCHMARK_NAME=$( parse_dirname "$BENCHMARK_DIR" )
+
+# load benchmark config
+source $( load_config_or_exit "$BENCHMARK_DIR" )
+
+# check for available code
+available_code_or_exit "$BENCHMARK_DIR"
+
+# javascript files in directory
+SNIPPETS=("$BENCHMARK_DIR"/*.js)
+SNIPPET_NAMES=()
+SNIPPET_NAMES=()
+
+VERSIONS=("simple" "realistic" "edge-case")
+
+RESULTS_simple=()
+RESULTS_realistic=()
+RESULTS_edge_case=()
+
+RESULTS=()
+
+for SNIPPET in ${SNIPPETS[@]}
+do
+
+    CODE=$( cat "$SNIPPET" )
+
+    NAME=$( parse_filename "$SNIPPET" "_" )
+    SNIPPET_NAMES+=("$( parse_filename "$SNIPPET" )")
+
+    for VERSION in ${VERSIONS[@]}
+    do
+
+        # parse available code
+        AVAILABLE_CODE=$( cat "$BENCHMARK_DIR/available-code/$VERSION.js" )
+
+        BENCHMARK=$( 
+            benchmark "$CODE" "$SAMPLES" "$AVAILABLE_CODE" "$( space $VERSION "_" )" "$NAME" "$SNIPPET"
+        )
+
+        RESULT=$( node -e "$BENCHMARK" )
+
+        RESULTS+=("$RESULT")
+    done
+
+done
+
+CONF="{
+    \"name\": \"$( space $BENCHMARK_NAME "_" )\",
+    \"description\": \"$DESCRIPTION\",
+    \"related\": \"$RELATED\",
+    \"samples\": $SAMPLES
+}"
+
+JSON_RESULT=$( node ./src/js/to-json.mjs "$CONF" "$MEDATADA" "${RESULTS[@]}" )
+
+if [[ ! -d "$BENCHMARK_DIR/.data" ]]
+then
+    mkdir "$BENCHMARK_DIR/.data"
+fi
+
+echo "$JSON_RESULT" > "$BENCHMARK_DIR/.data/results.json"
+
+echo "$( node ./src/js/chart.mjs "$JSON_RESULT" )" > "$BENCHMARK_DIR/.data/chart.svg"
+
+
+echo "$( node ./src/js/readme.mjs "$JSON_RESULT" )" > "$BENCHMARK_DIR/README.md"
