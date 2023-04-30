@@ -32,18 +32,18 @@ for (let i = 0; i < 1_000; i++) {
 </td>
 
 <td>
-    <b>393 μs </b>
-    (std. 257 μs)
+    <b>412 μs </b>
+    (std. 306 μs)
 </td>
 
 <td>
-    <b>678 μs </b>
-    (std. 292 μs)
+    <b>675 μs </b>
+    (std. 264 μs)
 </td>
 
 <td>
-    <b>1.90 ms </b>
-    (std. 230 μs)
+    <b>1.92 ms </b>
+    (std. 275 μs)
 </td>
 
 </tr>,
@@ -67,17 +67,17 @@ for (let i = 0; i < 1_000; i++) {
 
 <td>
     <b>2.15 ms </b>
-    (std. 280 μs)
+    (std. 299 μs)
 </td>
 
 <td>
-    <b>3.37 ms </b>
-    (std. 313 μs)
+    <b>3.41 ms </b>
+    (std. 338 μs)
 </td>
 
 <td>
-    <b>12.95 ms </b>
-    (std. 385 μs)
+    <b>11.23 ms </b>
+    (std. 944 μs)
 </td>
 
 </tr>
@@ -88,7 +88,7 @@ for (let i = 0; i < 1_000; i++) {
 
 ### Chart
 
-![chart](.data/chart.svg)
+<img src=".data/chart.svg" width="100%"/>
 
 <sub>
 config

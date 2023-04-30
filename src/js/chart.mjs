@@ -14,7 +14,7 @@ let y = (v) => 44 - ((40 * v) / mx)
 let h = (v) => ((40 * v) / mx)
 
 let svg = `
-<svg class="chart" view-box="0 0 128 48" xmlns="http://www.w3.org/2000/svg">
+<svg class="chart" viewBox="0 0 128 48" xmlns="http://www.w3.org/2000/svg">
   <style>
     .chart .bg {
       fill: #eee;

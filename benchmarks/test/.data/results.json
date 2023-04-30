@@ -19,32 +19,32 @@
             "path": "/benchmarks/test/snippet-1.js",
             "code": "for (let i = 0; i < 1_000; i++) {\n    JSON.stringify(object)\n}",
             "simple": {
-                "mean": 0.3934687614440918,
-                "std": 0.2570595555783839
+                "mean": 0.4118344783782959,
+                "std": 0.30555234842541623
             },
             "realistic": {
-                "mean": 0.6779538869857789,
-                "std": 0.2920467480339138
+                "mean": 0.6754045009613037,
+                "std": 0.2641097413957887
             },
             "edge_case": {
-                "mean": 1.9029060840606689,
-                "std": 0.22992918115396982
+                "mean": 1.919493556022644,
+                "std": 0.27492899199546655
             }
         },
         "snippet_2": {
             "path": "/benchmarks/test/snippet-2.js",
             "code": "for (let i = 0; i < 1_000; i++) {\n    JSON.parse(json)\n    JSON.parse(json)\n    JSON.parse(json)\n    JSON.parse(json)\n    JSON.parse(json)\n}",
             "simple": {
-                "mean": 2.1519315242767334,
-                "std": 0.2797951596103978
+                "mean": 2.1514192819595337,
+                "std": 0.2987884459077943
             },
             "realistic": {
-                "mean": 3.373730516433716,
-                "std": 0.3128968982568382
+                "mean": 3.4065274715423586,
+                "std": 0.33781913227702576
             },
             "edge_case": {
-                "mean": 12.947093605995178,
-                "std": 0.3852456600950169
+                "mean": 11.23234248161316,
+                "std": 0.943677105468215
             }
         }
     }

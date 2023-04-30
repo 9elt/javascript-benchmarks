@@ -61,7 +61,7 @@ ${data.results[key].code}
 
 ### Chart
 
-![chart](.data/chart.svg)
+<img src=".data/chart.svg" width="100%"/>
 
 <sub>
 config
