@@ -1,12 +1,12 @@
 
-<svg class="chart" viewBox="0 0 128 48" xmlns="http://www.w3.org/2000/svg">
+<svg class="chart" viewBox="0 0 128 32" xmlns="http://www.w3.org/2000/svg">
   <style>
     .chart .bg {
       fill: #eee;
     }
     .chart .w {
       fill: none;
-      stroke: #000;
+      stroke: #888;
       stroke-width: 0.1;
     }
     .chart .c {
@@ -20,63 +20,61 @@
     }
   </style>
 
-  <rect class="bg" width="128" height="48" rx="0.25"/>
-  <rect class="w" x="2" y="2" width="66" height="44" rx="0.25"/>
+  <!--<rect class="bg" width="128" height="32" rx="0.25"/>-->
+  <rect class="w" x="2" y="2" width="43" height="28" rx="0.25"/>
 
   
   <rect 
     class="c" 
-    x="5" 
-    y="42.53339771627352" 
-    height="1.4666022837264816" 
+    x="3" 
+    y="27.238247206930332" 
+    height="0.7617527930696684" 
     width="5" 
+    rx="0.25"
+  />
+
+  <rect 
+    class="c" 
+    x="9" 
+    y="26.721392392678084" 
+    height="1.2786076073219164" 
+    width="5"
     rx="0.25"
   />
 
   <rect 
     class="c" 
     x="15" 
-    y="41.59478665445997" 
-    height="2.405213345540026" 
-    width="5"
-    rx="0.25"
-  />
-
-  <rect 
-    class="c" 
-    x="25" 
-    y="37.164405166011385" 
-    height="6.835594833988615"
+    y="24.357831922297862" 
+    height="3.6421680777021366"
     width="5"
     rx="0.25"
   />,
   <rect 
     class="c" 
-    x="40" 
-    y="36.33848403222637" 
-    height="7.661515967773634" 
+    x="26" 
+    y="24.05534349166988" 
+    height="3.9446565083301186" 
     width="5" 
     rx="0.25"
   />
 
   <rect 
     class="c" 
-    x="50" 
-    y="31.868861808233888" 
-    height="12.13113819176611" 
+    x="32" 
+    y="21.085055863874857" 
+    height="6.914944136125145" 
     width="5"
     rx="0.25"
   />
 
   <rect 
     class="c" 
-    x="60" 
-    y="4" 
-    height="40"
+    x="38" 
+    y="3.9999999999999964" 
+    height="24.000000000000004"
     width="5"
     rx="0.25"
   />
-
-  
 
 </svg>
