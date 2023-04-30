@@ -32,18 +32,18 @@ for (let i = 0; i < 1_000; i++) {
 </td>
 
 <td>
-    <b>451 μs </b>
-    (std. 359 μs)
+    <b>442 μs </b>
+    (std. 387 μs)
 </td>
 
 <td>
-    <b>791 μs </b>
-    (std. 346 μs)
+    <b>690 μs </b>
+    (std. 272 μs)
 </td>
 
 <td>
-    <b>2.10 ms </b>
-    (std. 419 μs)
+    <b>2.09 ms </b>
+    (std. 416 μs)
 </td>
 
 </tr>
@@ -56,28 +56,24 @@ for (let i = 0; i < 1_000; i++) {
 ```javascript
 for (let i = 0; i < 1_000; i++) {
     JSON.parse(json)
-    JSON.parse(json)
-    JSON.parse(json)
-    JSON.parse(json)
-    JSON.parse(json)
 }
 ```
 
 </td>
 
 <td>
-    <b>1.90 ms </b>
-    (std. 294 μs)
+    <b>541 μs </b>
+    (std. 401 μs)
 </td>
 
 <td>
-    <b>3.94 ms </b>
-    (std. 884 μs)
+    <b>783 μs </b>
+    (std. 282 μs)
 </td>
 
 <td>
-    <b>9.93 ms </b>
-    (std. 601 μs)
+    <b>2.08 ms </b>
+    (std. 345 μs)
 </td>
 
 </tr>
