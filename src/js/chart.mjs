@@ -45,9 +45,6 @@ let svg = `
       stroke: #808080;
       stroke-width: 0.075;
     }
-    .chart .c {
-      fill: #2f81f7;
-    }
     .chart .t {
       font-size: 1.4px;
       font-weight: bold;
@@ -94,12 +91,12 @@ let svg = `
 
   ${values.map((v, i) => `
 
-  <text x="${(i * goc) + ((i + 1) * cs) + start - cl}" y="1" class="t">
+  <text x="${(i * goc) + ((i + 1) * cs) + start - (coc)}" y="1" class="t">
     ${n(names[i])}
   </text>
 
   <rect 
-    class="c" 
+    fill="#5b9cfb" 
     x="${(i * goc) + (coc * 0) + ((i + 1) * cs) + start}" 
     y="${y(v.simple.mean)}" 
     height="${h(v.simple.mean)}" 
@@ -108,7 +105,7 @@ let svg = `
   />
 
   <rect 
-    class="c" 
+    fill="#2f81f7"
     x="${(i * goc) + (coc * 1) + ((i + 1) * cs) + start}" 
     y="${y(v.realistic.mean)}" 
     height="${h(v.realistic.mean)}" 
@@ -117,7 +114,7 @@ let svg = `
   />
 
   <rect 
-    class="c" 
+    fill="#286aca"
     x="${(i * goc) + (coc * 2) + ((i + 1) * cs) + start}" 
     y="${y(v.edge_case.mean)}" 
     height="${h(v.edge_case.mean)}"

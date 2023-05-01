@@ -30,18 +30,18 @@ Comparing string manipulation methods
 </td>
 
 <td>
-    <b>3.44 ms </b><br>
-    (std. 46 μs, o. 13%)
+    <b>3.55 ms </b><br>
+    (std. 225 μs, o. 9%)
 </td>
 
 <td>
-    <b>3.62 ms </b><br>
-    (std. 96 μs, o. 11%)
+    <b>3.55 ms </b><br>
+    (std. 71 μs, o. 20%)
 </td>
 
 <td>
-    <b>4.15 ms </b><br>
-    (std. 339 μs, o. 9%)
+    <b>3.91 ms </b><br>
+    (std. 60 μs, o. 15%)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ Comparing string manipulation methods
 </td>
 
 <td>
-    <b>267 μs </b><br>
-    (std. 4 μs, o. 15%)
+    <b>258 μs </b><br>
+    (std. 1 μs, o. 23%)
 </td>
 
 <td>
-    <b>262 μs </b><br>
-    (std. 8 μs, o. 5%)
+    <b>231 μs </b><br>
+    (std. 0 μs, o. 10%)
 </td>
 
 <td>
-    <b>263 μs </b><br>
-    (std. 9 μs, o. 5%)
+    <b>218 μs </b><br>
+    (std. 0 μs, o. 17%)
 </td>
 
 </tr>
@@ -87,17 +87,17 @@ string + other_string
 
 <td>
     <b>15 μs </b><br>
-    (std. 0 μs, o. 6%)
+    (std. 0 μs, o. 14%)
 </td>
 
 <td>
     <b>15 μs </b><br>
-    (std. 0 μs, o. 5%)
+    (std. 0 μs, o. 9%)
 </td>
 
 <td>
     <b>15 μs </b><br>
-    (std. 0 μs, o. 5%)
+    (std. 0 μs, o. 4%)
 </td>
 
 </tr>
@@ -119,7 +119,7 @@ string + other_string
 <br>
 <b>Normal distribution samples: </b> 1000
 <br>
-<b>Average outliers percentage: </b> 8%
+<b>Average outliers percentage: </b> 13%
 <br><br>
 <sup>results are measured over multiple iterations of a code snippet</sup>
 <br>
