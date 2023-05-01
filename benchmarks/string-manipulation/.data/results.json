@@ -19,57 +19,57 @@
             "path": "/benchmarks/string-manipulation/array-join.js",
             "code": "[string, other_string].join(\"\")",
             "simple": {
-                "samples": 890,
-                "mean": 3.533899233466491,
-                "std": 0.05955408952007335
+                "samples": 870,
+                "mean": 3.441944608928313,
+                "std": 0.04599514439603407
             },
             "realistic": {
-                "samples": 789,
-                "mean": 3.629234670306459,
-                "std": 0.037236844828491295
+                "samples": 892,
+                "mean": 3.6243402299048393,
+                "std": 0.09635795682238102
             },
             "edge_case": {
-                "samples": 821,
-                "mean": 3.9612520034136187,
-                "std": 0.12411449841358405
+                "samples": 911,
+                "mean": 4.145392811487255,
+                "std": 0.33856933049028265
             }
         },
         "backticks": {
             "path": "/benchmarks/string-manipulation/backticks.js",
             "code": "`${string}${other_string}`",
             "simple": {
-                "samples": 807,
-                "mean": 0.2725821724348432,
-                "std": 0.000009994801171139182
+                "samples": 846,
+                "mean": 0.2668431524872828,
+                "std": 0.003840302163247568
             },
             "realistic": {
-                "samples": 978,
-                "mean": 0.2632859629932564,
-                "std": 0.007570171553987873
+                "samples": 951,
+                "mean": 0.26193513690524134,
+                "std": 0.007610991854848419
             },
             "edge_case": {
-                "samples": 830,
-                "mean": 0.2306367019787376,
-                "std": 0.0000073558946186480496
+                "samples": 947,
+                "mean": 0.2634382222888695,
+                "std": 0.009490127623843301
             }
         },
         "concatenation": {
             "path": "/benchmarks/string-manipulation/concatenation.js",
             "code": "string + other_string",
             "simple": {
-                "samples": 786,
-                "mean": 0.01491017271258713,
-                "std": 0.000005181501626244899
+                "samples": 944,
+                "mean": 0.01490938434600006,
+                "std": 0.000004615175625234296
             },
             "realistic": {
-                "samples": 862,
-                "mean": 0.012612044259324837,
-                "std": 0.000004730878272246755
+                "samples": 950,
+                "mean": 0.014899678458950518,
+                "std": 0.000003809398422703887
             },
             "edge_case": {
-                "samples": 871,
-                "mean": 0.014910800333822504,
-                "std": 0.000004565965508125612
+                "samples": 949,
+                "mean": 0.014901783899450467,
+                "std": 0.000004068873710376835
             }
         }
     }

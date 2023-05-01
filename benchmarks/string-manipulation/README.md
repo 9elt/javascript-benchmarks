@@ -3,7 +3,7 @@ Comparing string manipulation methods
 
 
 
-### Results table
+## Results
 
 <table>
 <thead>
@@ -30,18 +30,18 @@ Comparing string manipulation methods
 </td>
 
 <td>
-    <b>3.53 ms </b>
-    (std. 60 μs)
+    <b>3.44 ms </b><br>
+    (std. 46 μs, o. 13%)
 </td>
 
 <td>
-    <b>3.63 ms </b>
-    (std. 37 μs)
+    <b>3.62 ms </b><br>
+    (std. 96 μs, o. 11%)
 </td>
 
 <td>
-    <b>3.96 ms </b>
-    (std. 124 μs)
+    <b>4.15 ms </b><br>
+    (std. 339 μs, o. 9%)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ Comparing string manipulation methods
 </td>
 
 <td>
-    <b>273 μs </b>
-    (std. 0 μs)
+    <b>267 μs </b><br>
+    (std. 4 μs, o. 15%)
 </td>
 
 <td>
-    <b>263 μs </b>
-    (std. 8 μs)
+    <b>262 μs </b><br>
+    (std. 8 μs, o. 5%)
 </td>
 
 <td>
-    <b>231 μs </b>
-    (std. 0 μs)
+    <b>263 μs </b><br>
+    (std. 9 μs, o. 5%)
 </td>
 
 </tr>
@@ -86,18 +86,18 @@ string + other_string
 </td>
 
 <td>
-    <b>15 μs </b>
-    (std. 0 μs)
+    <b>15 μs </b><br>
+    (std. 0 μs, o. 6%)
 </td>
 
 <td>
-    <b>13 μs </b>
-    (std. 0 μs)
+    <b>15 μs </b><br>
+    (std. 0 μs, o. 5%)
 </td>
 
 <td>
-    <b>15 μs </b>
-    (std. 0 μs)
+    <b>15 μs </b><br>
+    (std. 0 μs, o. 5%)
 </td>
 
 </tr>
@@ -105,23 +105,28 @@ string + other_string
 </tbody>
 </table>
 
+**std.** standard deviation, **o.** outliers 
 
-### Chart
+## Chart
 
 <img src=".data/chart.svg" width="100%"/>
 
-<sub>
-config
+## Metadata
+
+#### benchmark
+
+<sup>normal distrubution is calculated without outliers</sup>
 <br>
-<b>Normal Distribution Samples: </b> 1000
+<b>Normal distribution samples: </b> 1000
 <br>
-<b>Measured iterations: </b> 50000
-</sub>
+<b>Average outliers percentage: </b> 8%
+<br><br>
+<sup>results are measured over multiple iterations of a code snippet</sup>
 <br>
-<sub>
-system
-<br>
+<b>Result measured over: </b> 50000 iterations
+
+#### system
+
 <b>Node: </b> v19.8.1
 <br>
-<b>CPU: </b>Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)
-</sub>
+<b>CPU: </b> Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)
