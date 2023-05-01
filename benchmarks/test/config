@@ -3,6 +3,8 @@
 # number of benchmark runs
 SAMPLES=10
 
+ITERATIONS=100
+
 DESCRIPTION="A test benchmark"
 
 RELATED="test,test2"

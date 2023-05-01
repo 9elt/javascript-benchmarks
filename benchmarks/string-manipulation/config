@@ -3,6 +3,8 @@
 # number of benchmark runs
 SAMPLES=1000
 
+ITERATIONS=10000
+
 DESCRIPTION="Comparing string manipulation methods"
 
 # RELATED=""

@@ -47,7 +47,7 @@ do
         AVAILABLE_CODE=$( cat "$BENCHMARK_DIR/available-code/$VERSION.js" )
 
         BENCHMARK=$( 
-            benchmark "$CODE" "$SAMPLES" "$AVAILABLE_CODE" "$( space $VERSION "_" )" "$NAME" "$SNIPPET"
+            benchmark "$CODE" "$SAMPLES" "$ITERATIONS" "$AVAILABLE_CODE" "$( space $VERSION "_" )" "$NAME" "$SNIPPET"
         )
 
         RESULT=$( node -e "$BENCHMARK" )
@@ -61,7 +61,8 @@ CONF="{
     \"name\": \"$( space $BENCHMARK_NAME "_" )\",
     \"description\": \"$DESCRIPTION\",
     \"related\": \"$RELATED\",
-    \"samples\": $SAMPLES
+    \"samples\": $SAMPLES,
+    \"iterations\": "$ITERATIONS"
 }"
 
 JSON_RESULT=$( node ./src/js/to-json.mjs "$CONF" "$MEDATADA" "${RESULTS[@]}" )

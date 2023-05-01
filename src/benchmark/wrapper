@@ -4,10 +4,11 @@
 #
 # $1 => javascript snippet code
 # $2 => normal distribution samples
-# $3 => available code
-# $4 => benchmark version: simple, realistic, edge-case
-# $5 => benchmark name
-# $6 => file path
+# $3 => snippet measured iterations
+# $4 => available code
+# $5 => benchmark version: simple, realistic, edge-case
+# $6 => benchmark name
+# $7 => file path
 benchmark() {
     echo "
     const _snd = (arr) => {
@@ -18,7 +19,7 @@ benchmark() {
         }
     }
 
-    $3
+    $4
 
     const _results = [];
 
@@ -26,7 +27,11 @@ benchmark() {
 
         const _start = performance.now();
 
-        $1
+        for (let _iter = 0; _iter < $3; _iter++) {
+
+            $1
+
+        }
 
         const _end = performance.now();
 
@@ -34,9 +39,9 @@ benchmark() {
     }
 
     const _result = {
-        version: '$4',
-        name: '$5',
-        file_path: '/$6',
+        version: '$5',
+        name: '$6',
+        file_path: '/$7',
         code: '$1',
         result: _snd(_results),
     }

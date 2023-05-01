@@ -6,7 +6,8 @@
             "related": [
                 ""
             ],
-            "samples": 1000
+            "samples": 1000,
+            "iterations": 10000
         },
         "system": {
             "node_version": "v19.8.1",
@@ -18,48 +19,48 @@
             "path": "/benchmarks/string-manipulation/array-join.js",
             "code": "[other_string, string, other_string].join()",
             "simple": {
-                "mean": 0.0008308706283569336,
-                "std": 0.003673010604742872
+                "mean": 1.1973522727489472,
+                "std": 0.1464975008008907
             },
             "realistic": {
-                "mean": 0.0015233724117279053,
-                "std": 0.026027242100602033
+                "mean": 1.2322150509357452,
+                "std": 0.14896457119441503
             },
             "edge_case": {
-                "mean": 0.0018299274444580078,
-                "std": 0.030276004896847068
+                "mean": 1.3222449793815614,
+                "std": 0.1672046729911029
             }
         },
         "backticks": {
             "path": "/benchmarks/string-manipulation/backticks.js",
             "code": "`${other_string}${string}${other_string}`",
             "simple": {
-                "mean": 0.0014531846046447754,
-                "std": 0.02732241043667793
+                "mean": 0.1874343247413635,
+                "std": 0.07349502151408972
             },
             "realistic": {
-                "mean": 0.0012384896278381347,
-                "std": 0.02375306903980619
+                "mean": 0.11904778385162354,
+                "std": 0.05776182908824997
             },
             "edge_case": {
-                "mean": 0.0005689365863800049,
-                "std": 0.0036765436811169653
+                "mean": 0.14150126838684082,
+                "std": 0.07796684294484174
             }
         },
         "concatenation": {
             "path": "/benchmarks/string-manipulation/concatenation.js",
             "code": "other_string + string + other_string",
             "simple": {
-                "mean": 0.000579676866531372,
-                "std": 0.0036467368295460463
+                "mean": 0.008218482494354248,
+                "std": 0.06411921741966077
             },
             "realistic": {
-                "mean": 0.0013827378749847411,
-                "std": 0.026058900697025565
+                "mean": 0.011328313112258912,
+                "std": 0.06582461357524053
             },
             "edge_case": {
-                "mean": 0.0014283604621887207,
-                "std": 0.02737854611224868
+                "mean": 0.009853861570358276,
+                "std": 0.06118148622688886
             }
         }
     }

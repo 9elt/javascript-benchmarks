@@ -3,6 +3,8 @@
 # number of benchmark runs
 SAMPLES=1000
 
+ITERATIONS=10_000
+
 DESCRIPTION="Comparing different ways of iterating arrays"
 
 # RELATED=""

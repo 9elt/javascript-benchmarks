@@ -67,6 +67,7 @@ ${data.results[key].code}
 config
 <br>
 <b>Normal Distribution Samples: </b> ${data.metadata.config.samples}
+<b>Snippet code measured iterations: </b> ${data.metadata.config.iterations}
 </sub>
 <br>
 <sub>
