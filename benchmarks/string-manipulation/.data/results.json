@@ -19,48 +19,57 @@
             "path": "/benchmarks/string-manipulation/array-join.js",
             "code": "[string, other_string].join(\"\")",
             "simple": {
-                "mean": 3.510627250636109,
-                "std": 0.02310070204015171
+                "samples": 818,
+                "mean": 3.53005854861952,
+                "std": 0.06419918795467609
             },
             "realistic": {
-                "mean": 3.7019229521601584,
-                "std": 0.08953539754109135
+                "samples": 894,
+                "mean": 3.702238749604364,
+                "std": 0.09826344271102358
             },
             "edge_case": {
-                "mean": 4.246325985709233,
-                "std": 0.33908379426584034
+                "samples": 871,
+                "mean": 4.052684935581807,
+                "std": 0.09412089905400305
             }
         },
         "backticks": {
             "path": "/benchmarks/string-manipulation/backticks.js",
             "code": "`${string}${other_string}`",
             "simple": {
-                "mean": 0.22765109282198961,
-                "std": 0.006141150179656589
+                "samples": 763,
+                "mean": 0.273212220690666,
+                "std": 0.0001395978106390342
             },
             "realistic": {
-                "mean": 0.23130476309575881,
-                "std": 0.0002627237032354406
+                "samples": 950,
+                "mean": 0.2642676880485133,
+                "std": 0.008061174461570897
             },
             "edge_case": {
-                "mean": 0.2665356215279507,
-                "std": 0.0077963455586889776
+                "samples": 699,
+                "mean": 0.27313218062186617,
+                "std": 0.0022596008717472894
             }
         },
         "concatenation": {
             "path": "/benchmarks/string-manipulation/concatenation.js",
             "code": "string + other_string",
             "simple": {
-                "mean": 0.013119948609926073,
-                "std": 0.0001121939131581219
+                "samples": 974,
+                "mean": 0.015515788135097746,
+                "std": 0.0001221457610998954
             },
             "realistic": {
-                "mean": 0.013155234925915991,
-                "std": 0.00007405538476186051
+                "samples": 961,
+                "mean": 0.015535069802053016,
+                "std": 0.00010342087913610331
             },
             "edge_case": {
-                "mean": 0.013146640828502741,
-                "std": 0.00009179565428565529
+                "samples": 978,
+                "mean": 0.015529655727628306,
+                "std": 0.0001041000307171237
             }
         }
     }

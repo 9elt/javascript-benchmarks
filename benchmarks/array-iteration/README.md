@@ -30,18 +30,18 @@ array.filter(v => {})
 </td>
 
 <td>
-    <b>43 μs </b>
+    <b>42 μs </b>
     (std. 0 μs)
 </td>
 
 <td>
-    <b>290 μs </b>
-    (std. 24 μs)
+    <b>269 μs </b>
+    (std. 4 μs)
 </td>
 
 <td>
     <b>2.58 ms </b>
-    (std. 9 μs)
+    (std. 2 μs)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ array.forEach(v => {})
 </td>
 
 <td>
-    <b>35 μs </b>
+    <b>42 μs </b>
     (std. 0 μs)
 </td>
 
 <td>
-    <b>266 μs </b>
-    (std. 0 μs)
+    <b>268 μs </b>
+    (std. 4 μs)
 </td>
 
 <td>
     <b>2.58 ms </b>
-    (std. 10 μs)
+    (std. 3 μs)
 </td>
 
 </tr>
@@ -86,17 +86,17 @@ array.forEach(v => {})
 </td>
 
 <td>
-    <b>9 μs </b>
-    (std. 0 μs)
+    <b>10 μs </b>
+    (std. 2 μs)
+</td>
+
+<td>
+    <b>7 μs </b>
+    (std. 4 μs)
 </td>
 
 <td>
     <b>8 μs </b>
-    (std. 0 μs)
-</td>
-
-<td>
-    <b>9 μs </b>
     (std. 0 μs)
 </td>
 
@@ -114,18 +114,18 @@ for (let i = 0; i < array.length; i++) {}
 </td>
 
 <td>
-    <b>37 μs </b>
-    (std. 1 μs)
+    <b>43 μs </b>
+    (std. 0 μs)
 </td>
 
 <td>
-    <b>320 μs </b>
-    (std. 8 μs)
+    <b>315 μs </b>
+    (std. 0 μs)
 </td>
 
 <td>
-    <b>2.60 ms </b>
-    (std. 32 μs)
+    <b>2.59 ms </b>
+    (std. 22 μs)
 </td>
 
 </tr>
@@ -142,18 +142,18 @@ for (const v of array) {}
 </td>
 
 <td>
-    <b>77 μs </b>
-    (std. 0 μs)
+    <b>73 μs </b>
+    (std. 6 μs)
 </td>
 
 <td>
-    <b>529 μs </b>
-    (std. 3 μs)
+    <b>582 μs </b>
+    (std. 48 μs)
 </td>
 
 <td>
-    <b>5.21 ms </b>
-    (std. 69 μs)
+    <b>5.16 ms </b>
+    (std. 21 μs)
 </td>
 
 </tr>
@@ -170,18 +170,18 @@ array.map(v => {})
 </td>
 
 <td>
-    <b>185 μs </b>
+    <b>184 μs </b>
     (std. 19 μs)
 </td>
 
 <td>
-    <b>1.42 ms </b>
-    (std. 36 μs)
+    <b>1.45 ms </b>
+    (std. 100 μs)
 </td>
 
 <td>
-    <b>14.03 ms </b>
-    (std. 111 μs)
+    <b>14.15 ms </b>
+    (std. 212 μs)
 </td>
 
 </tr>
