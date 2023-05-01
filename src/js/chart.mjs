@@ -19,7 +19,6 @@ let lo = 0
 let end = (values.length * 6.75) + ((values.length + 1) * 2.25)
 
 let svg = `
-<!--${mx}-->
 <svg class="chart" viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
   <style>
     .chart .bg {
@@ -36,7 +35,7 @@ let svg = `
     .chart .t {
       font-size: 1.4px;
       font-weight: bold;
-      fill: #2f81f7;
+      fill: #30363d;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
       transform: rotate(90deg);
       transform-box: fill-box;
