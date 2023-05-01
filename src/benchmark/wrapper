@@ -49,7 +49,7 @@ benchmark() {
 
     const _benchmark_cost_results = [];
 
-    for (let _i = 0; _i < ($2 * 3) ; _i++) {
+    for (let _i = 0; _i < $2 ; _i++) {
         const _start = performance.now();
         const _end = performance.now();
         _benchmark_cost_results.push(_end - _start);
