@@ -1,5 +1,5 @@
-let values = []
+let values = [];
 
-for (const key in obj) {
-    values.push(obj[key])
+for (const key in object) {
+    values.push(object[key])
 }

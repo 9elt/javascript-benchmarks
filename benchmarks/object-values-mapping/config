@@ -1,13 +1,10 @@
 #!/bin/bash
 
-# benchmark description
+# number of benchmark runs
+SAMPLES=1000
+
+ITERATIONS=10000
+
 DESCRIPTION="Mapping object values"
 
-# number of benchmark runs
-RUNS=100
-
-# number of iterations in a benchmark run
-ITERATIONS=1_000_000
-
-# related benchmarks
-RELATED_BENCHMAKRS=("object-keys-mapping" "array-iteration")
+RELATED="object-keys-mapping,array-iteration"

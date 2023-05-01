@@ -1,0 +1,52 @@
+{
+    "metadata": {
+        "config": {
+            "name": "object_values_mapping",
+            "description": "Mapping object values",
+            "related": [
+                "object-keys-mapping",
+                "array-iteration"
+            ],
+            "samples": 1000,
+            "iterations": 10000
+        },
+        "system": {
+            "node_version": "v19.8.1",
+            "cpu": "Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)"
+        }
+    },
+    "results": {
+        "for_key": {
+            "path": "/benchmarks/object-values-mapping/for-key.js",
+            "code": "let values = [];\n\nfor (const key in object) {\n    values.push(object[key])\n}",
+            "simple": {
+                "mean": 0.5976640536785126,
+                "std": 0.1647920711841444
+            },
+            "realistic": {
+                "mean": 0.7284497504234314,
+                "std": 0.18855619204615975
+            },
+            "edge_case": {
+                "mean": 2.1193002915382384,
+                "std": 0.48006149846127744
+            }
+        },
+        "object_values": {
+            "path": "/benchmarks/object-values-mapping/object-values.js",
+            "code": "let values = Object.values(object)",
+            "simple": {
+                "mean": 1.4502811329364778,
+                "std": 0.151486006400669
+            },
+            "realistic": {
+                "mean": 1.9281394457817078,
+                "std": 0.35512745916397986
+            },
+            "edge_case": {
+                "mean": 3.5953735258579256,
+                "std": 0.35362183728757707
+            }
+        }
+    }
+}
