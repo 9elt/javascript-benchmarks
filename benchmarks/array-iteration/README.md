@@ -30,18 +30,18 @@ array.filter(v => {})
 </td>
 
 <td>
-    <b>411 μs </b>
-    (std. 1.15 ms)
+    <b>61 μs </b>
+    (std. 169 μs)
 </td>
 
 <td>
-    <b>3.23 ms </b>
-    (std. 8.93 ms)
+    <b>396 μs </b>
+    (std. 955 μs)
 </td>
 
 <td>
-    <b>22.37 ms </b>
-    (std. 62.46 ms)
+    <b>3.40 ms </b>
+    (std. 8.50 ms)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ array.forEach(v => {})
 </td>
 
 <td>
-    <b>402 μs </b>
-    (std. 1.10 ms)
+    <b>60 μs </b>
+    (std. 155 μs)
 </td>
 
 <td>
-    <b>3.01 ms </b>
-    (std. 7.98 ms)
+    <b>383 μs </b>
+    (std. 850 μs)
 </td>
 
 <td>
-    <b>21.69 ms </b>
-    (std. 60.98 ms)
+    <b>3.30 ms </b>
+    (std. 8.00 ms)
 </td>
 
 </tr>
@@ -80,24 +80,24 @@ array.forEach(v => {})
 [**for in**](/benchmarks/array-iteration/for-in.js)
 
 ```javascript
-for (const i in array) {}
+
 ```
 
 </td>
 
 <td>
-    <b>11.97 ms </b>
-    (std. 1.23 ms)
+    <b>10 μs </b>
+    (std. 32 μs)
 </td>
 
 <td>
-    <b>106.58 ms </b>
-    (std. 2.09 ms)
+    <b>8 μs </b>
+    (std. 5 μs)
 </td>
 
 <td>
-    <b>1.04 s </b>
-    (std. 5.07 ms)
+    <b>9 μs </b>
+    (std. 5 μs)
 </td>
 
 </tr>
@@ -114,18 +114,18 @@ for (let i = 0; i < array.length; i++) {}
 </td>
 
 <td>
-    <b>403 μs </b>
-    (std. 889 μs)
+    <b>43 μs </b>
+    (std. 70 μs)
 </td>
 
 <td>
-    <b>1.76 ms </b>
-    (std. 1.12 ms)
+    <b>334 μs </b>
+    (std. 461 μs)
 </td>
 
 <td>
-    <b>13.59 ms </b>
-    (std. 1.78 ms)
+    <b>2.62 ms </b>
+    (std. 228 μs)
 </td>
 
 </tr>
@@ -142,18 +142,18 @@ for (const v of array) {}
 </td>
 
 <td>
-    <b>605 μs </b>
-    (std. 1.38 ms)
+    <b>82 μs </b>
+    (std. 211 μs)
 </td>
 
 <td>
-    <b>2.93 ms </b>
-    (std. 1.81 ms)
+    <b>602 μs </b>
+    (std. 658 μs)
 </td>
 
 <td>
-    <b>26.60 ms </b>
-    (std. 3.26 ms)
+    <b>5.22 ms </b>
+    (std. 650 μs)
 </td>
 
 </tr>
@@ -170,18 +170,18 @@ array.map(v => {})
 </td>
 
 <td>
-    <b>1.52 ms </b>
-    (std. 1.71 ms)
+    <b>187 μs </b>
+    (std. 192 μs)
 </td>
 
 <td>
-    <b>8.98 ms </b>
-    (std. 7.73 ms)
+    <b>1.50 ms </b>
+    (std. 878 μs)
 </td>
 
 <td>
-    <b>84.74 ms </b>
-    (std. 60.03 ms)
+    <b>15.01 ms </b>
+    (std. 8.77 ms)
 </td>
 
 </tr>
@@ -197,9 +197,9 @@ array.map(v => {})
 <sub>
 config
 <br>
-<b>Normal Distribution Samples: </b> 100
+<b>Normal Distribution Samples: </b> 1000
 <br>
-<b>Measured iterations: </b> 5000
+<b>Measured iterations: </b> 1000
 </sub>
 <br>
 <sub>
