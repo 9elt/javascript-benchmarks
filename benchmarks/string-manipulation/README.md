@@ -30,18 +30,18 @@ Comparing string manipulation methods
 </td>
 
 <td>
-    <b>1.20 ms </b>
-    (std. 146 μs)
+    <b>12.06 ms </b>
+    (std. 1.30 ms)
 </td>
 
 <td>
-    <b>1.23 ms </b>
-    (std. 149 μs)
+    <b>12.29 ms </b>
+    (std. 1.28 ms)
 </td>
 
 <td>
-    <b>1.32 ms </b>
-    (std. 167 μs)
+    <b>13.26 ms </b>
+    (std. 1.39 ms)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ Comparing string manipulation methods
 </td>
 
 <td>
-    <b>187 μs </b>
-    (std. 73 μs)
+    <b>1.82 ms </b>
+    (std. 712 μs)
 </td>
 
 <td>
-    <b>119 μs </b>
-    (std. 58 μs)
+    <b>1.17 ms </b>
+    (std. 556 μs)
 </td>
 
 <td>
-    <b>142 μs </b>
-    (std. 78 μs)
+    <b>1.18 ms </b>
+    (std. 459 μs)
 </td>
 
 </tr>
@@ -86,18 +86,18 @@ other_string + string + other_string
 </td>
 
 <td>
-    <b>8 μs </b>
-    (std. 64 μs)
+    <b>231 μs </b>
+    (std. 831 μs)
 </td>
 
 <td>
-    <b>11 μs </b>
-    (std. 66 μs)
+    <b>170 μs </b>
+    (std. 615 μs)
 </td>
 
 <td>
-    <b>10 μs </b>
-    (std. 61 μs)
+    <b>168 μs </b>
+    (std. 597 μs)
 </td>
 
 </tr>
@@ -113,8 +113,9 @@ other_string + string + other_string
 <sub>
 config
 <br>
-<b>Normal Distribution Samples: </b> 1000
-<b>Snippet code measured iterations: </b> 10000
+<b>Normal Distribution Samples: </b> 100
+<br>
+<b>Snippet code measured iterations: </b> 100000
 </sub>
 <br>
 <sub>
