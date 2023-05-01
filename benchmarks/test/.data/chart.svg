@@ -1,6 +1,6 @@
 
-<!--2.7839262962341307-->
-<svg class="chart" viewBox="0 0 128 32" xmlns="http://www.w3.org/2000/svg">
+<!--2.5480171918869017-->
+<svg class="chart" viewBox="0 0 112 32" xmlns="http://www.w3.org/2000/svg">
   <style>
     .chart .bg {
       fill: #eee5;
@@ -20,7 +20,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
       transform: rotate(90deg);
       transform-box: fill-box;
-      transform-origin: center;
+      transform-origin: left;
     }
     .chart path {
       fill: none;
@@ -50,13 +50,13 @@
 
   
 
-  <text x="1.75" y="0" class="t">snippet 1</text>
+  <text x="5.25" y="0" class="t">snippet 1</text>
 
   <rect 
     class="c" 
     x="5.25" 
-    y="25.77655709866779" 
-    height="4.22344290133221" 
+    y="25.387195176581404" 
+    height="4.612804823418595" 
     width="2" 
     rx="0.1"
   />
@@ -64,8 +64,8 @@
   <rect 
     class="c" 
     x="7.5" 
-    y="23.129464921446704" 
-    height="6.870535078553295" 
+    y="22.326177246717595" 
+    height="7.673822753282406" 
     width="2"
     rx="0.1"
   />
@@ -73,19 +73,19 @@
   <rect 
     class="c" 
     x="9.75" 
-    y="9.961600129736023" 
-    height="20.038399870263977"
+    y="8.536960249313037" 
+    height="21.463039750686963"
     width="2"
     rx="0.1"
   />
 
-  <text x="10.75" y="0" class="t">snippet 2</text>
+  <text x="14.25" y="0" class="t">snippet 2</text>
 
   <rect 
     class="c" 
     x="14.25" 
-    y="24.640630211797696" 
-    height="5.359369788202304" 
+    y="24.519273827195995" 
+    height="5.480726172804003" 
     width="2" 
     rx="0.1"
   />
@@ -93,8 +93,8 @@
   <rect 
     class="c" 
     x="16.5" 
-    y="22.24408272069384" 
-    height="7.755917279306162" 
+    y="21.525100155946966" 
+    height="8.474899844053033" 
     width="2"
     rx="0.1"
   />
@@ -108,13 +108,13 @@
     rx="0.1"
   />
 
-  <text x="19.75" y="0" class="t">snippet 3</text>
+  <text x="23.25" y="0" class="t">snippet 3</text>
 
   <rect 
     class="c" 
     x="23.25" 
-    y="27.292257155084737" 
-    height="2.7077428449152623" 
+    y="26.893535603621196" 
+    height="3.1064643963788057" 
     width="2" 
     rx="0.1"
   />
@@ -122,8 +122,8 @@
   <rect 
     class="c" 
     x="25.5" 
-    y="26.788467209880327" 
-    height="3.2115327901196724" 
+    y="25.82460045250381" 
+    height="4.175399547496193" 
     width="2"
     rx="0.1"
   />
@@ -131,19 +131,19 @@
   <rect 
     class="c" 
     x="27.75" 
-    y="26.23264099792053" 
-    height="3.767359002079469"
+    y="25.779326379798214" 
+    height="4.220673620201786"
     width="2"
     rx="0.1"
   />
 
-  <text x="28.75" y="0" class="t">snippet 4</text>
+  <text x="32.25" y="0" class="t">snippet 4</text>
 
   <rect 
     class="c" 
     x="32.25" 
-    y="28.807289621806394" 
-    height="1.1927103781936046" 
+    y="28.565919040764314" 
+    height="1.4340809592356853" 
     width="2" 
     rx="0.1"
   />
@@ -151,8 +151,8 @@
   <rect 
     class="c" 
     x="34.5" 
-    y="28.751543004707898" 
-    height="1.2484569952921019" 
+    y="28.51702338807788" 
+    height="1.4829766119221195" 
     width="2"
     rx="0.1"
   />
@@ -160,8 +160,8 @@
   <rect 
     class="c" 
     x="36.75" 
-    y="28.695823964051556" 
-    height="1.3041760359484447"
+    y="28.44958963695374" 
+    height="1.5504103630462602"
     width="2"
     rx="0.1"
   />
