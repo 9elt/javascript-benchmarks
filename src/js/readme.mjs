@@ -5,6 +5,16 @@ let [data] = node_args(JSON.parse)
 const n = (str) => str.replaceAll("-", " ").replaceAll("_", " ")
 const c = (str) => str[0]?.toUpperCase() + str.slice(1)
 
+let results = Object.values(data.results)
+
+let actual_samples = 0;
+
+results.forEach(v => {
+    actual_samples += ((v.simple.samples + v.realistic.samples + v.edge_case.samples) / 3)
+})
+
+actual_samples = Math.floor(actual_samples / results.length)
+
 let readme = `# ${c(n(data.metadata.config.name))}
 ${data.metadata.config.description}
 
@@ -66,7 +76,7 @@ ${data.results[key].code}
 <sub>
 config
 <br>
-<b>Normal Distribution Samples: </b> ${data.metadata.config.samples}
+<b>Normal Distribution Samples: </b> ${actual_samples} / ${data.metadata.config.samples}
 <br>
 <b>Measured iterations: </b> ${data.metadata.config.iterations}
 </sub>
