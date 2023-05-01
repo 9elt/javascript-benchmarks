@@ -31,17 +31,17 @@ array.filter(v => {})
 
 <td>
     <b>61 μs </b>
-    (std. 169 μs)
+    (std. 167 μs)
 </td>
 
 <td>
-    <b>396 μs </b>
-    (std. 955 μs)
+    <b>390 μs </b>
+    (std. 930 μs)
 </td>
 
 <td>
-    <b>3.40 ms </b>
-    (std. 8.50 ms)
+    <b>3.36 ms </b>
+    (std. 8.66 ms)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ array.forEach(v => {})
 </td>
 
 <td>
-    <b>60 μs </b>
-    (std. 155 μs)
+    <b>53 μs </b>
+    (std. 140 μs)
 </td>
 
 <td>
-    <b>383 μs </b>
-    (std. 850 μs)
+    <b>330 μs </b>
+    (std. 705 μs)
 </td>
 
 <td>
-    <b>3.30 ms </b>
-    (std. 8.00 ms)
+    <b>3.25 ms </b>
+    (std. 7.34 ms)
 </td>
 
 </tr>
@@ -80,24 +80,24 @@ array.forEach(v => {})
 [**for in**](/benchmarks/array-iteration/for-in.js)
 
 ```javascript
-
+// removed... too slow
 ```
 
 </td>
 
 <td>
-    <b>10 μs </b>
-    (std. 32 μs)
-</td>
-
-<td>
-    <b>8 μs </b>
-    (std. 5 μs)
-</td>
-
-<td>
     <b>9 μs </b>
+    (std. 27 μs)
+</td>
+
+<td>
+    <b>7 μs </b>
     (std. 5 μs)
+</td>
+
+<td>
+    <b>7 μs </b>
+    (std. 6 μs)
 </td>
 
 </tr>
@@ -114,18 +114,18 @@ for (let i = 0; i < array.length; i++) {}
 </td>
 
 <td>
-    <b>43 μs </b>
-    (std. 70 μs)
+    <b>49 μs </b>
+    (std. 77 μs)
 </td>
 
 <td>
     <b>334 μs </b>
-    (std. 461 μs)
+    (std. 369 μs)
 </td>
 
 <td>
-    <b>2.62 ms </b>
-    (std. 228 μs)
+    <b>2.91 ms </b>
+    (std. 639 μs)
 </td>
 
 </tr>
@@ -142,18 +142,18 @@ for (const v of array) {}
 </td>
 
 <td>
-    <b>82 μs </b>
-    (std. 211 μs)
+    <b>94 μs </b>
+    (std. 238 μs)
 </td>
 
 <td>
-    <b>602 μs </b>
-    (std. 658 μs)
+    <b>587 μs </b>
+    (std. 697 μs)
 </td>
 
 <td>
-    <b>5.22 ms </b>
-    (std. 650 μs)
+    <b>5.26 ms </b>
+    (std. 741 μs)
 </td>
 
 </tr>
@@ -170,18 +170,18 @@ array.map(v => {})
 </td>
 
 <td>
-    <b>187 μs </b>
-    (std. 192 μs)
+    <b>209 μs </b>
+    (std. 186 μs)
 </td>
 
 <td>
-    <b>1.50 ms </b>
-    (std. 878 μs)
+    <b>1.57 ms </b>
+    (std. 1.15 ms)
 </td>
 
 <td>
-    <b>15.01 ms </b>
-    (std. 8.77 ms)
+    <b>14.94 ms </b>
+    (std. 7.87 ms)
 </td>
 
 </tr>
