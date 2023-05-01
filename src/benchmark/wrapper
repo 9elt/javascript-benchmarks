@@ -1,5 +1,9 @@
 #!/bin/bash
 
+sanitize() {
+    echo -e "${@}" | sed "s/\`/\\\\\`/g"
+}
+
 # Generate the javascript benchmark code
 #
 # $1 => javascript snippet code
@@ -42,7 +46,7 @@ benchmark() {
         version: '$5',
         name: '$6',
         file_path: '/$7',
-        code: \`$1\`,
+        code: '$( sanitize "$1" )',
         result: _snd(_results),
     }
 

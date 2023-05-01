@@ -24,24 +24,24 @@ Comparing string manipulation methods
 [**array join**](/benchmarks/string-manipulation/array-join.js)
 
 ```javascript
-[other_string, string, other_string].join("")
+[string, other_string].join("")
 ```
 
 </td>
 
 <td>
-    <b>4.46 ms </b>
-    (std. 619 μs)
+    <b>3.62 ms </b>
+    (std. 313 μs)
 </td>
 
 <td>
-    <b>4.61 ms </b>
-    (std. 693 μs)
+    <b>3.68 ms </b>
+    (std. 366 μs)
 </td>
 
 <td>
-    <b>4.98 ms </b>
-    (std. 473 μs)
+    <b>4.17 ms </b>
+    (std. 615 μs)
 </td>
 
 </tr>
@@ -52,24 +52,24 @@ Comparing string manipulation methods
 [**backticks**](/benchmarks/string-manipulation/backticks.js)
 
 ```javascript
-`${other_string}${string}${other_string}`
+`${string}${other_string}`
 ```
 
 </td>
 
 <td>
-    <b>824 μs </b>
-    (std. 159 μs)
+    <b>299 μs </b>
+    (std. 158 μs)
 </td>
 
 <td>
-    <b>585 μs </b>
-    (std. 157 μs)
+    <b>278 μs </b>
+    (std. 114 μs)
 </td>
 
 <td>
-    <b>590 μs </b>
-    (std. 152 μs)
+    <b>289 μs </b>
+    (std. 114 μs)
 </td>
 
 </tr>
@@ -80,24 +80,24 @@ Comparing string manipulation methods
 [**concatenation**](/benchmarks/string-manipulation/concatenation.js)
 
 ```javascript
-other_string + string + other_string
+string + other_string
 ```
 
 </td>
 
 <td>
-    <b>25 μs </b>
-    (std. 162 μs)
+    <b>24 μs </b>
+    (std. 129 μs)
 </td>
 
 <td>
-    <b>27 μs </b>
-    (std. 154 μs)
+    <b>22 μs </b>
+    (std. 98 μs)
 </td>
 
 <td>
-    <b>34 μs </b>
-    (std. 182 μs)
+    <b>23 μs </b>
+    (std. 104 μs)
 </td>
 
 </tr>

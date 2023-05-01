@@ -1,1 +1,1 @@
-[other_string, string, other_string].join("")
+[string, other_string].join("")
