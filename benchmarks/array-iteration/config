@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # number of benchmark runs
-SAMPLES=1000
+SAMPLES=100
 
-ITERATIONS=10_000
+ITERATIONS=5000
 
 DESCRIPTION="Comparing different ways of iterating arrays"
 

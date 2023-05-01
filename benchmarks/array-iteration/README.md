@@ -30,18 +30,18 @@ array.filter(v => {})
 </td>
 
 <td>
-    <b>3 μs </b>
-    (std. 24 μs)
+    <b>411 μs </b>
+    (std. 1.15 ms)
 </td>
 
 <td>
-    <b>12 μs </b>
-    (std. 5 μs)
+    <b>3.23 ms </b>
+    (std. 8.93 ms)
 </td>
 
 <td>
-    <b>105 μs </b>
-    (std. 11 μs)
+    <b>22.37 ms </b>
+    (std. 62.46 ms)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ array.forEach(v => {})
 </td>
 
 <td>
-    <b>3 μs </b>
-    (std. 26 μs)
+    <b>402 μs </b>
+    (std. 1.10 ms)
 </td>
 
 <td>
-    <b>11 μs </b>
-    (std. 5 μs)
+    <b>3.01 ms </b>
+    (std. 7.98 ms)
 </td>
 
 <td>
-    <b>97 μs </b>
-    (std. 13 μs)
+    <b>21.69 ms </b>
+    (std. 60.98 ms)
 </td>
 
 </tr>
@@ -86,18 +86,18 @@ for (const i in array) {}
 </td>
 
 <td>
-    <b>6 μs </b>
-    (std. 34 μs)
+    <b>11.97 ms </b>
+    (std. 1.23 ms)
 </td>
 
 <td>
-    <b>30 μs </b>
-    (std. 21 μs)
+    <b>106.58 ms </b>
+    (std. 2.09 ms)
 </td>
 
 <td>
-    <b>256 μs </b>
-    (std. 40 μs)
+    <b>1.04 s </b>
+    (std. 5.07 ms)
 </td>
 
 </tr>
@@ -114,18 +114,18 @@ for (let i = 0; i < array.length; i++) {}
 </td>
 
 <td>
-    <b>2 μs </b>
-    (std. 4 μs)
+    <b>403 μs </b>
+    (std. 889 μs)
 </td>
 
 <td>
-    <b>8 μs </b>
-    (std. 28 μs)
+    <b>1.76 ms </b>
+    (std. 1.12 ms)
 </td>
 
 <td>
-    <b>15 μs </b>
-    (std. 35 μs)
+    <b>13.59 ms </b>
+    (std. 1.78 ms)
 </td>
 
 </tr>
@@ -142,18 +142,18 @@ for (const v of array) {}
 </td>
 
 <td>
-    <b>6 μs </b>
-    (std. 37 μs)
+    <b>605 μs </b>
+    (std. 1.38 ms)
 </td>
 
 <td>
-    <b>9 μs </b>
-    (std. 24 μs)
+    <b>2.93 ms </b>
+    (std. 1.81 ms)
 </td>
 
 <td>
-    <b>12 μs </b>
-    (std. 56 μs)
+    <b>26.60 ms </b>
+    (std. 3.26 ms)
 </td>
 
 </tr>
@@ -170,18 +170,18 @@ array.map(v => {})
 </td>
 
 <td>
-    <b>3 μs </b>
-    (std. 28 μs)
+    <b>1.52 ms </b>
+    (std. 1.71 ms)
 </td>
 
 <td>
-    <b>15 μs </b>
-    (std. 16 μs)
+    <b>8.98 ms </b>
+    (std. 7.73 ms)
 </td>
 
 <td>
-    <b>129 μs </b>
-    (std. 34 μs)
+    <b>84.74 ms </b>
+    (std. 60.03 ms)
 </td>
 
 </tr>
@@ -197,7 +197,9 @@ array.map(v => {})
 <sub>
 config
 <br>
-<b>Normal Distribution Samples: </b> 1000
+<b>Normal Distribution Samples: </b> 100
+<br>
+<b>Measured iterations: </b> 5000
 </sub>
 <br>
 <sub>
