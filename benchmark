@@ -1,23 +1,22 @@
-#!/bin/bash
-# if [[ "$1" = "all" ]]
-# then
-#     ALL_BENCHMARKS=(benchmarks/*)
-# else
-#     ALL_BENCHMARKS=("${@}")
-# fi
+source ./src/benchmark/main
 
-# for BENCHMARK in "${ALL_BENCHMARKS[@]}"
-# do
+if [[ "$1" = "all" ]]
+then
+    ALL_BENCHMARKS=(benchmarks/*)
+else
+    ALL_BENCHMARKS=("${@}")
+fi
 
-#     if [[ "$1" = "all" ]]
-#     then
-#         BNAME=$( echo "$BENCHMARK" | sed "s/benchmarks//g" )
-#     else
-#         BNAME="$BENCHMARK"
-#     fi
+for BENCHMARK in "${ALL_BENCHMARKS[@]}"
+do
 
-#     bash ./scripts/benchmark "$BNAME"
+    if [[ "$1" = "all" ]]
+    then
+        BENCHMARK_NAME=$( echo "$BENCHMARK" | sed "s/benchmarks//g" )
+    else
+        BENCHMARK_NAME="$BENCHMARK"
+    fi
 
-# done
+    run "$BENCHMARK_NAME"
 
-bash ./src/benchmark/main "test"
+done

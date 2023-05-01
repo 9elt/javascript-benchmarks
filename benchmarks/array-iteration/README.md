@@ -1,7 +1,25 @@
-## Array iteration
+# Array iteration
 Comparing different ways of iterating arrays
-<table><thead><tr><th>tested code</th><th>result <sub><sup>(1_000_000 times)</sup></sub></th><th>std <sub><sup>(10 samples)</sup></sub></th></tr></thead><tbody>
-<tr></tr><tr><td>
+
+> related: [**undefined**](/benchmarks/)
+
+### Results table
+
+<table>
+<thead>
+<tr>
+<th>tested code</th>
+<th><a href="available-code/simple.js">simple</a></th>
+<th><a href="available-code/realistic.js">realistic</a></th>
+<th><a href="available-code/edge-case.js">edge case</a></th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr></tr><tr>
+
+<td>
 
 [**filter**](/benchmarks/array-iteration/filter.js)
 
@@ -9,8 +27,27 @@ Comparing different ways of iterating arrays
 array.filter(v => {})
 ```
 
-</td><td><b>48.2 ms</b></td><td>4.5 ms</td></tr>
-<tr></tr><tr><td>
+</td>
+
+<td>
+    <b>2 μs </b>
+    (std. 4 μs)
+</td>
+
+<td>
+    <b>10 μs </b>
+    (std. 5 μs)
+</td>
+
+<td>
+    <b>91 μs </b>
+    (std. 10 μs)
+</td>
+
+</tr>
+<tr></tr><tr>
+
+<td>
 
 [**foreach**](/benchmarks/array-iteration/foreach.js)
 
@@ -18,8 +55,27 @@ array.filter(v => {})
 array.forEach(v => {})
 ```
 
-</td><td><b>47.7 ms</b></td><td>3.0 ms</td></tr>
-<tr></tr><tr><td>
+</td>
+
+<td>
+    <b>3 μs </b>
+    (std. 24 μs)
+</td>
+
+<td>
+    <b>9 μs </b>
+    (std. 4 μs)
+</td>
+
+<td>
+    <b>95 μs </b>
+    (std. 11 μs)
+</td>
+
+</tr>
+<tr></tr><tr>
+
+<td>
 
 [**for in**](/benchmarks/array-iteration/for-in.js)
 
@@ -27,8 +83,27 @@ array.forEach(v => {})
 for (const i in array) {}
 ```
 
-</td><td><b>2.34 s</b></td><td>67.8 ms</td></tr>
-<tr></tr><tr><td>
+</td>
+
+<td>
+    <b>5 μs </b>
+    (std. 29 μs)
+</td>
+
+<td>
+    <b>28 μs </b>
+    (std. 15 μs)
+</td>
+
+<td>
+    <b>263 μs </b>
+    (std. 34 μs)
+</td>
+
+</tr>
+<tr></tr><tr>
+
+<td>
 
 [**for**](/benchmarks/array-iteration/for.js)
 
@@ -36,8 +111,27 @@ for (const i in array) {}
 for (let i = 0; i < array.length; i++) {}
 ```
 
-</td><td><b>40.7 ms</b></td><td>3.6 ms</td></tr>
-<tr></tr><tr><td>
+</td>
+
+<td>
+    <b>2 μs </b>
+    (std. 4 μs)
+</td>
+
+<td>
+    <b>9 μs </b>
+    (std. 8 μs)
+</td>
+
+<td>
+    <b>15 μs </b>
+    (std. 33 μs)
+</td>
+
+</tr>
+<tr></tr><tr>
+
+<td>
 
 [**for of**](/benchmarks/array-iteration/for-of.js)
 
@@ -45,8 +139,27 @@ for (let i = 0; i < array.length; i++) {}
 for (const v of array) {}
 ```
 
-</td><td><b>73.7 ms</b></td><td>7.0 ms</td></tr>
-<tr></tr><tr><td>
+</td>
+
+<td>
+    <b>5 μs </b>
+    (std. 29 μs)
+</td>
+
+<td>
+    <b>15 μs </b>
+    (std. 42 μs)
+</td>
+
+<td>
+    <b>12 μs </b>
+    (std. 50 μs)
+</td>
+
+</tr>
+<tr></tr><tr>
+
+<td>
 
 [**map**](/benchmarks/array-iteration/map.js)
 
@@ -54,8 +167,43 @@ for (const v of array) {}
 array.map(v => {})
 ```
 
-</td><td><b>193.2 ms</b></td><td>15.5 ms</td></tr>
-</tbody></table>
+</td>
+
+<td>
+    <b>3 μs </b>
+    (std. 21 μs)
+</td>
+
+<td>
+    <b>12 μs </b>
+    (std. 13 μs)
+</td>
+
+<td>
+    <b>124 μs </b>
+    (std. 25 μs)
+</td>
+
+</tr>
+
+</tbody>
+</table>
 
 
-<sub>system<br><b>Node: </b> v19.8.1 <br><b>CPU: </b>Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)</sub>
+### Chart
+
+<img src=".data/chart.svg" width="100%"/>
+
+<sub>
+config
+<br>
+<b>Normal Distribution Samples: </b> 1000
+</sub>
+<br>
+<sub>
+system
+<br>
+<b>Node: </b> v19.8.1
+<br>
+<b>CPU: </b>Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)
+</sub>

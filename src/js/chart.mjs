@@ -3,7 +3,7 @@ import { node_args, unit } from "./utils.mjs";
 let [data] = node_args(JSON.parse)
 
 const n = (str) => str.replace("-", " ").replace("_", " ")
-const c = (str) => str[0].toUpperCase() + str.slice(1)
+const c = (str) => str[0]?.toUpperCase() + str.slice(1)
 let values = Object.values(data.results)
 let max = values.map(v => v.edge_case.mean)
 

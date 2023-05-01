@@ -1,0 +1,1 @@
+let array = Array.from(Array(10000).keys())

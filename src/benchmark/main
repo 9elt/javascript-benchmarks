@@ -4,6 +4,7 @@ source ./src/benchmark/utils
 source ./src/benchmark/metadata
 source ./src/benchmark/wrapper
 
+run() {
 # base benchmark directory
 BASE_DIR="benchmarks"
 
@@ -76,3 +77,4 @@ echo "$( node ./src/js/chart.mjs "$JSON_RESULT" )" > "$BENCHMARK_DIR/.data/chart
 
 
 echo "$( node ./src/js/readme.mjs "$JSON_RESULT" )" > "$BENCHMARK_DIR/README.md"
+}

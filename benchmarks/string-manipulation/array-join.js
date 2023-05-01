@@ -1,1 +1,1 @@
-["_", iteration, "_"].join()
+[other_string, string, other_string].join()

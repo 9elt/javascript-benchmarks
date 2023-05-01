@@ -1,0 +1,114 @@
+{
+    "metadata": {
+        "config": {
+            "name": "array_iteration",
+            "description": "Comparing different ways of iterating arrays",
+            "related": [
+                ""
+            ],
+            "samples": 1000
+        },
+        "system": {
+            "node_version": "v19.8.1",
+            "cpu": "Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)"
+        }
+    },
+    "results": {
+        "filter": {
+            "path": "/benchmarks/array-iteration/filter.js",
+            "code": "array.filter(v => {})",
+            "simple": {
+                "mean": 0.0021350374221801756,
+                "std": 0.0038679730323078945
+            },
+            "realistic": {
+                "mean": 0.010108265638351441,
+                "std": 0.00464634063256602
+            },
+            "edge_case": {
+                "mean": 0.0908156578540802,
+                "std": 0.010463447316168238
+            }
+        },
+        "foreach": {
+            "path": "/benchmarks/array-iteration/foreach.js",
+            "code": "array.forEach(v => {})",
+            "simple": {
+                "mean": 0.002830570936203003,
+                "std": 0.02384079478544023
+            },
+            "realistic": {
+                "mean": 0.00901495623588562,
+                "std": 0.0038502237391434425
+            },
+            "edge_case": {
+                "mean": 0.09482254648208618,
+                "std": 0.010827542300930807
+            }
+        },
+        "for_in": {
+            "path": "/benchmarks/array-iteration/for-in.js",
+            "code": "for (const i in array) {}",
+            "simple": {
+                "mean": 0.005124691009521484,
+                "std": 0.02931939505743617
+            },
+            "realistic": {
+                "mean": 0.02843437910079956,
+                "std": 0.01529621897667141
+            },
+            "edge_case": {
+                "mean": 0.2630620074272156,
+                "std": 0.033564384141445636
+            }
+        },
+        "for": {
+            "path": "/benchmarks/array-iteration/for.js",
+            "code": "for (let i = 0; i < array.length; i++) {}",
+            "simple": {
+                "mean": 0.001631474733352661,
+                "std": 0.0037110273742146107
+            },
+            "realistic": {
+                "mean": 0.008881689548492432,
+                "std": 0.007931346940983408
+            },
+            "edge_case": {
+                "mean": 0.014600293397903443,
+                "std": 0.03327601355932562
+            }
+        },
+        "for_of": {
+            "path": "/benchmarks/array-iteration/for-of.js",
+            "code": "for (const v of array) {}",
+            "simple": {
+                "mean": 0.00548592209815979,
+                "std": 0.029044756876887096
+            },
+            "realistic": {
+                "mean": 0.015422600507736205,
+                "std": 0.041983660200832974
+            },
+            "edge_case": {
+                "mean": 0.012283824443817138,
+                "std": 0.049735121997491444
+            }
+        },
+        "map": {
+            "path": "/benchmarks/array-iteration/map.js",
+            "code": "array.map(v => {})",
+            "simple": {
+                "mean": 0.0028141329288482665,
+                "std": 0.02101843513560666
+            },
+            "realistic": {
+                "mean": 0.012369436502456666,
+                "std": 0.01276421462287722
+            },
+            "edge_case": {
+                "mean": 0.12383133506774903,
+                "std": 0.024723538770458547
+            }
+        }
+    }
+}

@@ -1,0 +1,236 @@
+
+<svg class="chart" viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .chart .bg {
+      fill: #eee5;
+    }
+    .chart .w {
+      fill: none;
+      stroke: #30363d;
+      stroke-width: 0.075;
+    }
+    .chart .c {
+      fill: #2f81f7;
+    }
+    .chart .t {
+      font-size: 1.4px;
+      font-weight: bold;
+      fill: #30363d;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      transform: rotate(90deg);
+      transform-box: fill-box;
+      transform-origin: left;
+    }
+    .chart .un {
+      font-size: 1.4px;
+      font-weight: bold;
+      fill: #2f81f7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    .chart path {
+      fill: none;
+      stroke: #2f81f7;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+  </style>
+
+  <!--<rect class="bg" width="128" height="32" rx="0.15"/>
+  <rect 
+    class="w"
+    x="0"
+    y="2"
+    width="56.25"
+    height="29"
+    rx="0.1"
+  />-->
+
+  <text class="un" x="57.25" y="7.5" >197 μs</text>
+  <text class="un" x="57.25" y="15" >132 μs</text>
+  <text class="un" x="57.25" y="22.5" >66 μs</text>
+
+  <path class="w" d="
+    M0
+    ,0 0,30 56.25,30
+    M0,7.5 56.25,7.5
+    M0,15 56.25,15
+    M0,22.5 56.25,22.5
+  "/>
+
+  
+
+  <text x="2.25" y="1" class="t">filter</text>
+
+  <rect 
+    class="c" 
+    x="2.25" 
+    y="29.77274921450759" 
+    height="0.22725078549240993" 
+    width="2" 
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="4.5" 
+    y="28.92408850429627" 
+    height="1.0759114957037266" 
+    width="2"
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="6.75" 
+    y="20.333691874461188" 
+    height="9.666308125538814"
+    width="2"
+    rx="0.1"
+  />
+
+  <text x="11.25" y="1" class="t">foreach</text>
+
+  <rect 
+    class="c" 
+    x="11.25" 
+    y="29.69871747353858" 
+    height="0.301282526461419" 
+    width="2" 
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="13.5" 
+    y="29.040459026852684" 
+    height="0.9595409731473176" 
+    width="2"
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="15.75" 
+    y="19.907203524123446" 
+    height="10.092796475876552"
+    width="2"
+    rx="0.1"
+  />
+
+  <text x="20.25" y="1" class="t">for in</text>
+
+  <rect 
+    class="c" 
+    x="20.25" 
+    y="29.45453412421669" 
+    height="0.5454658757833093" 
+    width="2" 
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="22.5" 
+    y="26.973479284945125" 
+    height="3.0265207150548763" 
+    width="2"
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="24.75" 
+    y="2" 
+    height="28"
+    width="2"
+    rx="0.1"
+  />
+
+  <text x="29.25" y="1" class="t">for</text>
+
+  <rect 
+    class="c" 
+    x="29.25" 
+    y="29.826347814415907" 
+    height="0.17365218558409157" 
+    width="2" 
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="31.5" 
+    y="29.05464377091171" 
+    height="0.9453562290882894" 
+    width="2"
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="33.75" 
+    y="28.445962535071104" 
+    height="1.5540374649288955"
+    width="2"
+    rx="0.1"
+  />
+
+  <text x="38.25" y="1" class="t">for of</text>
+
+  <rect 
+    class="c" 
+    x="38.25" 
+    y="29.416085126656025" 
+    height="0.583914873343974" 
+    width="2" 
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="40.5" 
+    y="28.35843716681097" 
+    height="1.6415628331890302" 
+    width="2"
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="42.75" 
+    y="28.692524672069784" 
+    height="1.307475327930217"
+    width="2"
+    rx="0.1"
+  />
+
+  <text x="47.25" y="1" class="t">map</text>
+
+  <rect 
+    class="c" 
+    x="47.25" 
+    y="29.700467115041107" 
+    height="0.2995328849588924" 
+    width="2" 
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="49.5" 
+    y="28.68341222871336" 
+    height="1.3165877712866374" 
+    width="2"
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="51.75" 
+    y="16.819543362390313" 
+    height="13.180456637609689"
+    width="2"
+    rx="0.1"
+  />
+
+</svg>
