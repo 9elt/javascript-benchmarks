@@ -1,5 +1,7 @@
 source ./src/benchmark/main
 
+# create new benchmark
+
 if [[ "$1" = "-n" ]] || [[ "$1" = "--new" ]]
 then
 
@@ -17,23 +19,29 @@ then
     exit 0
 fi
 
+# run benchmarks
+
 if [[ "$1" = "all" ]]
 then
-    ALL_BENCHMARKS=(benchmarks/*)
+
+    BENCHMARKS=()
+    PATHS=(benchmarks/*)
+
+    for PATH in "${PATHS[@]}"
+    do
+        BENCHMARKS+=("$( echo "$PATH" | sed "s/benchmarks//g" )")
+    done
+
 else
-    ALL_BENCHMARKS=("${@}")
+    BENCHMARKS=("${@}")
 fi
 
-for BENCHMARK in "${ALL_BENCHMARKS[@]}"
+for BENCHMARK in "${BENCHMARKS[@]}"
 do
 
-    if [[ "$1" = "all" ]]
+    if [[ "$BENCHMARK" != "empty" ]]
     then
-        BENCHMARK_NAME=$( echo "$BENCHMARK" | sed "s/benchmarks//g" )
-    else
-        BENCHMARK_NAME="$BENCHMARK"
+        run "$BENCHMARK"
     fi
-
-    run "$BENCHMARK_NAME"
 
 done

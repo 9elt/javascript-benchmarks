@@ -52,30 +52,54 @@ parse_dirname() {
 }
 
 # colors
+black() {
+    echo -ne "\x1b[1;90m${@}\x1b[0m"
+}
 
 cyan() {
-    echo -ne "\x1b[1;36m${@}\x1b[0m"
+    echo -ne "\x1b[1;38;5;39m${@}\x1b[0m"
+}
+
+green() {
+    echo -ne "\x1b[1;38;5;25m${@}\x1b[0m"
 }
 
 yellow() {
-    echo -ne "\x1b[1;33m${@}\x1b[0m"
+    echo -ne "\x1b[1;38;5;215m${@}\x1b[0m"
 }
 
 bold() {
     echo -ne "\x1b[1m${@}\x1b[0m"
 }
 
+gray() {
+    echo -ne "\x1b[1;38;5;244m${@}\x1b[0m"
+}
+
 # progress indicator
 
+# $1 => snippet name
+# $2 => version
 show_progress() {
-    echo -ne "> $( yellow "$1" ) -> run $( yellow "$2" ) / $3    \\r"
-}
+    if [[ "$2" = "simple" ]]
+    then
 
-clear_line() {
-    echo -ne "                                                   \\r"
-}
+        echo -ne "> $( yellow "$1" ): $( yellow "[simple]" ) $( black "[realistic]" ) $( black "[edge case]" )\\r"
 
-clear_progress() {
-    echo -ne "$( bold "$1" ) -> $( cyan "OK" )                   \\r"
-    echo ""
+    elif [[ "$2" = "realistic" ]]
+    then
+
+        echo -ne "> $( yellow "$1" ): $( cyan "[simple]" ) $( yellow "[realistic]" ) $( black "[edge case]" )\\r"
+
+    elif [[ "$2" = "edge-case" ]]
+    then
+
+        echo -ne "> $( yellow "$1" ): $( cyan "[simple]" ) $( cyan "[realistic]" ) $( yellow "[edge case]" )\\r"
+
+    else
+
+        echo -ne "> $( gray "$1" ): $( green "[simple]" ) $( green "[realistic]" ) $( green "[edge case]" )\\r"
+        echo ""
+
+    fi
 }

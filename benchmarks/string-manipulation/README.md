@@ -30,18 +30,18 @@ let s = [string, other_string].join("")
 </td>
 
 <td>
-    <b>3.57 ms </b><br>
-    (std. 209 μs, o. 9%)
+    <b>3.41 ms </b><br>
+    (std. 28 μs, o. 14%)
 </td>
 
 <td>
-    <b>3.84 ms </b><br>
-    (std. 419 μs, o. 5%)
+    <b>3.48 ms </b><br>
+    (std. 4 μs, o. 21%)
 </td>
 
 <td>
-    <b>4.09 ms </b><br>
-    (std. 259 μs, o. 5%)
+    <b>3.99 ms </b><br>
+    (std. 21 μs, o. 4%)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ let s = `${string}${other_string}`
 </td>
 
 <td>
-    <b>277 μs </b><br>
-    (std. 7 μs, o. 11%)
+    <b>231 μs </b><br>
+    (std. 0 μs, o. 23%)
 </td>
 
 <td>
-    <b>275 μs </b><br>
-    (std. 4 μs, o. 16%)
+    <b>270 μs </b><br>
+    (std. 6 μs, o. 3%)
 </td>
 
 <td>
-    <b>271 μs </b><br>
-    (std. 10 μs, o. 10%)
+    <b>231 μs </b><br>
+    (std. 0 μs, o. 16%)
 </td>
 
 </tr>
@@ -86,18 +86,18 @@ let s = string + other_string
 </td>
 
 <td>
+    <b>13 μs </b><br>
+    (std. 0 μs, o. 3%)
+</td>
+
+<td>
+    <b>16 μs </b><br>
+    (std. 0 μs, o. 2%)
+</td>
+
+<td>
     <b>16 μs </b><br>
     (std. 0 μs, o. 9%)
-</td>
-
-<td>
-    <b>16 μs </b><br>
-    (std. 0 μs, o. 8%)
-</td>
-
-<td>
-    <b>16 μs </b><br>
-    (std. 0 μs, o. 13%)
 </td>
 
 </tr>
@@ -119,7 +119,7 @@ let s = string + other_string
 <br>
 <b>Normal distribution samples: </b> 1000
 <br>
-<b>Average outliers percentage: </b> 10%
+<b>Average outliers percentage: </b> 11%
 <br><br>
 <sup>results are measured over multiple iterations of a code snippet</sup>
 <br>

@@ -31,17 +31,17 @@ array.filter(v => {})
 
 <td>
     <b>42 μs </b><br>
-    (std. 0 μs, o. 11%)
+    (std. 0 μs, o. 6%)
 </td>
 
 <td>
-    <b>317 μs </b><br>
+    <b>302 μs </b><br>
+    (std. 25 μs, o. 1%)
+</td>
+
+<td>
+    <b>2.58 ms </b><br>
     (std. 0 μs, o. 40%)
-</td>
-
-<td>
-    <b>2.59 ms </b><br>
-    (std. 22 μs, o. 13%)
 </td>
 
 </tr>
@@ -59,17 +59,17 @@ array.forEach(v => {})
 
 <td>
     <b>35 μs </b><br>
-    (std. 0 μs, o. 8%)
+    (std. 0 μs, o. 6%)
 </td>
 
 <td>
     <b>314 μs </b><br>
-    (std. 0 μs, o. 27%)
+    (std. 0 μs, o. 24%)
 </td>
 
 <td>
-    <b>2.59 ms </b><br>
-    (std. 26 μs, o. 17%)
+    <b>2.58 ms </b><br>
+    (std. 4 μs, o. 15%)
 </td>
 
 </tr>
@@ -86,18 +86,18 @@ array.forEach(v => {})
 </td>
 
 <td>
-    <b>6 μs </b><br>
-    (std. 4 μs, o. 1%)
-</td>
-
-<td>
-    <b>7 μs </b><br>
+    <b>8 μs </b><br>
     (std. 0 μs, o. 8%)
 </td>
 
 <td>
     <b>8 μs </b><br>
-    (std. 0 μs, o. 14%)
+    (std. 0 μs, o. 4%)
+</td>
+
+<td>
+    <b>8 μs </b><br>
+    (std. 0 μs, o. 23%)
 </td>
 
 </tr>
@@ -114,18 +114,18 @@ for (let i = 0; i < array.length; i++) {}
 </td>
 
 <td>
-    <b>40 μs </b><br>
-    (std. 3 μs, o. 10%)
+    <b>44 μs </b><br>
+    (std. 2 μs, o. 4%)
 </td>
 
 <td>
-    <b>268 μs </b><br>
-    (std. 3 μs, o. 15%)
+    <b>267 μs </b><br>
+    (std. 0 μs, o. 19%)
 </td>
 
 <td>
-    <b>2.65 ms </b><br>
-    (std. 123 μs, o. 16%)
+    <b>2.58 ms </b><br>
+    (std. 4 μs, o. 18%)
 </td>
 
 </tr>
@@ -142,18 +142,18 @@ for (const v of array) {}
 </td>
 
 <td>
-    <b>76 μs </b><br>
-    (std. 0 μs, o. 9%)
+    <b>77 μs </b><br>
+    (std. 0 μs, o. 5%)
 </td>
 
 <td>
-    <b>583 μs </b><br>
-    (std. 66 μs, o. 4%)
+    <b>562 μs </b><br>
+    (std. 46 μs, o. 0%)
 </td>
 
 <td>
-    <b>5.24 ms </b><br>
-    (std. 98 μs, o. 8%)
+    <b>5.15 ms </b><br>
+    (std. 7 μs, o. 7%)
 </td>
 
 </tr>
@@ -170,18 +170,18 @@ array.map(v => {})
 </td>
 
 <td>
-    <b>158 μs </b><br>
-    (std. 17 μs, o. 3%)
+    <b>193 μs </b><br>
+    (std. 25 μs, o. 7%)
 </td>
 
 <td>
-    <b>1.43 ms </b><br>
-    (std. 41 μs, o. 12%)
+    <b>1.42 ms </b><br>
+    (std. 39 μs, o. 18%)
 </td>
 
 <td>
-    <b>14.27 ms </b><br>
-    (std. 298 μs, o. 7%)
+    <b>14.14 ms </b><br>
+    (std. 146 μs, o. 5%)
 </td>
 
 </tr>

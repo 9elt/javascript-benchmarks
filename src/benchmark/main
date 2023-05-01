@@ -13,6 +13,8 @@ BENCHMARK_DIR="$BASE_DIR/$1"
 
 BENCHMARK_NAME=$( parse_dirname "$BENCHMARK_DIR" )
 
+echo -e "\nrunning $( cyan "$BENCHMARK_NAME" )\n"
+
 # load benchmark config
 source $( load_config_or_exit "$BENCHMARK_DIR" )
 
@@ -45,6 +47,8 @@ do
     for VERSION in ${VERSIONS[@]}
     do
 
+        show_progress "$( parse_filename "$SNIPPET" " " )" "$VERSION"
+
         # parse available code
         AVAILABLE_CODE=$( cat "$BENCHMARK_DIR/.code/$VERSION.js" )
 
@@ -57,7 +61,11 @@ do
         RESULTS+=("$RESULT")
     done
 
+    show_progress "$NAME"
+
 done
+
+echo ""
 
 CONF="{
     \"name\": \"$( space $BENCHMARK_NAME "_" )\",
