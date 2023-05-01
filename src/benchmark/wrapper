@@ -31,7 +31,7 @@ benchmark() {
 
     const _snd = (arr, adj) => {
         if (adj) {
-            arr = arr.map(v => v - adj)
+            arr = arr.map(v => v - adj >= 0 ? v - adj : 0)
         }
 
         arr = _outliers(arr)
@@ -56,7 +56,8 @@ benchmark() {
         _benchmark_cost_results.push(_end - _start);
     }
 
-    const _benchmark_cost = _snd(_benchmark_cost_results)
+    let _benchmark_cost = _snd(_benchmark_cost_results);
+    _benchmark_cost = _benchmark_cost.mean - _benchmark_cost.std;
 
     const _results = [];
 
@@ -80,7 +81,7 @@ benchmark() {
         name: '$6',
         file_path: '/$7',
         code: '$( sanitize "$1" )',
-        result: _snd(_results, _benchmark_cost.mean),
+        result: _snd(_results, _benchmark_cost),
     }
 
     console.clear();
