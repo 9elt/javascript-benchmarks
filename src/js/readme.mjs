@@ -1,4 +1,4 @@
-import { node_args, unit } from "./utils.mjs";
+import { node_args, unit, pct } from "./utils.mjs";
 
 let [data] = node_args(JSON.parse)
 
@@ -7,6 +7,7 @@ const c = (str) => str[0]?.toUpperCase() + str.slice(1)
 
 let results = Object.values(data.results)
 
+let samples = data.metadata.config.samples
 let actual_samples = 0;
 
 results.forEach(v => {
@@ -50,17 +51,23 @@ ${data.results[key].code}
 
 <td>
     <b>${unit(data.results[key].simple.mean)} </b>
-    (std. ${unit(data.results[key].simple.std)})
+    (std. ${unit(data.results[key].simple.std)}, o. ${
+        pct(samples - data.results[key].simple.samples, samples)
+    }%)
 </td>
 
 <td>
     <b>${unit(data.results[key].realistic.mean)} </b>
-    (std. ${unit(data.results[key].realistic.std)})
+    (std. ${unit(data.results[key].realistic.std)}, o. ${
+        pct(samples - data.results[key].realistic.samples, samples)
+    }%)
 </td>
 
 <td>
     <b>${unit(data.results[key].edge_case.mean)} </b>
-    (std. ${unit(data.results[key].edge_case.std)})
+    (std. ${unit(data.results[key].edge_case.std)}, o. ${
+        pct(samples - data.results[key].edge_case.samples, samples)
+    }%)
 </td>
 
 </tr>`).join("")}

@@ -1,5 +1,7 @@
 export const rnd = (f, p = 1) => (f).toFixed(p)
 
+export const pct = (n, d) => rnd((n / d) * 100,0)
+
 export const unit = (ms) => {
     if (ms < 1) {
         return `${rnd(ms * 1000, 0)} μs`

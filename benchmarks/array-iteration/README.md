@@ -31,17 +31,17 @@ array.filter(v => {})
 
 <td>
     <b>41 μs </b>
-    (std. 0 μs)
+    (std. 0 μs, o. 9%)
 </td>
 
 <td>
-    <b>324 μs </b>
-    (std. 65 μs)
+    <b>314 μs </b>
+    (std. 0 μs, o. 28%)
 </td>
 
 <td>
     <b>2.60 ms </b>
-    (std. 27 μs)
+    (std. 30 μs, o. 4%)
 </td>
 
 </tr>
@@ -59,17 +59,17 @@ array.forEach(v => {})
 
 <td>
     <b>41 μs </b>
-    (std. 0 μs)
+    (std. 0 μs, o. 14%)
 </td>
 
 <td>
-    <b>290 μs </b>
-    (std. 24 μs)
+    <b>314 μs </b>
+    (std. 0 μs, o. 21%)
 </td>
 
 <td>
     <b>2.58 ms </b>
-    (std. 1 μs)
+    (std. 2 μs, o. 16%)
 </td>
 
 </tr>
@@ -86,18 +86,18 @@ array.forEach(v => {})
 </td>
 
 <td>
-    <b>8 μs </b>
-    (std. 0 μs)
-</td>
-
-<td>
-    <b>8 μs </b>
-    (std. 0 μs)
-</td>
-
-<td>
     <b>9 μs </b>
-    (std. 1 μs)
+    (std. 0 μs, o. 3%)
+</td>
+
+<td>
+    <b>7 μs </b>
+    (std. 0 μs, o. 25%)
+</td>
+
+<td>
+    <b>8 μs </b>
+    (std. 0 μs, o. 2%)
 </td>
 
 </tr>
@@ -114,18 +114,18 @@ for (let i = 0; i < array.length; i++) {}
 </td>
 
 <td>
-    <b>37 μs </b>
-    (std. 1 μs)
+    <b>42 μs </b>
+    (std. 0 μs, o. 19%)
 </td>
 
 <td>
-    <b>316 μs </b>
-    (std. 0 μs)
+    <b>267 μs </b>
+    (std. 0 μs, o. 34%)
 </td>
 
 <td>
     <b>2.58 ms </b>
-    (std. 7 μs)
+    (std. 4 μs, o. 14%)
 </td>
 
 </tr>
@@ -143,17 +143,17 @@ for (const v of array) {}
 
 <td>
     <b>83 μs </b>
-    (std. 0 μs)
+    (std. 0 μs, o. 4%)
 </td>
 
 <td>
-    <b>777 μs </b>
-    (std. 1 μs)
+    <b>816 μs </b>
+    (std. 63 μs, o. 0%)
 </td>
 
 <td>
     <b>5.16 ms </b>
-    (std. 12 μs)
+    (std. 10 μs, o. 4%)
 </td>
 
 </tr>
@@ -170,18 +170,18 @@ array.map(v => {})
 </td>
 
 <td>
-    <b>163 μs </b>
-    (std. 15 μs)
+    <b>193 μs </b>
+    (std. 18 μs, o. 2%)
 </td>
 
 <td>
-    <b>1.51 ms </b>
-    (std. 13 μs)
+    <b>1.52 ms </b>
+    (std. 6 μs, o. 25%)
 </td>
 
 <td>
-    <b>15.21 ms </b>
-    (std. 24 μs)
+    <b>15.34 ms </b>
+    (std. 174 μs, o. 8%)
 </td>
 
 </tr>
@@ -197,7 +197,7 @@ array.map(v => {})
 <sub>
 config
 <br>
-<b>Normal Distribution Samples: </b> 895 / 1000
+<b>Normal Distribution Samples: </b> 871 / 1000
 <br>
 <b>Measured iterations: </b> 1000
 </sub>
