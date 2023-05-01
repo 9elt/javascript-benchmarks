@@ -9,9 +9,9 @@ Mapping object values
 <thead>
 <tr>
 <th>tested code</th>
-<th><a href="available-code/simple.js">simple</a></th>
-<th><a href="available-code/realistic.js">realistic</a></th>
-<th><a href="available-code/edge-case.js">edge case</a></th>
+<th><a href=".code/simple.js">simple</a></th>
+<th><a href=".code/realistic.js">realistic</a></th>
+<th><a href=".code/edge-case.js">edge case</a></th>
 </tr>
 </thead>
 <tbody>
@@ -34,18 +34,18 @@ for (const key in object) {
 </td>
 
 <td>
-    <b>467 μs </b><br>
-    (std. 42 μs, o. 2%)
+    <b>503 μs </b><br>
+    (std. 39 μs, o. 5%)
 </td>
 
 <td>
-    <b>777 μs </b><br>
-    (std. 73 μs, o. 8%)
+    <b>703 μs </b><br>
+    (std. 77 μs, o. 2%)
 </td>
 
 <td>
-    <b>1.95 ms </b><br>
-    (std. 41 μs, o. 18%)
+    <b>2.04 ms </b><br>
+    (std. 73 μs, o. 12%)
 </td>
 
 </tr>
@@ -62,18 +62,18 @@ let values = Object.values(object)
 </td>
 
 <td>
-    <b>1.36 ms </b><br>
-    (std. 30 μs, o. 8%)
+    <b>1.48 ms </b><br>
+    (std. 130 μs, o. 4%)
 </td>
 
 <td>
-    <b>1.78 ms </b><br>
-    (std. 32 μs, o. 10%)
+    <b>1.85 ms </b><br>
+    (std. 161 μs, o. 4%)
 </td>
 
 <td>
-    <b>3.45 ms </b><br>
-    (std. 59 μs, o. 12%)
+    <b>3.53 ms </b><br>
+    (std. 84 μs, o. 16%)
 </td>
 
 </tr>
@@ -95,7 +95,7 @@ let values = Object.values(object)
 <br>
 <b>Normal distribution samples: </b> 1000
 <br>
-<b>Average outliers percentage: </b> 10%
+<b>Average outliers percentage: </b> 7%
 <br><br>
 <sup>results are measured over multiple iterations of a code snippet</sup>
 <br>

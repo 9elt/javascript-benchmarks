@@ -9,9 +9,9 @@ Comparing string manipulation methods
 <thead>
 <tr>
 <th>tested code</th>
-<th><a href="available-code/simple.js">simple</a></th>
-<th><a href="available-code/realistic.js">realistic</a></th>
-<th><a href="available-code/edge-case.js">edge case</a></th>
+<th><a href=".code/simple.js">simple</a></th>
+<th><a href=".code/realistic.js">realistic</a></th>
+<th><a href=".code/edge-case.js">edge case</a></th>
 </tr>
 </thead>
 <tbody>
@@ -30,18 +30,18 @@ let s = [string, other_string].join("")
 </td>
 
 <td>
-    <b>3.47 ms </b><br>
-    (std. 68 μs, o. 14%)
+    <b>3.57 ms </b><br>
+    (std. 209 μs, o. 9%)
 </td>
 
 <td>
-    <b>3.59 ms </b><br>
-    (std. 42 μs, o. 11%)
+    <b>3.84 ms </b><br>
+    (std. 419 μs, o. 5%)
 </td>
 
 <td>
-    <b>3.91 ms </b><br>
-    (std. 36 μs, o. 17%)
+    <b>4.09 ms </b><br>
+    (std. 259 μs, o. 5%)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ let s = `${string}${other_string}`
 </td>
 
 <td>
+    <b>277 μs </b><br>
+    (std. 7 μs, o. 11%)
+</td>
+
+<td>
     <b>275 μs </b><br>
-    (std. 4 μs, o. 9%)
+    (std. 4 μs, o. 16%)
 </td>
 
 <td>
-    <b>273 μs </b><br>
-    (std. 0 μs, o. 18%)
-</td>
-
-<td>
-    <b>250 μs </b><br>
-    (std. 24 μs, o. 7%)
+    <b>271 μs </b><br>
+    (std. 10 μs, o. 10%)
 </td>
 
 </tr>
@@ -87,17 +87,17 @@ let s = string + other_string
 
 <td>
     <b>16 μs </b><br>
-    (std. 0 μs, o. 4%)
+    (std. 0 μs, o. 9%)
 </td>
 
 <td>
     <b>16 μs </b><br>
-    (std. 0 μs, o. 4%)
+    (std. 0 μs, o. 8%)
 </td>
 
 <td>
     <b>16 μs </b><br>
-    (std. 0 μs, o. 5%)
+    (std. 0 μs, o. 13%)
 </td>
 
 </tr>

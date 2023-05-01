@@ -29,9 +29,9 @@ ${data.metadata.config.related?.[0] != "" ?
 <thead>
 <tr>
 <th>tested code</th>
-<th><a href="available-code/simple.js">simple</a></th>
-<th><a href="available-code/realistic.js">realistic</a></th>
-<th><a href="available-code/edge-case.js">edge case</a></th>
+<th><a href=".code/simple.js">simple</a></th>
+<th><a href=".code/realistic.js">realistic</a></th>
+<th><a href=".code/edge-case.js">edge case</a></th>
 </tr>
 </thead>
 <tbody>

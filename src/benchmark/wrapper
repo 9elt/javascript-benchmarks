@@ -1,22 +1,25 @@
 #!/bin/bash
 
-s() {
+escape_backticks() {
     echo -e "${@}" | sed "s/\`/\\\\\`/g"
 }
 
 sanitize() {
-    echo "$( s "${@}" )" | sed 's/\$/\\$/g'
+    echo "$( escape_backticks "${@}" )" | sed 's/\$/\\$/g'
 }
 
 # Generate the javascript benchmark code
 #
 # $1 => javascript snippet code
-# $2 => normal distribution samples
-# $3 => snippet measured iterations
-# $4 => available code
-# $5 => benchmark version: simple, realistic, edge-case
-# $6 => benchmark name
-# $7 => file path
+# $2 => available code
+# $3 => javascript tests
+#
+# $4 => normal distribution samples
+# $5 => snippet iterations
+#
+# $6 => benchmark version: simple, realistic, edge-case
+# $7 => benchmark name
+# $8 => file path
 benchmark() {
     echo "
     const _outliers = (array) => {
@@ -33,11 +36,7 @@ benchmark() {
         return arr.filter(x => x <= max && x >= min)
     }
 
-    const _snd = (arr, adj) => {
-        if (adj) {
-            arr = arr.map(v => v - adj >= 0 ? v - adj : 0)
-        }
-
+    const _snd = (arr) => {
         arr = _outliers(arr)
 
         const μ = arr.reduce((a, b) => a + b) / arr.length
@@ -49,30 +48,25 @@ benchmark() {
         }
     }
 
-    $4
-
-    /*
-    const _benchmark_cost_results = [];
-
-    for (let _i = 0; _i < $2 ; _i++) {
-        const _start = performance.now();
-        for (let _iter = 0; _iter < $3; _iter++) {}
-        const _end = performance.now();
-        _benchmark_cost_results.push(_end - _start);
-    }
-
-    let _benchmark_cost = _snd(_benchmark_cost_results);
-    _benchmark_cost = _benchmark_cost.mean - _benchmark_cost.std;
-    */
-
+    $2
 
     const _results = [];
 
-    for (let _i = 0; _i < $2 ; _i++) {
+    const _tests = () => {
+
+        $1
+
+        $3
+
+    }
+
+    _tests()
+
+    for (let _i = 0; _i < $4 ; _i++) {
 
         const _start = performance.now();
 
-        for (let _iter = 0; _iter < $3; _iter++) {
+        for (let _iter = 0; _iter < $5; _iter++) {
 
             $1
 
@@ -84,9 +78,9 @@ benchmark() {
     }
 
     const _result = {
-        version: '$5',
-        name: '$6',
-        file_path: '/$7',
+        version: '$6',
+        name: '$7',
+        file_path: '/$8',
         code: \`$( sanitize "$1" )\`,
         result: _snd(_results),
     }

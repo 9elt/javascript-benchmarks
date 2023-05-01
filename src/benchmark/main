@@ -32,6 +32,8 @@ RESULTS_edge_case=()
 
 RESULTS=()
 
+TESTS=$( cat "$BENCHMARK_DIR/.code/tests.js" )
+
 for SNIPPET in ${SNIPPETS[@]}
 do
 
@@ -44,10 +46,10 @@ do
     do
 
         # parse available code
-        AVAILABLE_CODE=$( cat "$BENCHMARK_DIR/available-code/$VERSION.js" )
+        AVAILABLE_CODE=$( cat "$BENCHMARK_DIR/.code/$VERSION.js" )
 
         BENCHMARK=$( 
-            benchmark "$CODE" "$SAMPLES" "$ITERATIONS" "$AVAILABLE_CODE" "$( space $VERSION "_" )" "$NAME" "$SNIPPET"
+            benchmark "$CODE" "$AVAILABLE_CODE" "$TESTS" "$SAMPLES" "$ITERATIONS" "$( space $VERSION "_" )" "$NAME" "$SNIPPET"
         )
 
         RESULT=$( node -e "$BENCHMARK" )

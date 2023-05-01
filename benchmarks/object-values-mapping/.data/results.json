@@ -20,38 +20,38 @@
             "path": "/benchmarks/object-values-mapping/for-key.js",
             "code": "let values = [];\n\nfor (const key in object) {\n    values.push(object[key])\n}",
             "simple": {
-                "samples": 980,
-                "mean": 0.4671952678232777,
-                "std": 0.04199902369329261
+                "samples": 953,
+                "mean": 0.503281675130598,
+                "std": 0.039267508125131446
             },
             "realistic": {
-                "samples": 919,
-                "mean": 0.7771296257293003,
-                "std": 0.0733164015679801
+                "samples": 980,
+                "mean": 0.7034392393365199,
+                "std": 0.07673536840426733
             },
             "edge_case": {
-                "samples": 821,
-                "mean": 1.9519913269163776,
-                "std": 0.040670809127466886
+                "samples": 880,
+                "mean": 2.0354402447288686,
+                "std": 0.07262825148857038
             }
         },
         "object_values": {
             "path": "/benchmarks/object-values-mapping/object-values.js",
             "code": "let values = Object.values(object)",
             "simple": {
-                "samples": 921,
-                "mean": 1.3594454903556004,
-                "std": 0.02961482254961119
+                "samples": 961,
+                "mean": 1.481714493278162,
+                "std": 0.13013058885579987
             },
             "realistic": {
-                "samples": 905,
-                "mean": 1.7811745098282619,
-                "std": 0.03209962942553451
+                "samples": 963,
+                "mean": 1.851364647487985,
+                "std": 0.16050092016510414
             },
             "edge_case": {
-                "samples": 878,
-                "mean": 3.448497967459346,
-                "std": 0.05916969426066729
+                "samples": 841,
+                "mean": 3.5266982046233912,
+                "std": 0.08411488361748111
             }
         }
     }

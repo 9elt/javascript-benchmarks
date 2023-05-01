@@ -1,1 +1,1 @@
-let keys = Object.keys(obj)
+let keys = Object.keys(object)

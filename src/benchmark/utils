@@ -19,9 +19,9 @@ load_config_or_exit() {
 }
 
 available_code_or_exit() {
-    if [[ ! -f "$1/available-code/simple.js" ]] ||
-    [[ ! -f "$1/available-code/realistic.js" ]] || 
-    [[ ! -f "$1/available-code/edge-case.js" ]]
+    if [[ ! -f "$1/.code/simple.js" ]] ||
+    [[ ! -f "$1/.code/realistic.js" ]] || 
+    [[ ! -f "$1/.code/edge-case.js" ]]
     then
         echo "missing config in $1" 
         exit 1
@@ -29,7 +29,7 @@ available_code_or_exit() {
 }
 
 load_available() {
-    cat "$1/available-code/$2.js"
+    cat "$1/.code/$2.js"
 }
 
 space() {
