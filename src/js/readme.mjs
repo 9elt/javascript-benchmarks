@@ -50,21 +50,21 @@ ${data.results[key].code}
 </td>
 
 <td>
-    <b>${unit(data.results[key].simple.mean)} </b>
+    <b>${unit(data.results[key].simple.mean)} </b><br>
     (std. ${unit(data.results[key].simple.std)}, o. ${
         pct(samples - data.results[key].simple.samples, samples)
     }%)
 </td>
 
 <td>
-    <b>${unit(data.results[key].realistic.mean)} </b>
+    <b>${unit(data.results[key].realistic.mean)} </b><br>
     (std. ${unit(data.results[key].realistic.std)}, o. ${
         pct(samples - data.results[key].realistic.samples, samples)
     }%)
 </td>
 
 <td>
-    <b>${unit(data.results[key].edge_case.mean)} </b>
+    <b>${unit(data.results[key].edge_case.mean)} </b><br>
     (std. ${unit(data.results[key].edge_case.std)}, o. ${
         pct(samples - data.results[key].edge_case.samples, samples)
     }%)
