@@ -30,18 +30,18 @@ Comparing string manipulation methods
 </td>
 
 <td>
-    <b>3.55 ms </b><br>
-    (std. 225 μs, o. 9%)
+    <b>3.51 ms </b><br>
+    (std. 175 μs, o. 12%)
 </td>
 
 <td>
-    <b>3.55 ms </b><br>
-    (std. 71 μs, o. 20%)
+    <b>3.72 ms </b><br>
+    (std. 151 μs, o. 12%)
 </td>
 
 <td>
-    <b>3.91 ms </b><br>
-    (std. 60 μs, o. 15%)
+    <b>3.89 ms </b><br>
+    (std. 67 μs, o. 14%)
 </td>
 
 </tr>
@@ -52,23 +52,23 @@ Comparing string manipulation methods
 [**backticks**](/benchmarks/string-manipulation/backticks.js)
 
 ```javascript
-`${string}${other_string}`
+`string_`
 ```
 
 </td>
 
 <td>
-    <b>258 μs </b><br>
-    (std. 1 μs, o. 23%)
+    <b>216 μs </b><br>
+    (std. 5 μs, o. 4%)
 </td>
 
 <td>
-    <b>231 μs </b><br>
-    (std. 0 μs, o. 10%)
+    <b>210 μs </b><br>
+    (std. 8 μs, o. 7%)
 </td>
 
 <td>
-    <b>218 μs </b><br>
+    <b>205 μs </b><br>
     (std. 0 μs, o. 17%)
 </td>
 
@@ -86,18 +86,18 @@ string + other_string
 </td>
 
 <td>
-    <b>15 μs </b><br>
-    (std. 0 μs, o. 14%)
+    <b>0 μs </b><br>
+    (std. 0 μs, o. 6%)
 </td>
 
 <td>
-    <b>15 μs </b><br>
-    (std. 0 μs, o. 9%)
+    <b>0 μs </b><br>
+    (std. 0 μs, o. 7%)
 </td>
 
 <td>
-    <b>15 μs </b><br>
-    (std. 0 μs, o. 4%)
+    <b>0 μs </b><br>
+    (std. 0 μs, o. 7%)
 </td>
 
 </tr>
@@ -119,7 +119,7 @@ string + other_string
 <br>
 <b>Normal distribution samples: </b> 1000
 <br>
-<b>Average outliers percentage: </b> 13%
+<b>Average outliers percentage: </b> 10%
 <br><br>
 <sup>results are measured over multiple iterations of a code snippet</sup>
 <br>

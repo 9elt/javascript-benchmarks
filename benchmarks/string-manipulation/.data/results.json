@@ -19,57 +19,57 @@
             "path": "/benchmarks/string-manipulation/array-join.js",
             "code": "[string, other_string].join(\"\")",
             "simple": {
-                "samples": 915,
-                "mean": 3.5526293273965486,
-                "std": 0.2253188525503792
+                "samples": 876,
+                "mean": 3.50898309430128,
+                "std": 0.17495390879181424
             },
             "realistic": {
-                "samples": 804,
-                "mean": 3.5512964432917054,
-                "std": 0.07125724646587074
+                "samples": 878,
+                "mean": 3.718705508947716,
+                "std": 0.1507143737903296
             },
             "edge_case": {
-                "samples": 853,
-                "mean": 3.9116947395070634,
-                "std": 0.06011626899102079
+                "samples": 861,
+                "mean": 3.888194776945574,
+                "std": 0.0669073126825821
             }
         },
         "backticks": {
             "path": "/benchmarks/string-manipulation/backticks.js",
-            "code": "`${string}${other_string}`",
+            "code": "`string_`",
             "simple": {
-                "samples": 774,
-                "mean": 0.2575662323610842,
-                "std": 0.0006438505302784542
+                "samples": 960,
+                "mean": 0.21633766596422385,
+                "std": 0.005358938202768144
             },
             "realistic": {
-                "samples": 900,
-                "mean": 0.2306528244772568,
-                "std": 0.000007646069747871706
+                "samples": 929,
+                "mean": 0.21000603686296512,
+                "std": 0.007777392216849823
             },
             "edge_case": {
-                "samples": 834,
-                "mean": 0.21784445271037464,
-                "std": 0.00001050040090229019
+                "samples": 828,
+                "mean": 0.20512436153353056,
+                "std": 0.000007569374200741909
             }
         },
         "concatenation": {
             "path": "/benchmarks/string-manipulation/concatenation.js",
             "code": "string + other_string",
             "simple": {
-                "samples": 862,
-                "mean": 0.014903318039984249,
-                "std": 0.0000052696874157791495
+                "samples": 945,
+                "mean": 0,
+                "std": 0
             },
             "realistic": {
-                "samples": 909,
-                "mean": 0.014896898044310571,
-                "std": 0.000004011604644984562
+                "samples": 926,
+                "mean": 0,
+                "std": 0
             },
             "edge_case": {
-                "samples": 958,
-                "mean": 0.014907624001622748,
-                "std": 0.000003846426147621547
+                "samples": 926,
+                "mean": 0,
+                "std": 0
             }
         }
     }

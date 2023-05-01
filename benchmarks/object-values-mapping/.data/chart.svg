@@ -6,17 +6,14 @@
     }
     .chart .w {
       fill: none;
-      stroke: #30363d;
+      stroke: #808080;
       stroke-width: 0.075;
-    }
-    .chart .c {
-      fill: #2f81f7;
     }
     .chart .t {
       font-size: 1.4px;
       font-weight: bold;
-      fill: #30363d;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      fill: #808080;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
       transform: rotate(90deg);
       transform-box: fill-box;
       transform-origin: left;
@@ -25,7 +22,7 @@
       font-size: 1.4px;
       font-weight: bold;
       fill: #2f81f7;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
     }
     .chart path {
       fill: none;
@@ -40,77 +37,80 @@
     class="w"
     x="0"
     y="2"
-    width="20.25"
+    width="73.5"
     height="29"
     rx="0.1"
   />-->
 
-  <text class="un" x="21.25" y="7.5" >2.76 ms</text>
-  <text class="un" x="21.25" y="15" >1.84 ms</text>
-  <text class="un" x="21.25" y="22.5" >921 μs</text>
+  <text class="un" x="74.5" y="7.5" >2.59 ms</text>
+  <text class="un" x="74.5" y="15" >1.73 ms</text>
+  <text class="un" x="74.5" y="22.5" >863 μs</text>
 
   <path class="w" d="
-    M0
-    ,0 0,30 20.25,30
-    M0,7.5 20.25,7.5
-    M0,15 20.25,15
-    M0,22.5 20.25,22.5
+    M0,0 0,30 73.5,30
+    M0,7.5 73.5,7.5
+    M0,15 73.5,15
+    M0,22.5 73.5,22.5
   "/>
 
   
 
-  <text x="1.25" y="1" class="t">for key</text>
+  <text x="17.75" y="1" class="t">
+    for key
+  </text>
 
   <rect 
-    class="c" 
-    x="2.25" 
-    y="25.80745616642128" 
-    height="4.19254383357872" 
+    fill="#5b9cfb" 
+    x="20" 
+    y="26.243060246302647" 
+    height="3.756939753697353" 
     width="2" 
     rx="0.1"
   />
 
   <rect 
-    class="c" 
-    x="4.5" 
-    y="24.742440348746364" 
-    height="5.257559651253637" 
+    fill="#2f81f7"
+    x="22.25" 
+    y="24.93361865767367" 
+    height="5.06638134232633" 
     width="2"
     rx="0.1"
   />
 
   <rect 
-    class="c" 
-    x="6.75" 
-    y="15.202158837766953" 
-    height="14.797841162233047"
+    fill="#286aca"
+    x="24.5" 
+    y="16.358888383467594" 
+    height="13.641111616532404"
     width="2"
     rx="0.1"
   />
 
-  <text x="10.25" y="1" class="t">object values</text>
+  <text x="44.5" y="1" class="t">
+    object values
+  </text>
 
   <rect 
-    class="c" 
-    x="11.25" 
-    y="18.998198954095876" 
-    height="11.001801045904125" 
+    fill="#5b9cfb" 
+    x="46.75" 
+    y="19.080810465676624" 
+    height="10.919189534323376" 
     width="2" 
     rx="0.1"
   />
 
   <rect 
-    class="c" 
-    x="13.5" 
-    y="15.92007365559496" 
-    height="14.07992634440504" 
+    fill="#2f81f7"
+    x="49" 
+    y="15.912306028657266" 
+    height="14.087693971342734" 
     width="2"
     rx="0.1"
   />
 
   <rect 
-    class="c" 
-    x="15.75" 
+    fill="#286aca"
+    x="51.25" 
     y="2" 
     height="28"
     width="2"

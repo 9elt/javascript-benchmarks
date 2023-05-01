@@ -80,7 +80,7 @@ benchmark() {
         version: '$5',
         name: '$6',
         file_path: '/$7',
-        code: '$( sanitize "$1" )',
+        code: \`$( sanitize "$1" )\`,
         result: _snd(_results, _benchmark_cost),
     }
 
