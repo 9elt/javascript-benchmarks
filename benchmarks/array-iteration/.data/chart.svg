@@ -16,7 +16,7 @@
       font-size: 1.4px;
       font-weight: bold;
       fill: #808080;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
       transform: rotate(90deg);
       transform-box: fill-box;
       transform-origin: left;
@@ -25,7 +25,7 @@
       font-size: 1.4px;
       font-weight: bold;
       fill: #2f81f7;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
     }
     .chart path {
       fill: none;
@@ -40,195 +40,206 @@
     class="w"
     x="0"
     y="2"
-    width="56.25"
+    width="82.5"
     height="29"
     rx="0.1"
   />-->
 
-  <text class="un" x="57.25" y="7.5" >11.59 ms</text>
-  <text class="un" x="57.25" y="15" >7.73 ms</text>
-  <text class="un" x="57.25" y="22.5" >3.86 ms</text>
+  <text class="un" x="83.5" y="7.5" >11.41 ms</text>
+  <text class="un" x="83.5" y="15" >7.61 ms</text>
+  <text class="un" x="83.5" y="22.5" >3.80 ms</text>
 
   <path class="w" d="
-    M0
-    ,0 0,30 56.25,30
-    M0,7.5 56.25,7.5
-    M0,15 56.25,15
-    M0,22.5 56.25,22.5
+    M0,0 0,30 82.5,30
+    M0,7.5 82.5,7.5
+    M0,15 82.5,15
+    M0,22.5 82.5,22.5
   "/>
 
   
 
-  <text x="1.25" y="1" class="t">filter</text>
+  <text x="5.75" y="1" class="t">
+    filter
+  </text>
 
   <rect 
     class="c" 
-    x="2.25" 
-    y="29.92493105266395" 
-    height="0.0750689473360478" 
+    x="6" 
+    y="29.923737233718814" 
+    height="0.07626276628118707" 
     width="2" 
     rx="0.1"
   />
 
   <rect 
     class="c" 
-    x="4.5" 
-    y="29.518296992464723" 
-    height="0.4817030075352752" 
+    x="8.25" 
+    y="29.469009181376503" 
+    height="0.5309908186234974" 
     width="2"
     rx="0.1"
   />
 
   <rect 
     class="c" 
-    x="6.75" 
-    y="25.330457131307284" 
-    height="4.669542868692714"
+    x="10.5" 
+    y="25.24521481572573" 
+    height="4.754785184274268"
     width="2"
     rx="0.1"
   />
 
-  <text x="10.25" y="1" class="t">foreach</text>
+  <text x="18.5" y="1" class="t">
+    foreach
+  </text>
 
   <rect 
     class="c" 
-    x="11.25" 
-    y="29.936399057551693" 
-    height="0.06360094244830625" 
+    x="18.75" 
+    y="29.923724049584216" 
+    height="0.07627595041578243" 
     width="2" 
     rx="0.1"
   />
 
   <rect 
     class="c" 
-    x="13.5" 
-    y="29.430743702623293" 
-    height="0.5692562973767079" 
+    x="21" 
+    y="29.4212054553822" 
+    height="0.5787945446177984" 
     width="2"
     rx="0.1"
   />
 
   <rect 
     class="c" 
-    x="15.75" 
-    y="25.3240362706202" 
-    height="4.675963729379799"
+    x="23.25" 
+    y="25.24460694285827" 
+    height="4.755393057141731"
     width="2"
     rx="0.1"
   />
 
-  <text x="19.25" y="1" class="t">for in</text>
-
-  <rect 
-    class="c" 
-    x="20.25" 
-    y="29.98797386608512" 
-    height="0.012026133914878969" 
-    width="2" 
-    rx="0.1"
-  />
-
-  <rect 
-    class="c" 
-    x="22.5" 
-    y="29.988449653845702" 
-    height="0.011550346154296853" 
-    width="2"
-    rx="0.1"
-  />
-
-  <rect 
-    class="c" 
-    x="24.75" 
-    y="29.98581225385882" 
-    height="0.014187746141178643"
-    width="2"
-    rx="0.1"
-  />
-
-  <text x="28.25" y="1" class="t">for</text>
-
-  <rect 
-    class="c" 
-    x="29.25" 
-    y="29.923120565697303" 
-    height="0.07687943430269809" 
-    width="2" 
-    rx="0.1"
-  />
+  <text x="31.25" y="1" class="t">
+    for in
+  </text>
 
   <rect 
     class="c" 
     x="31.5" 
-    y="29.515801281971605" 
-    height="0.48419871802839587" 
-    width="2"
+    y="29.98417597155594" 
+    height="0.015824028444060098" 
+    width="2" 
     rx="0.1"
   />
 
   <rect 
     class="c" 
     x="33.75" 
-    y="25.321028571697163" 
-    height="4.678971428302839"
+    y="29.98610867608464" 
+    height="0.013891323915357759" 
     width="2"
     rx="0.1"
   />
 
-  <text x="37.25" y="1" class="t">for of</text>
+  <rect 
+    class="c" 
+    x="36" 
+    y="29.98557644093348" 
+    height="0.014423559066517964"
+    width="2"
+    rx="0.1"
+  />
+
+  <text x="44" y="1" class="t">
+    for
+  </text>
 
   <rect 
     class="c" 
-    x="38.25" 
-    y="29.873382025469102" 
-    height="0.12661797453089668" 
+    x="44.25" 
+    y="29.918667180760693" 
+    height="0.08133281923930784" 
     width="2" 
     rx="0.1"
   />
 
   <rect 
     class="c" 
-    x="40.5" 
-    y="28.938118750962513" 
-    height="1.0618812490374856" 
+    x="46.5" 
+    y="29.46104162473189" 
+    height="0.5389583752681091" 
     width="2"
     rx="0.1"
   />
 
   <rect 
     class="c" 
-    x="42.75" 
-    y="20.667857828228243" 
-    height="9.332142171771759"
+    x="48.75" 
+    y="25.25654274448317" 
+    height="4.743457255516831"
     width="2"
     rx="0.1"
   />
 
-  <text x="46.25" y="1" class="t">map</text>
+  <text x="56.75" y="1" class="t">
+    for of
+  </text>
 
   <rect 
     class="c" 
-    x="47.25" 
-    y="29.70161938954574" 
-    height="0.2983806104542606" 
+    x="57" 
+    y="29.871416273762872" 
+    height="0.1285837262371289" 
     width="2" 
     rx="0.1"
   />
 
   <rect 
     class="c" 
-    x="49.5" 
-    y="27.255890633477335" 
-    height="2.744109366522666" 
+    x="59.25" 
+    y="29.022211075189" 
+    height="0.9777889248110002" 
     width="2"
     rx="0.1"
   />
 
   <rect 
     class="c" 
-    x="51.75" 
-    y="1.9999999999999964" 
-    height="28.000000000000004"
+    x="61.5" 
+    y="20.519341369917132" 
+    height="9.480658630082868"
+    width="2"
+    rx="0.1"
+  />
+
+  <text x="69.5" y="1" class="t">
+    map
+  </text>
+
+  <rect 
+    class="c" 
+    x="69.75" 
+    y="29.70023417250771" 
+    height="0.29976582749228986" 
+    width="2" 
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="72" 
+    y="27.2039763976052" 
+    height="2.796023602394802" 
+    width="2"
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="74.25" 
+    y="2" 
+    height="28"
     width="2"
     rx="0.1"
   />
