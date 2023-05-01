@@ -1,5 +1,22 @@
 source ./src/benchmark/main
 
+if [[ "$1" = "-n" ]] || [[ "$1" = "--new" ]]
+then
+
+    if [[ "$2" = "" ]]
+    then
+        echo "missing benchmark name"
+        exit 1
+    fi
+
+    mkdir -p "benchmarks/$2"
+
+    cp -r benchmarks/empty/. benchmarks/"$2"/
+
+    echo "created: $2"
+    exit 0
+fi
+
 if [[ "$1" = "all" ]]
 then
     ALL_BENCHMARKS=(benchmarks/*)

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# number of normal distribution samples
+SAMPLES=1000
+
+# number of snippet iterations
+ITERATIONS=10000
+
+# benchmark description
+DESCRIPTION=""
+
+# related benchmarks (separated by commas)
+RELATED=""
