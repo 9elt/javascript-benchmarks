@@ -20,8 +20,8 @@ let readme = `# ${c(n(data.metadata.config.name))}
 ${data.metadata.config.description}
 
 ${data.metadata.config.related?.[0] != "" ?
-    `> related: ${data.metadata.config.related.map(rel => `[**${c(n(rel))}**](/benchmarks/${rel})`).join(", ")}` : ""
-  }
+        `> related: ${data.metadata.config.related.map(rel => `[**${c(n(rel))}**](/benchmarks/${rel})`).join(", ")}` : ""
+    }
 
 ## Results
 
@@ -51,23 +51,20 @@ ${data.results[key].code}
 
 <td>
     <b>${unit(data.results[key].simple.mean)} </b><br>
-    (std. ${unit(data.results[key].simple.std)}, o. ${
-        pct(samples - data.results[key].simple.samples, samples)
-    }%)
+    (std. ${unit(data.results[key].simple.std)}, o. ${pct(samples - data.results[key].simple.samples, samples)
+        }%)
 </td>
 
 <td>
     <b>${unit(data.results[key].realistic.mean)} </b><br>
-    (std. ${unit(data.results[key].realistic.std)}, o. ${
-        pct(samples - data.results[key].realistic.samples, samples)
-    }%)
+    (std. ${unit(data.results[key].realistic.std)}, o. ${pct(samples - data.results[key].realistic.samples, samples)
+        }%)
 </td>
 
 <td>
     <b>${unit(data.results[key].edge_case.mean)} </b><br>
-    (std. ${unit(data.results[key].edge_case.std)}, o. ${
-        pct(samples - data.results[key].edge_case.samples, samples)
-    }%)
+    (std. ${unit(data.results[key].edge_case.std)}, o. ${pct(samples - data.results[key].edge_case.samples, samples)
+        }%)
 </td>
 
 </tr>`).join("")}
@@ -89,7 +86,7 @@ ${data.results[key].code}
 <br>
 <b>Normal distribution samples: </b> ${samples}
 <br>
-<b>Average outliers percentage: </b> ${pct(actual_samples, samples)}%
+<b>Average outliers percentage: </b> ${pct(samples - actual_samples, samples)}%
 <br><br>
 <sup>results are measured over multiple iterations of a code snippet</sup>
 <br>
