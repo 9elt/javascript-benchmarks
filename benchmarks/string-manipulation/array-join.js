@@ -1,1 +1,1 @@
-[string, other_string].join("")
+let s = [string, other_string].join("")

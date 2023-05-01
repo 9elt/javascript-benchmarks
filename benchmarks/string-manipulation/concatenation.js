@@ -1,1 +1,1 @@
-string + other_string
+let s = string + other_string

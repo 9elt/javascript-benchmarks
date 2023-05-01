@@ -24,24 +24,24 @@ Comparing string manipulation methods
 [**array join**](/benchmarks/string-manipulation/array-join.js)
 
 ```javascript
-[string, other_string].join("")
+let s = [string, other_string].join("")
 ```
 
 </td>
 
 <td>
-    <b>3.51 ms </b><br>
-    (std. 175 μs, o. 12%)
+    <b>3.47 ms </b><br>
+    (std. 68 μs, o. 14%)
 </td>
 
 <td>
-    <b>3.72 ms </b><br>
-    (std. 151 μs, o. 12%)
+    <b>3.59 ms </b><br>
+    (std. 42 μs, o. 11%)
 </td>
 
 <td>
-    <b>3.89 ms </b><br>
-    (std. 67 μs, o. 14%)
+    <b>3.91 ms </b><br>
+    (std. 36 μs, o. 17%)
 </td>
 
 </tr>
@@ -52,24 +52,24 @@ Comparing string manipulation methods
 [**backticks**](/benchmarks/string-manipulation/backticks.js)
 
 ```javascript
-`string_`
+let s = `${string}${other_string}`
 ```
 
 </td>
 
 <td>
-    <b>216 μs </b><br>
-    (std. 5 μs, o. 4%)
+    <b>275 μs </b><br>
+    (std. 4 μs, o. 9%)
 </td>
 
 <td>
-    <b>210 μs </b><br>
-    (std. 8 μs, o. 7%)
+    <b>273 μs </b><br>
+    (std. 0 μs, o. 18%)
 </td>
 
 <td>
-    <b>205 μs </b><br>
-    (std. 0 μs, o. 17%)
+    <b>250 μs </b><br>
+    (std. 24 μs, o. 7%)
 </td>
 
 </tr>
@@ -80,24 +80,24 @@ Comparing string manipulation methods
 [**concatenation**](/benchmarks/string-manipulation/concatenation.js)
 
 ```javascript
-string + other_string
+let s = string + other_string
 ```
 
 </td>
 
 <td>
-    <b>0 μs </b><br>
-    (std. 0 μs, o. 6%)
+    <b>16 μs </b><br>
+    (std. 0 μs, o. 4%)
 </td>
 
 <td>
-    <b>0 μs </b><br>
-    (std. 0 μs, o. 7%)
+    <b>16 μs </b><br>
+    (std. 0 μs, o. 4%)
 </td>
 
 <td>
-    <b>0 μs </b><br>
-    (std. 0 μs, o. 7%)
+    <b>16 μs </b><br>
+    (std. 0 μs, o. 5%)
 </td>
 
 </tr>

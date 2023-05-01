@@ -1,7 +1,11 @@
 #!/bin/bash
 
-sanitize() {
+s() {
     echo -e "${@}" | sed "s/\`/\\\\\`/g"
+}
+
+sanitize() {
+    echo "$( s "${@}" )" | sed 's/\$/\\$/g'
 }
 
 # Generate the javascript benchmark code
@@ -47,6 +51,7 @@ benchmark() {
 
     $4
 
+    /*
     const _benchmark_cost_results = [];
 
     for (let _i = 0; _i < $2 ; _i++) {
@@ -58,6 +63,8 @@ benchmark() {
 
     let _benchmark_cost = _snd(_benchmark_cost_results);
     _benchmark_cost = _benchmark_cost.mean - _benchmark_cost.std;
+    */
+
 
     const _results = [];
 
@@ -81,7 +88,7 @@ benchmark() {
         name: '$6',
         file_path: '/$7',
         code: \`$( sanitize "$1" )\`,
-        result: _snd(_results, _benchmark_cost),
+        result: _snd(_results),
     }
 
     console.clear();

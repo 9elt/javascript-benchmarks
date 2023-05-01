@@ -20,38 +20,38 @@
             "path": "/benchmarks/object-values-mapping/for-key.js",
             "code": "let values = [];\n\nfor (const key in object) {\n    values.push(object[key])\n}",
             "simple": {
-                "samples": 976,
-                "mean": 0.46328995667506817,
-                "std": 0.04086818350188049
+                "samples": 980,
+                "mean": 0.4671952678232777,
+                "std": 0.04199902369329261
             },
             "realistic": {
-                "samples": 791,
-                "mean": 0.6247647677277133,
-                "std": 0.0036609296615194814
+                "samples": 919,
+                "mean": 0.7771296257293003,
+                "std": 0.0733164015679801
             },
             "edge_case": {
-                "samples": 733,
-                "mean": 1.6821643210018238,
-                "std": 0.003892238735936679
+                "samples": 821,
+                "mean": 1.9519913269163776,
+                "std": 0.040670809127466886
             }
         },
         "object_values": {
             "path": "/benchmarks/object-values-mapping/object-values.js",
             "code": "let values = Object.values(object)",
             "simple": {
-                "samples": 941,
-                "mean": 1.3465083759474763,
-                "std": 0.03245973192006405
+                "samples": 921,
+                "mean": 1.3594454903556004,
+                "std": 0.02961482254961119
             },
             "realistic": {
-                "samples": 867,
-                "mean": 1.7372349724830758,
-                "std": 0.026100756014610604
+                "samples": 905,
+                "mean": 1.7811745098282619,
+                "std": 0.03209962942553451
             },
             "edge_case": {
-                "samples": 806,
-                "mean": 3.4528418439863278,
-                "std": 0.02750758015055376
+                "samples": 878,
+                "mean": 3.448497967459346,
+                "std": 0.05916969426066729
             }
         }
     }

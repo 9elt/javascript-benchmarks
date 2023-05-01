@@ -34,18 +34,18 @@ for (const key in object) {
 </td>
 
 <td>
-    <b>463 μs </b><br>
-    (std. 41 μs, o. 2%)
+    <b>467 μs </b><br>
+    (std. 42 μs, o. 2%)
 </td>
 
 <td>
-    <b>625 μs </b><br>
-    (std. 4 μs, o. 21%)
+    <b>777 μs </b><br>
+    (std. 73 μs, o. 8%)
 </td>
 
 <td>
-    <b>1.68 ms </b><br>
-    (std. 4 μs, o. 27%)
+    <b>1.95 ms </b><br>
+    (std. 41 μs, o. 18%)
 </td>
 
 </tr>
@@ -62,18 +62,18 @@ let values = Object.values(object)
 </td>
 
 <td>
-    <b>1.35 ms </b><br>
-    (std. 32 μs, o. 6%)
+    <b>1.36 ms </b><br>
+    (std. 30 μs, o. 8%)
 </td>
 
 <td>
-    <b>1.74 ms </b><br>
-    (std. 26 μs, o. 13%)
+    <b>1.78 ms </b><br>
+    (std. 32 μs, o. 10%)
 </td>
 
 <td>
     <b>3.45 ms </b><br>
-    (std. 28 μs, o. 19%)
+    (std. 59 μs, o. 12%)
 </td>
 
 </tr>
@@ -95,7 +95,7 @@ let values = Object.values(object)
 <br>
 <b>Normal distribution samples: </b> 1000
 <br>
-<b>Average outliers percentage: </b> 15%
+<b>Average outliers percentage: </b> 10%
 <br><br>
 <sup>results are measured over multiple iterations of a code snippet</sup>
 <br>
