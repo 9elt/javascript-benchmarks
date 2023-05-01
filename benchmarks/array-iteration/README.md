@@ -1,7 +1,7 @@
 # Array iteration
 Comparing different ways of iterating arrays
 
-> related: [**undefined**](/benchmarks/)
+
 
 ### Results table
 
@@ -30,18 +30,18 @@ array.filter(v => {})
 </td>
 
 <td>
-    <b>2 μs </b>
-    (std. 4 μs)
+    <b>3 μs </b>
+    (std. 24 μs)
 </td>
 
 <td>
-    <b>10 μs </b>
+    <b>12 μs </b>
     (std. 5 μs)
 </td>
 
 <td>
-    <b>91 μs </b>
-    (std. 10 μs)
+    <b>105 μs </b>
+    (std. 11 μs)
 </td>
 
 </tr>
@@ -59,17 +59,17 @@ array.forEach(v => {})
 
 <td>
     <b>3 μs </b>
-    (std. 24 μs)
+    (std. 26 μs)
 </td>
 
 <td>
-    <b>9 μs </b>
-    (std. 4 μs)
+    <b>11 μs </b>
+    (std. 5 μs)
 </td>
 
 <td>
-    <b>95 μs </b>
-    (std. 11 μs)
+    <b>97 μs </b>
+    (std. 13 μs)
 </td>
 
 </tr>
@@ -86,18 +86,18 @@ for (const i in array) {}
 </td>
 
 <td>
-    <b>5 μs </b>
-    (std. 29 μs)
-</td>
-
-<td>
-    <b>28 μs </b>
-    (std. 15 μs)
-</td>
-
-<td>
-    <b>263 μs </b>
+    <b>6 μs </b>
     (std. 34 μs)
+</td>
+
+<td>
+    <b>30 μs </b>
+    (std. 21 μs)
+</td>
+
+<td>
+    <b>256 μs </b>
+    (std. 40 μs)
 </td>
 
 </tr>
@@ -119,13 +119,13 @@ for (let i = 0; i < array.length; i++) {}
 </td>
 
 <td>
-    <b>9 μs </b>
-    (std. 8 μs)
+    <b>8 μs </b>
+    (std. 28 μs)
 </td>
 
 <td>
     <b>15 μs </b>
-    (std. 33 μs)
+    (std. 35 μs)
 </td>
 
 </tr>
@@ -142,18 +142,18 @@ for (const v of array) {}
 </td>
 
 <td>
-    <b>5 μs </b>
-    (std. 29 μs)
+    <b>6 μs </b>
+    (std. 37 μs)
 </td>
 
 <td>
-    <b>15 μs </b>
-    (std. 42 μs)
+    <b>9 μs </b>
+    (std. 24 μs)
 </td>
 
 <td>
     <b>12 μs </b>
-    (std. 50 μs)
+    (std. 56 μs)
 </td>
 
 </tr>
@@ -171,17 +171,17 @@ array.map(v => {})
 
 <td>
     <b>3 μs </b>
-    (std. 21 μs)
+    (std. 28 μs)
 </td>
 
 <td>
-    <b>12 μs </b>
-    (std. 13 μs)
+    <b>15 μs </b>
+    (std. 16 μs)
 </td>
 
 <td>
-    <b>124 μs </b>
-    (std. 25 μs)
+    <b>129 μs </b>
+    (std. 34 μs)
 </td>
 
 </tr>
