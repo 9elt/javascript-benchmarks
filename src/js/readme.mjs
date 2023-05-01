@@ -68,7 +68,7 @@ config
 <br>
 <b>Normal Distribution Samples: </b> ${data.metadata.config.samples}
 <br>
-<b>Snippet code measured iterations: </b> ${data.metadata.config.iterations}
+<b>Measured iterations: </b> ${data.metadata.config.iterations}
 </sub>
 <br>
 <sub>

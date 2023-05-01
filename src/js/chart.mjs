@@ -79,7 +79,7 @@ let svg = `
 
   ${values.map((v, i) => `
 
-  <text x="${(i * 6.75) + ((i + 1) * 2.25) + lo}" y="1" class="t">${n(Object.keys(data.results)[i])}</text>
+  <text x="${(i * 6.75) + ((i) * 2.25) + lo + 1.25}" y="1" class="t">${n(Object.keys(data.results)[i])}</text>
 
   <rect 
     class="c" 

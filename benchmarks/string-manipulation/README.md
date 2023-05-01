@@ -24,24 +24,24 @@ Comparing string manipulation methods
 [**array join**](/benchmarks/string-manipulation/array-join.js)
 
 ```javascript
-[other_string, string, other_string].join()
+[other_string, string, other_string].join("")
 ```
 
 </td>
 
 <td>
-    <b>12.06 ms </b>
-    (std. 1.30 ms)
+    <b>4.46 ms </b>
+    (std. 619 μs)
 </td>
 
 <td>
-    <b>12.29 ms </b>
-    (std. 1.28 ms)
+    <b>4.61 ms </b>
+    (std. 693 μs)
 </td>
 
 <td>
-    <b>13.26 ms </b>
-    (std. 1.39 ms)
+    <b>4.98 ms </b>
+    (std. 473 μs)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ Comparing string manipulation methods
 </td>
 
 <td>
-    <b>1.82 ms </b>
-    (std. 712 μs)
+    <b>824 μs </b>
+    (std. 159 μs)
 </td>
 
 <td>
-    <b>1.17 ms </b>
-    (std. 556 μs)
+    <b>585 μs </b>
+    (std. 157 μs)
 </td>
 
 <td>
-    <b>1.18 ms </b>
-    (std. 459 μs)
+    <b>590 μs </b>
+    (std. 152 μs)
 </td>
 
 </tr>
@@ -86,18 +86,18 @@ other_string + string + other_string
 </td>
 
 <td>
-    <b>231 μs </b>
-    (std. 831 μs)
+    <b>25 μs </b>
+    (std. 162 μs)
 </td>
 
 <td>
-    <b>170 μs </b>
-    (std. 615 μs)
+    <b>27 μs </b>
+    (std. 154 μs)
 </td>
 
 <td>
-    <b>168 μs </b>
-    (std. 597 μs)
+    <b>34 μs </b>
+    (std. 182 μs)
 </td>
 
 </tr>
@@ -113,9 +113,9 @@ other_string + string + other_string
 <sub>
 config
 <br>
-<b>Normal Distribution Samples: </b> 100
+<b>Normal Distribution Samples: </b> 1000
 <br>
-<b>Snippet code measured iterations: </b> 100000
+<b>Measured iterations: </b> 50000
 </sub>
 <br>
 <sub>

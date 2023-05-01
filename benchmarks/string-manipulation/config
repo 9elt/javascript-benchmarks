@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # number of benchmark runs
-SAMPLES=100
+SAMPLES=1000
 
-ITERATIONS=100000
+ITERATIONS=50000
 
 DESCRIPTION="Comparing string manipulation methods"
 
