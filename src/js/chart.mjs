@@ -1,4 +1,4 @@
-import { node_args } from "./utils.mjs";
+import { node_args, unit } from "./utils.mjs";
 
 let [data] = node_args(JSON.parse)
 
@@ -15,7 +15,7 @@ let h = (v) => (((32 - 4) * v) / mx)
 
 let qrt = (32 - 2) / 4
 
-let lo = 3
+let lo = 0
 let end = (values.length * 6.75) + ((values.length + 1) * 2.25)
 
 let svg = `
@@ -42,6 +42,12 @@ let svg = `
       transform-box: fill-box;
       transform-origin: left;
     }
+    .chart .un {
+      font-size: 1.4px;
+      font-weight: bold;
+      fill: #30363d;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    }
     .chart path {
       fill: none;
       stroke: #2f81f7;
@@ -60,6 +66,10 @@ let svg = `
     rx="0.1"
   />-->
 
+  <text class="un" x="${end + 1}" y="${qrt * 1}" >${unit(mx / 4 * 3)}</text>
+  <text class="un" x="${end + 1}" y="${qrt * 2}" >${unit(mx / 4 * 2)}</text>
+  <text class="un" x="${end + 1}" y="${qrt * 3}" >${unit(mx / 4 * 1)}</text>
+
   <path class="w" d="
     M${lo}
     ,0 ${lo},30 ${end},30
@@ -70,11 +80,11 @@ let svg = `
 
   ${values.map((v, i) => `
 
-  <text x="${(i * 6.75) + ((i+1) * 2.25) + lo}" y="0" class="t">${n(Object.keys(data.results)[i])}</text>
+  <text x="${(i * 6.75) + ((i + 1) * 2.25) + lo}" y="0" class="t">${n(Object.keys(data.results)[i])}</text>
 
   <rect 
     class="c" 
-    x="${(i * 6.75) + ((i + 1) * 2.25)+lo}" 
+    x="${(i * 6.75) + ((i + 1) * 2.25) + lo}" 
     y="${y(v.simple.mean)}" 
     height="${h(v.simple.mean)}" 
     width="2" 
@@ -83,7 +93,7 @@ let svg = `
 
   <rect 
     class="c" 
-    x="${(i * 6.75) + 2.25 + ((i + 1) * 2.25)+lo}" 
+    x="${(i * 6.75) + 2.25 + ((i + 1) * 2.25) + lo}" 
     y="${y(v.realistic.mean)}" 
     height="${h(v.realistic.mean)}" 
     width="2"
@@ -92,7 +102,7 @@ let svg = `
 
   <rect 
     class="c" 
-    x="${(i * 6.75) + 4.5 + ((i + 1) * 2.25)+lo}" 
+    x="${(i * 6.75) + 4.5 + ((i + 1) * 2.25) + lo}" 
     y="${y(v.edge_case.mean)}" 
     height="${h(v.edge_case.mean)}"
     width="2"
