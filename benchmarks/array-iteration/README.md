@@ -30,18 +30,18 @@ array.filter(v => {})
 </td>
 
 <td>
-    <b>33 μs </b><br>
-    (std. 0 μs, o. 4%)
+    <b>42 μs </b><br>
+    (std. 0 μs, o. 10%)
 </td>
 
 <td>
-    <b>279 μs </b><br>
-    (std. 24 μs, o. 1%)
+    <b>301 μs </b><br>
+    (std. 22 μs, o. 1%)
 </td>
 
 <td>
-    <b>2.57 ms </b><br>
-    (std. 7 μs, o. 9%)
+    <b>2.61 ms </b><br>
+    (std. 61 μs, o. 14%)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ array.forEach(v => {})
 </td>
 
 <td>
-    <b>40 μs </b><br>
-    (std. 0 μs, o. 21%)
+    <b>42 μs </b><br>
+    (std. 0 μs, o. 11%)
 </td>
 
 <td>
-    <b>306 μs </b><br>
-    (std. 2 μs, o. 8%)
+    <b>280 μs </b><br>
+    (std. 22 μs, o. 1%)
 </td>
 
 <td>
     <b>2.58 ms </b><br>
-    (std. 11 μs, o. 7%)
+    (std. 1 μs, o. 14%)
 </td>
 
 </tr>
@@ -86,18 +86,18 @@ array.forEach(v => {})
 </td>
 
 <td>
-    <b>0 μs </b><br>
+    <b>9 μs </b><br>
     (std. 0 μs, o. 6%)
 </td>
 
 <td>
-    <b>1 μs </b><br>
-    (std. 0 μs, o. 6%)
+    <b>5 μs </b><br>
+    (std. 3 μs, o. 1%)
 </td>
 
 <td>
-    <b>0 μs </b><br>
-    (std. 0 μs, o. 4%)
+    <b>8 μs </b><br>
+    (std. 2 μs, o. 2%)
 </td>
 
 </tr>
@@ -114,18 +114,18 @@ for (let i = 0; i < array.length; i++) {}
 </td>
 
 <td>
-    <b>36 μs </b><br>
-    (std. 2 μs, o. 4%)
+    <b>43 μs </b><br>
+    (std. 0 μs, o. 37%)
 </td>
 
 <td>
-    <b>259 μs </b><br>
-    (std. 0 μs, o. 23%)
+    <b>269 μs </b><br>
+    (std. 4 μs, o. 10%)
 </td>
 
 <td>
-    <b>2.58 ms </b><br>
-    (std. 18 μs, o. 7%)
+    <b>2.59 ms </b><br>
+    (std. 12 μs, o. 23%)
 </td>
 
 </tr>
@@ -142,18 +142,18 @@ for (const v of array) {}
 </td>
 
 <td>
-    <b>62 μs </b><br>
-    (std. 0 μs, o. 5%)
+    <b>77 μs </b><br>
+    (std. 0 μs, o. 14%)
 </td>
 
 <td>
-    <b>586 μs </b><br>
-    (std. 50 μs, o. 1%)
+    <b>579 μs </b><br>
+    (std. 54 μs, o. 1%)
 </td>
 
 <td>
-    <b>5.18 ms </b><br>
-    (std. 57 μs, o. 10%)
+    <b>5.20 ms </b><br>
+    (std. 71 μs, o. 7%)
 </td>
 
 </tr>
@@ -170,18 +170,18 @@ array.map(v => {})
 </td>
 
 <td>
-    <b>190 μs </b><br>
-    (std. 18 μs, o. 2%)
+    <b>189 μs </b><br>
+    (std. 22 μs, o. 2%)
 </td>
 
 <td>
-    <b>1.53 ms </b><br>
-    (std. 35 μs, o. 20%)
+    <b>1.41 ms </b><br>
+    (std. 21 μs, o. 16%)
 </td>
 
 <td>
-    <b>15.27 ms </b><br>
-    (std. 33 μs, o. 11%)
+    <b>14.14 ms </b><br>
+    (std. 281 μs, o. 10%)
 </td>
 
 </tr>
@@ -203,7 +203,7 @@ array.map(v => {})
 <br>
 <b>Normal distribution samples: </b> 1000
 <br>
-<b>Average outliers percentage: </b> 8%
+<b>Average outliers percentage: </b> 10%
 <br><br>
 <sup>results are measured over multiple iterations of a code snippet</sup>
 <br>
