@@ -2,7 +2,7 @@ import { node_args, unit } from "./utils.mjs";
 
 let [data] = node_args(JSON.parse)
 
-const n = (str) => str.replace("-", " ").replace("_", " ")
+const n = (str) => str.replaceAll("-", " ").replaceAll("_", " ")
 const c = (str) => str[0]?.toUpperCase() + str.slice(1)
 
 let readme = `# ${c(n(data.metadata.config.name))}

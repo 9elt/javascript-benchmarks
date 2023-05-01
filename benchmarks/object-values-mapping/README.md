@@ -1,7 +1,7 @@
-# Object values_mapping
+# Object values mapping
 Mapping object values
 
-> related: [**Object keys-mapping**](/benchmarks/object-keys-mapping), [**Array iteration**](/benchmarks/array-iteration)
+> related: [**Object keys mapping**](/benchmarks/object-keys-mapping), [**Array iteration**](/benchmarks/array-iteration)
 
 ### Results table
 
@@ -34,18 +34,18 @@ for (const key in object) {
 </td>
 
 <td>
-    <b>598 μs </b>
-    (std. 165 μs)
+    <b>551 μs </b>
+    (std. 129 μs)
 </td>
 
 <td>
-    <b>728 μs </b>
-    (std. 189 μs)
+    <b>691 μs </b>
+    (std. 149 μs)
 </td>
 
 <td>
-    <b>2.12 ms </b>
-    (std. 480 μs)
+    <b>1.95 ms </b>
+    (std. 259 μs)
 </td>
 
 </tr>
@@ -63,17 +63,17 @@ let values = Object.values(object)
 
 <td>
     <b>1.45 ms </b>
-    (std. 151 μs)
+    (std. 137 μs)
 </td>
 
 <td>
-    <b>1.93 ms </b>
-    (std. 355 μs)
+    <b>1.85 ms </b>
+    (std. 230 μs)
 </td>
 
 <td>
-    <b>3.60 ms </b>
-    (std. 354 μs)
+    <b>3.68 ms </b>
+    (std. 482 μs)
 </td>
 
 </tr>

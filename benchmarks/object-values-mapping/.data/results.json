@@ -20,32 +20,32 @@
             "path": "/benchmarks/object-values-mapping/for-key.js",
             "code": "let values = [];\n\nfor (const key in object) {\n    values.push(object[key])\n}",
             "simple": {
-                "mean": 0.5976640536785126,
-                "std": 0.1647920711841444
+                "mean": 0.5513715744018555,
+                "std": 0.1291166779350166
             },
             "realistic": {
-                "mean": 0.7284497504234314,
-                "std": 0.18855619204615975
+                "mean": 0.6914343791007995,
+                "std": 0.14884659119531976
             },
             "edge_case": {
-                "mean": 2.1193002915382384,
-                "std": 0.48006149846127744
+                "mean": 1.9460998628139496,
+                "std": 0.2593394111700965
             }
         },
         "object_values": {
             "path": "/benchmarks/object-values-mapping/object-values.js",
             "code": "let values = Object.values(object)",
             "simple": {
-                "mean": 1.4502811329364778,
-                "std": 0.151486006400669
+                "mean": 1.446873450756073,
+                "std": 0.13711002162435834
             },
             "realistic": {
-                "mean": 1.9281394457817078,
-                "std": 0.35512745916397986
+                "mean": 1.8516851496696471,
+                "std": 0.23023240813906296
             },
             "edge_case": {
-                "mean": 3.5953735258579256,
-                "std": 0.35362183728757707
+                "mean": 3.682347685813904,
+                "std": 0.48190229192425094
             }
         }
     }
