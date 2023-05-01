@@ -23,7 +23,7 @@ ${data.metadata.config.related?.[0] != "" ?
     `> related: ${data.metadata.config.related.map(rel => `[**${c(n(rel))}**](/benchmarks/${rel})`).join(", ")}` : ""
   }
 
-### Results table
+## Results
 
 <table>
 <thead>
@@ -75,25 +75,31 @@ ${data.results[key].code}
 </tbody>
 </table>
 
+**std.** standard deviation, **o.** outliers 
 
-### Chart
+## Chart
 
 <img src=".data/chart.svg" width="100%"/>
 
-<sub>
-config
+## Metadata
+
+#### benchmark
+
+<sup>normal distrubution is calculated without outliers</sup>
 <br>
-<b>Normal Distribution Samples: </b> ${actual_samples} / ${data.metadata.config.samples}
+<b>Normal distribution samples: </b> ${samples}
 <br>
-<b>Measured iterations: </b> ${data.metadata.config.iterations}
-</sub>
+<b>Average outliers percentage: </b> ${pct(actual_samples, samples)}%
+<br><br>
+<sup>results are measured over multiple iterations of a code snippet</sup>
 <br>
-<sub>
-system
-<br>
+<b>Result measured over: </b> ${data.metadata.config.iterations} iterations
+
+#### system
+
 <b>Node: </b> ${data.metadata.system.node_version}
 <br>
-<b>CPU: </b>${data.metadata.system.cpu}
-</sub>
+<b>CPU: </b> ${data.metadata.system.cpu}
 `
+
 console.log(readme)

@@ -3,7 +3,7 @@ Comparing different ways of iterating arrays
 
 
 
-### Results table
+## Results
 
 <table>
 <thead>
@@ -30,18 +30,18 @@ array.filter(v => {})
 </td>
 
 <td>
-    <b>35 μs </b><br>
-    (std. 0 μs, o. 8%)
+    <b>41 μs </b><br>
+    (std. 0 μs, o. 10%)
 </td>
 
 <td>
-    <b>266 μs </b><br>
-    (std. 0 μs, o. 15%)
+    <b>300 μs </b><br>
+    (std. 22 μs, o. 1%)
 </td>
 
 <td>
     <b>2.58 ms </b><br>
-    (std. 13 μs, o. 10%)
+    (std. 6 μs, o. 7%)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ array.forEach(v => {})
 </td>
 
 <td>
-    <b>39 μs </b><br>
-    (std. 3 μs, o. 3%)
+    <b>48 μs </b><br>
+    (std. 7 μs, o. 2%)
 </td>
 
 <td>
-    <b>266 μs </b><br>
-    (std. 0 μs, o. 14%)
+    <b>296 μs </b><br>
+    (std. 25 μs, o. 3%)
 </td>
 
 <td>
-    <b>2.58 ms </b><br>
-    (std. 1 μs, o. 16%)
+    <b>2.59 ms </b><br>
+    (std. 22 μs, o. 9%)
 </td>
 
 </tr>
@@ -86,18 +86,18 @@ array.forEach(v => {})
 </td>
 
 <td>
+    <b>7 μs </b><br>
+    (std. 0 μs, o. 5%)
+</td>
+
+<td>
     <b>8 μs </b><br>
-    (std. 1 μs, o. 2%)
+    (std. 0 μs, o. 5%)
 </td>
 
 <td>
     <b>7 μs </b><br>
-    (std. 0 μs, o. 3%)
-</td>
-
-<td>
-    <b>7 μs </b><br>
-    (std. 0 μs, o. 8%)
+    (std. 0 μs, o. 25%)
 </td>
 
 </tr>
@@ -114,18 +114,18 @@ for (let i = 0; i < array.length; i++) {}
 </td>
 
 <td>
-    <b>34 μs </b><br>
-    (std. 0 μs, o. 20%)
+    <b>36 μs </b><br>
+    (std. 0 μs, o. 16%)
 </td>
 
 <td>
     <b>267 μs </b><br>
-    (std. 0 μs, o. 32%)
+    (std. 1 μs, o. 22%)
 </td>
 
 <td>
-    <b>2.58 ms </b><br>
-    (std. 3 μs, o. 15%)
+    <b>2.59 ms </b><br>
+    (std. 21 μs, o. 16%)
 </td>
 
 </tr>
@@ -143,17 +143,17 @@ for (const v of array) {}
 
 <td>
     <b>70 μs </b><br>
-    (std. 0 μs, o. 9%)
+    (std. 0 μs, o. 3%)
 </td>
 
 <td>
-    <b>533 μs </b><br>
-    (std. 2 μs, o. 6%)
+    <b>587 μs </b><br>
+    (std. 52 μs, o. 1%)
 </td>
 
 <td>
-    <b>5.16 ms </b><br>
-    (std. 21 μs, o. 14%)
+    <b>5.17 ms </b><br>
+    (std. 37 μs, o. 13%)
 </td>
 
 </tr>
@@ -170,18 +170,18 @@ array.map(v => {})
 </td>
 
 <td>
-    <b>193 μs </b><br>
-    (std. 17 μs, o. 2%)
+    <b>196 μs </b><br>
+    (std. 22 μs, o. 9%)
 </td>
 
 <td>
-    <b>1.51 ms </b><br>
-    (std. 5 μs, o. 18%)
+    <b>1.60 ms </b><br>
+    (std. 121 μs, o. 1%)
 </td>
 
 <td>
-    <b>15.40 ms </b><br>
-    (std. 234 μs, o. 5%)
+    <b>15.19 ms </b><br>
+    (std. 19 μs, o. 17%)
 </td>
 
 </tr>
@@ -189,23 +189,28 @@ array.map(v => {})
 </tbody>
 </table>
 
+**std.** standard deviation, **o.** outliers 
 
-### Chart
+## Chart
 
 <img src=".data/chart.svg" width="100%"/>
 
-<sub>
-config
+## Metadata
+
+#### benchmark
+
+<sup>normal distrubution is calculated without outliers</sup>
 <br>
-<b>Normal Distribution Samples: </b> 888 / 1000
+<b>Normal distribution samples: </b> 1000
 <br>
-<b>Measured iterations: </b> 1000
-</sub>
+<b>Average outliers percentage: </b> 91%
+<br><br>
+<sup>results are measured over multiple iterations of a code snippet</sup>
 <br>
-<sub>
-system
-<br>
+<b>Result measured over: </b> 1000 iterations
+
+#### system
+
 <b>Node: </b> v19.8.1
 <br>
-<b>CPU: </b>Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)
-</sub>
+<b>CPU: </b> Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)
