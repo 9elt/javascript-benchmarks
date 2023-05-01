@@ -20,7 +20,7 @@ let end = (values.length * 6.75) + ((values.length + 1) * 2.25)
 
 let svg = `
 <!--${mx}-->
-<svg class="chart" viewBox="0 0 128 32" xmlns="http://www.w3.org/2000/svg">
+<svg class="chart" viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
   <style>
     .chart .bg {
       fill: #eee5;
@@ -70,7 +70,7 @@ let svg = `
 
   ${values.map((v, i) => `
 
-  <text x="${(i * 6.75) + ((i - 1) * 2.25) + lo + 1}" y="0" class="t">${n(Object.keys(data.results)[i])}</text>
+  <text x="${(i * 6.75) + ((i - 1) * 2.25) + lo + 1}" y="5" class="t">${n(Object.keys(data.results)[i])}</text>
 
   <rect 
     class="c" 
