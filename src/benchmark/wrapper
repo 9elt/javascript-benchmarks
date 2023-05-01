@@ -15,7 +15,7 @@ sanitize() {
 # $7 => file path
 benchmark() {
     echo "
-    const outliers = (array) => {
+    const _outliers = (array) => {
         let arr = [...array]
         arr.sort((a, b) => a - b)
 
@@ -29,8 +29,12 @@ benchmark() {
         return arr.filter(x => x <= max && x >= min)
     }
 
-    const _snd = (arr) => {
-        arr = outliers(arr)
+    const _snd = (arr, adj) => {
+        if (adj) {
+            arr = arr.map(v => v - adj)
+        }
+
+        arr = _outliers(arr)
 
         const μ = arr.reduce((a, b) => a + b) / arr.length
 
@@ -42,6 +46,16 @@ benchmark() {
     }
 
     $4
+
+    const _benchmark_cost_results = [];
+
+    for (let _i = 0; _i < ($2 * 3) ; _i++) {
+        const _start = performance.now();
+        const _end = performance.now();
+        _benchmark_cost_results.push(_end - _start);
+    }
+
+    const _benchmark_cost = _snd(_benchmark_cost_results)
 
     const _results = [];
 
@@ -65,7 +79,7 @@ benchmark() {
         name: '$6',
         file_path: '/$7',
         code: '$( sanitize "$1" )',
-        result: _snd(_results),
+        result: _snd(_results, _benchmark_cost.mean),
     }
 
     console.clear();

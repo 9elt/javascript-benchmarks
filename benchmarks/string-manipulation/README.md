@@ -31,17 +31,17 @@ Comparing string manipulation methods
 
 <td>
     <b>3.53 ms </b>
-    (std. 64 μs)
+    (std. 60 μs)
 </td>
 
 <td>
-    <b>3.70 ms </b>
-    (std. 98 μs)
+    <b>3.63 ms </b>
+    (std. 37 μs)
 </td>
 
 <td>
-    <b>4.05 ms </b>
-    (std. 94 μs)
+    <b>3.96 ms </b>
+    (std. 124 μs)
 </td>
 
 </tr>
@@ -63,13 +63,13 @@ Comparing string manipulation methods
 </td>
 
 <td>
-    <b>264 μs </b>
+    <b>263 μs </b>
     (std. 8 μs)
 </td>
 
 <td>
-    <b>273 μs </b>
-    (std. 2 μs)
+    <b>231 μs </b>
+    (std. 0 μs)
 </td>
 
 </tr>
@@ -86,17 +86,17 @@ string + other_string
 </td>
 
 <td>
-    <b>16 μs </b>
+    <b>15 μs </b>
     (std. 0 μs)
 </td>
 
 <td>
-    <b>16 μs </b>
+    <b>13 μs </b>
     (std. 0 μs)
 </td>
 
 <td>
-    <b>16 μs </b>
+    <b>15 μs </b>
     (std. 0 μs)
 </td>
 
