@@ -28,7 +28,7 @@ let svg = `
     .chart .w {
       fill: none;
       stroke: #30363d;
-      stroke-width: 0.05;
+      stroke-width: 0.075;
     }
     .chart .c {
       fill: #2f81f7;
@@ -36,7 +36,7 @@ let svg = `
     .chart .t {
       font-size: 1.4px;
       font-weight: bold;
-      fill: #30363d;
+      fill: #2f81f7;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
       transform: rotate(90deg);
       transform-box: fill-box;
@@ -45,7 +45,7 @@ let svg = `
     .chart .un {
       font-size: 1.4px;
       font-weight: bold;
-      fill: #30363d;
+      fill: #2f81f7;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     }
     .chart path {
