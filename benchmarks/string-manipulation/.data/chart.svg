@@ -1,1 +1,149 @@
 
+<svg class="chart" viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .chart .bg {
+      fill: #eee5;
+    }
+    .chart .w {
+      fill: none;
+      stroke: #30363d;
+      stroke-width: 0.075;
+    }
+    .chart .c {
+      fill: #2f81f7;
+    }
+    .chart .t {
+      font-size: 1.4px;
+      font-weight: bold;
+      fill: #30363d;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      transform: rotate(90deg);
+      transform-box: fill-box;
+      transform-origin: left;
+    }
+    .chart .un {
+      font-size: 1.4px;
+      font-weight: bold;
+      fill: #2f81f7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    .chart path {
+      fill: none;
+      stroke: #2f81f7;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+  </style>
+
+  <!--<rect class="bg" width="128" height="32" rx="0.15"/>
+  <rect 
+    class="w"
+    x="0"
+    y="2"
+    width="29.25"
+    height="29"
+    rx="0.1"
+  />-->
+
+  <text class="un" x="30.25" y="7.5" >1 μs</text>
+  <text class="un" x="30.25" y="15" >1 μs</text>
+  <text class="un" x="30.25" y="22.5" >0 μs</text>
+
+  <path class="w" d="
+    M0
+    ,0 0,30 29.25,30
+    M0,7.5 29.25,7.5
+    M0,15 29.25,15
+    M0,22.5 29.25,22.5
+  "/>
+
+  
+
+  <text x="2.25" y="1" class="t">array join</text>
+
+  <rect 
+    class="c" 
+    x="2.25" 
+    y="17.28672130446973" 
+    height="12.713278695530269" 
+    width="2" 
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="4.5" 
+    y="6.6906454911304785" 
+    height="23.30935450886952" 
+    width="2"
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="6.75" 
+    y="2" 
+    height="28"
+    width="2"
+    rx="0.1"
+  />
+
+  <text x="11.25" y="1" class="t">backticks</text>
+
+  <rect 
+    class="c" 
+    x="11.25" 
+    y="7.764599873463766" 
+    height="22.235400126536234" 
+    width="2" 
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="13.5" 
+    y="11.049680584609899" 
+    height="18.9503194153901" 
+    width="2"
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="15.75" 
+    y="21.294614184357243" 
+    height="8.705385815642755"
+    width="2"
+    rx="0.1"
+  />
+
+  <text x="20.25" y="1" class="t">concatenation</text>
+
+  <rect 
+    class="c" 
+    x="20.25" 
+    y="21.130275513362914" 
+    height="8.869724486637086" 
+    width="2" 
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="22.5" 
+    y="8.842516069788797" 
+    height="21.157483930211203" 
+    width="2"
+    rx="0.1"
+  />
+
+  <rect 
+    class="c" 
+    x="24.75" 
+    y="8.144437877901918" 
+    height="21.855562122098082"
+    width="2"
+    rx="0.1"
+  />
+
+</svg>

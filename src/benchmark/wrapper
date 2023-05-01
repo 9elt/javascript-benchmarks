@@ -37,7 +37,7 @@ benchmark() {
         version: '$4',
         name: '$5',
         file_path: '/$6',
-        code: \`$1\`,
+        code: '$1',
         result: _snd(_results),
     }
 

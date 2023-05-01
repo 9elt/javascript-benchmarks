@@ -1,1 +1,66 @@
-
+{
+    "metadata": {
+        "config": {
+            "name": "string_manipulation",
+            "description": "Comparing string manipulation methods",
+            "related": [
+                ""
+            ],
+            "samples": 1000
+        },
+        "system": {
+            "node_version": "v19.8.1",
+            "cpu": "Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)"
+        }
+    },
+    "results": {
+        "array_join": {
+            "path": "/benchmarks/string-manipulation/array-join.js",
+            "code": "[other_string, string, other_string].join()",
+            "simple": {
+                "mean": 0.0008308706283569336,
+                "std": 0.003673010604742872
+            },
+            "realistic": {
+                "mean": 0.0015233724117279053,
+                "std": 0.026027242100602033
+            },
+            "edge_case": {
+                "mean": 0.0018299274444580078,
+                "std": 0.030276004896847068
+            }
+        },
+        "backticks": {
+            "path": "/benchmarks/string-manipulation/backticks.js",
+            "code": "`${other_string}${string}${other_string}`",
+            "simple": {
+                "mean": 0.0014531846046447754,
+                "std": 0.02732241043667793
+            },
+            "realistic": {
+                "mean": 0.0012384896278381347,
+                "std": 0.02375306903980619
+            },
+            "edge_case": {
+                "mean": 0.0005689365863800049,
+                "std": 0.0036765436811169653
+            }
+        },
+        "concatenation": {
+            "path": "/benchmarks/string-manipulation/concatenation.js",
+            "code": "other_string + string + other_string",
+            "simple": {
+                "mean": 0.000579676866531372,
+                "std": 0.0036467368295460463
+            },
+            "realistic": {
+                "mean": 0.0013827378749847411,
+                "std": 0.026058900697025565
+            },
+            "edge_case": {
+                "mean": 0.0014283604621887207,
+                "std": 0.02737854611224868
+            }
+        }
+    }
+}
