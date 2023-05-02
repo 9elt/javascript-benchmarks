@@ -1,22 +1,30 @@
-import { node_args, unit } from "./utils.mjs";
+import { node_args, unit, map, name, output } from "./utils.mjs"
 
 let [data] = node_args(JSON.parse)
 
-const n = (str) => str.replaceAll("-", " ").replaceAll("_", " ")
-const c = (str) => str[0]?.toUpperCase() + str.slice(1)
-
-let values = Object.values(data.results)
 let names = Object.keys(data.results)
+let values = Object.values(data.results)
 
-let max = values.map(v => v.edge_case.mean)
-
-let mx = 0
-max.forEach(v => { if (v > mx) { mx = v } })
-
-let y = (v) => (32 - 2) - (((32 - 4) * v) / mx)
-let h = (v) => (((32 - 4) * v) / mx)
-
-let qrt = (32 - 2) / 4
+/** benchmark max value */
+let max = Math.max(...values.map(
+  v => Math.max(v.edge_case.mean, v.simple.mean, v.realistic.mean)
+))
+/** chart viewbox height */
+let ch = 32
+/** chart bottom margin */
+let bm = 2
+/** chart actula height */
+let ah = ch - bm
+/** quarter chart height */
+let qrt = ah / 4
+/** quarter chart line y */
+let ly = (n) => qrt * n
+/** quarter chart value */
+let lv = (n) => unit(max / 4 * (4 - n))
+/** col h from value */
+let h = (v) => (((ch - 4) * v) / max)
+/** col y from value */
+let y = (v) => (ch - 2) - h(v)
 /** number of columns groups */
 let ng = values.length
 /** column width */
@@ -33,83 +41,96 @@ let cs = Math.floor((96 - (coc * ng)) / (coc * ng))
 let start = 0
 /** chart end */
 let end = (ng * goc) + ((ng + 1) * cs)
+/** column x pos */
+let cx = (i, n) => (i * goc) + (coc * n) + ((i + 1) * cs) + start
+/** title x pos */
+let tx = (i) => (i * goc) + ((i + 1) * cs) + start - (coc)
 
-let svg = `
-<svg class="chart" viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
+output(`
+<svg viewBox="0 0 96 ${ch}" xmlns="http://www.w3.org/2000/svg">
+
   <style>
-    .chart .chart-lines {
+
+    path {
       fill: none;
       stroke: #808080;
       stroke-width: 0.075;
       stroke-linejoin: round;
       stroke-linecap: round;
     }
-    .chart .chart-names {
+
+    text {
       font-size: 1.4px;
       font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+        Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
+    }
+
+    .names {
       fill: #808080;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
       transform: rotate(90deg);
       transform-box: fill-box;
       transform-origin: left;
     }
-    .chart .chart-labels {
-      font-size: 1.4px;
-      font-weight: bold;
+
+    .labels {
       fill: #2f81f7;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
     }
+
   </style>
 
-  <text class="chart-labels" x="${end + 1}" y="${qrt * 1}" >${unit(mx / 4 * 3)}</text>
-  <text class="chart-labels" x="${end + 1}" y="${qrt * 2}" >${unit(mx / 4 * 2)}</text>
-  <text class="chart-labels" x="${end + 1}" y="${qrt * 3}" >${unit(mx / 4 * 1)}</text>
+  <!-- chart labels -->
+  <text class="labels" x="${end + 1}" y="${ly(1)}">${lv(1)}</text>
+  <text class="labels" x="${end + 1}" y="${ly(2)}">${lv(2)}</text>
+  <text class="labels" x="${end + 1}" y="${ly(3)}">${lv(3)}</text>
 
-  <path class="chart-lines" d="
-    M${start},0 ${start},30 ${end},30
-    M${start},${qrt * 1} ${end},${qrt * 1}
-    M${start},${qrt * 2} ${end},${qrt * 2}
-    M${start},${qrt * 3} ${end},${qrt * 3}
+  <!-- chart axis -->
+  <path d="
+    M${start},${ly(0)} ${start},${ah} ${end},${ah}
+    M${start},${ly(1)} ${end},${ly(1)}
+    M${start},${ly(2)} ${end},${ly(2)}
+    M${start},${ly(3)} ${end},${ly(3)}
   "/>
 
-  ${values.map((v, i) => `
+  ${map(values, (v, i) => `
 
+  <!-- benchmark name -->
   <text 
-    class="chart-names"
-    x="${(i * goc) + ((i + 1) * cs) + start - (coc)}" 
+    class="names"
+    x="${tx(i)}" 
     y="1"
   >
-    ${n(names[i])}
+    ${name(names[i])}
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
-    x="${(i * goc) + (coc * 0) + ((i + 1) * cs) + start}" 
+    x="${cx(i, 0)}" 
     y="${y(v.simple.mean)}" 
     height="${h(v.simple.mean)}" 
     width="${cw}" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
-    x="${(i * goc) + (coc * 1) + ((i + 1) * cs) + start}" 
+    x="${cx(i, 1)}" 
     y="${y(v.realistic.mean)}" 
     height="${h(v.realistic.mean)}" 
     width="${cw}"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
-    x="${(i * goc) + (coc * 2) + ((i + 1) * cs) + start}" 
+    x="${cx(i, 2)}" 
     y="${y(v.edge_case.mean)}" 
     height="${h(v.edge_case.mean)}"
     width="${cw}"
     rx="0.1"
-  />`).join("")}
+  />`)}
 
-</svg>
-`
-
-console.log(svg)
+</svg>`)

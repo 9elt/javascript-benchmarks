@@ -14,7 +14,10 @@ export const unit = (ms) => {
     return `${rnd(ms / 1000, 2)} s`
 }
 
-export const output = (...args) => console.log(args.join(" "))
+export const output = (...args) => {
+    console.clear()
+    console.log(args.join(" "))
+}
 
 export const node_args = (as = (v) => v) => process.argv.slice(2).map(v => as(v))
 
@@ -74,3 +77,7 @@ export const _snd = (arr) => {
         std: Math.sqrt(arr.map(x => Math.pow(x - μ, 2)).reduce((a, b) => a + b) / arr.length)
     }
 }
+
+export const map = (arr, f) => arr.map((v, i) => f(v, i)).join("") 
+
+export const name = (str) => str.replaceAll("-", " ").replaceAll("_", " ")
