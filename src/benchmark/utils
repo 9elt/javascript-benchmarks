@@ -84,21 +84,21 @@ show_progress() {
     if [[ "$2" = "simple" ]]
     then
 
-        echo -ne "> $( yellow "$1" ): $( yellow "[simple]" ) $( black "[realistic]" ) $( black "[edge case]" )\\r"
+        echo -ne "> $( yellow "$1" ) > $( yellow "[simple]" ) $( black "[realistic]" ) $( black "[edge case]" )\\r"
 
     elif [[ "$2" = "realistic" ]]
     then
 
-        echo -ne "> $( yellow "$1" ): $( cyan "[simple]" ) $( yellow "[realistic]" ) $( black "[edge case]" )\\r"
+        echo -ne "> $( yellow "$1" ) > $( cyan "[simple]" ) $( yellow "[realistic]" ) $( black "[edge case]" )\\r"
 
     elif [[ "$2" = "edge-case" ]]
     then
 
-        echo -ne "> $( yellow "$1" ): $( cyan "[simple]" ) $( cyan "[realistic]" ) $( yellow "[edge case]" )\\r"
+        echo -ne "> $( yellow "$1" ) > $( cyan "[simple]" ) $( cyan "[realistic]" ) $( yellow "[edge case]" )\\r"
 
     else
 
-        echo -ne "> $( gray "$1" ): $( green "[simple]" ) $( green "[realistic]" ) $( green "[edge case]" )\\r"
+        echo -ne "> $( gray "$1 >" ) $( green "[simple]" ) $( green "[realistic]" ) $( green "[edge case]" )\\r"
         echo ""
 
     fi
