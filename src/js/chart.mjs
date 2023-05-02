@@ -37,12 +37,14 @@ let end = (ng * goc) + ((ng + 1) * cs)
 let svg = `
 <svg class="chart" viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
   <style>
-    .chart .w {
+    .chart .chart-lines {
       fill: none;
       stroke: #808080;
       stroke-width: 0.075;
+      stroke-linejoin: round;
+      stroke-linecap: round;
     }
-    .chart .t {
+    .chart .chart-names {
       font-size: 1.4px;
       font-weight: bold;
       fill: #808080;
@@ -51,25 +53,19 @@ let svg = `
       transform-box: fill-box;
       transform-origin: left;
     }
-    .chart .un {
+    .chart .chart-labels {
       font-size: 1.4px;
       font-weight: bold;
       fill: #2f81f7;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
     }
-    .chart path {
-      fill: none;
-      stroke: #2f81f7;
-      stroke-linejoin: round;
-      stroke-linecap: round;
-    }
   </style>
 
-  <text class="un" x="${end + 1}" y="${qrt * 1}" >${unit(mx / 4 * 3)}</text>
-  <text class="un" x="${end + 1}" y="${qrt * 2}" >${unit(mx / 4 * 2)}</text>
-  <text class="un" x="${end + 1}" y="${qrt * 3}" >${unit(mx / 4 * 1)}</text>
+  <text class="chart-labels" x="${end + 1}" y="${qrt * 1}" >${unit(mx / 4 * 3)}</text>
+  <text class="chart-labels" x="${end + 1}" y="${qrt * 2}" >${unit(mx / 4 * 2)}</text>
+  <text class="chart-labels" x="${end + 1}" y="${qrt * 3}" >${unit(mx / 4 * 1)}</text>
 
-  <path class="w" d="
+  <path class="chart-lines" d="
     M${start},0 ${start},30 ${end},30
     M${start},${qrt * 1} ${end},${qrt * 1}
     M${start},${qrt * 2} ${end},${qrt * 2}
@@ -78,7 +74,11 @@ let svg = `
 
   ${values.map((v, i) => `
 
-  <text x="${(i * goc) + ((i + 1) * cs) + start - (coc)}" y="1" class="t">
+  <text 
+    class="chart-names"
+    x="${(i * goc) + ((i + 1) * cs) + start - (coc)}" 
+    y="1"
+  >
     ${n(names[i])}
   </text>
 

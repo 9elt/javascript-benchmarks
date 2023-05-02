@@ -22,31 +22,10 @@ sanitize() {
 # $8 => file path
 benchmark() {
     echo "
-    const _outliers = (array) => {
-        let arr = [...array]
-        arr.sort((a, b) => a - b)
-
-        let q1 = arr[Math.floor((arr.length / 4))]; 
-        let q3 = arr[Math.ceil((arr.length * (3 / 4)))];
-        let iqr = q3 - q1;
-
-        let max = q3 + iqr * 1.5
-        let min = q1 - iqr * 1.5
-
-        return arr.filter(x => x <= max && x >= min)
-    }
-
-    const _snd = (arr) => {
-        arr = _outliers(arr)
-
-        const μ = arr.reduce((a, b) => a + b) / arr.length
-
-        return {
-            samples: arr.length,
-            mean: μ,
-            std: Math.sqrt(arr.map(x => Math.pow(x - μ, 2)).reduce((a, b) => a + b) / arr.length)
-        }
-    }
+import('./src/js/utils.mjs').then(({
+    _outliers,
+    _snd
+}) => {
 
     $2
 
@@ -86,5 +65,6 @@ benchmark() {
     }
 
     console.clear();
-    console.log(JSON.stringify(_result));"
+    console.log(JSON.stringify(_result));
+})"
 }

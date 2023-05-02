@@ -5,88 +5,88 @@ source ./src/benchmark/metadata
 source ./src/benchmark/wrapper
 
 run() {
-# base benchmark directory
-BASE_DIR="benchmarks"
+    # base benchmark directory
+    BASE_DIR="benchmarks"
 
-# benchmark directory
-BENCHMARK_DIR="$BASE_DIR/$1"
+    # benchmark directory
+    BENCHMARK_DIR="$BASE_DIR/$1"
 
-BENCHMARK_NAME=$( parse_dirname "$BENCHMARK_DIR" )
+    BENCHMARK_NAME=$( parse_dirname "$BENCHMARK_DIR" )
 
-BENCHMARK_NAME_FORM="$( space "$BENCHMARK_NAME" " " )"
-echo -e "\nrunning $( cyan "${BENCHMARK_NAME_FORM^}" )\n"
+    BENCHMARK_NAME_FORM="$( space "$BENCHMARK_NAME" " " )"
+    echo -e "\nrunning $( cyan "${BENCHMARK_NAME_FORM^}" )\n"
 
-# load benchmark config
-source $( load_config_or_exit "$BENCHMARK_DIR" )
+    # load benchmark config
+    source $( load_config_or_exit "$BENCHMARK_DIR" )
 
-# check for available code
-available_code_or_exit "$BENCHMARK_DIR"
+    # check for available code
+    available_code_or_exit "$BENCHMARK_DIR"
 
-# javascript files in directory
-SNIPPETS=("$BENCHMARK_DIR"/*.js)
-SNIPPET_NAMES=()
-SNIPPET_NAMES=()
+    # javascript files in directory
+    SNIPPETS=("$BENCHMARK_DIR"/*.js)
+    SNIPPET_NAMES=()
+    SNIPPET_NAMES=()
 
-VERSIONS=("simple" "realistic" "edge-case")
+    VERSIONS=("simple" "realistic" "edge-case")
 
-RESULTS_simple=()
-RESULTS_realistic=()
-RESULTS_edge_case=()
+    RESULTS_simple=()
+    RESULTS_realistic=()
+    RESULTS_edge_case=()
 
-RESULTS=()
+    RESULTS=()
 
-TESTS=$( cat "$BENCHMARK_DIR/.code/tests.js" )
+    TESTS=$( cat "$BENCHMARK_DIR/.code/tests.js" )
 
-for SNIPPET in ${SNIPPETS[@]}
-do
-
-    CODE=$( cat "$SNIPPET" )
-
-    NAME=$( parse_filename "$SNIPPET" "_" )
-    SNIPPET_NAMES+=("$( parse_filename "$SNIPPET" )")
-
-    for VERSION in ${VERSIONS[@]}
+    for SNIPPET in ${SNIPPETS[@]}
     do
 
-        show_progress "$( parse_filename "$SNIPPET" " " )" "$VERSION"
+        CODE=$( cat "$SNIPPET" )
 
-        # parse available code
-        AVAILABLE_CODE=$( cat "$BENCHMARK_DIR/.code/$VERSION.js" )
+        NAME=$( parse_filename "$SNIPPET" "_" )
+        SNIPPET_NAMES+=("$( parse_filename "$SNIPPET" )")
 
-        BENCHMARK=$( 
-            benchmark "$CODE" "$AVAILABLE_CODE" "$TESTS" "$SAMPLES" "$ITERATIONS" "$( space $VERSION "_" )" "$NAME" "$SNIPPET"
-        )
+        for VERSION in ${VERSIONS[@]}
+        do
 
-        RESULT=$( node -e "$BENCHMARK" )
+            show_progress "$( parse_filename "$SNIPPET" " " )" "$VERSION"
 
-        RESULTS+=("$RESULT")
+            # parse available code
+            AVAILABLE_CODE=$( cat "$BENCHMARK_DIR/.code/$VERSION.js" )
+
+            BENCHMARK=$( 
+                benchmark "$CODE" "$AVAILABLE_CODE" "$TESTS" "$SAMPLES" "$ITERATIONS" "$( space $VERSION "_" )" "$NAME" "$SNIPPET"
+            )
+
+            RESULT=$( node -e "$BENCHMARK" )
+
+            RESULTS+=("$RESULT")
+        done
+
+        show_progress "$NAME"
+
     done
 
-    show_progress "$NAME"
+    echo ""
 
-done
+    CONF="{
+        \"name\": \"$( space $BENCHMARK_NAME "_" )\",
+        \"description\": \"$DESCRIPTION\",
+        \"related\": \"$RELATED\",
+        \"samples\": $SAMPLES,
+        \"iterations\": "$ITERATIONS"
+    }"
 
-echo ""
+    JSON_RESULT=$( node ./src/js/to-json.mjs "$CONF" "$MEDATADA" "${RESULTS[@]}" )
 
-CONF="{
-    \"name\": \"$( space $BENCHMARK_NAME "_" )\",
-    \"description\": \"$DESCRIPTION\",
-    \"related\": \"$RELATED\",
-    \"samples\": $SAMPLES,
-    \"iterations\": "$ITERATIONS"
-}"
+    if [[ ! -d "$BENCHMARK_DIR/.data" ]]
+    then
+        mkdir "$BENCHMARK_DIR/.data"
+    fi
 
-JSON_RESULT=$( node ./src/js/to-json.mjs "$CONF" "$MEDATADA" "${RESULTS[@]}" )
+    echo "$JSON_RESULT" > "$BENCHMARK_DIR/.data/results.json"
 
-if [[ ! -d "$BENCHMARK_DIR/.data" ]]
-then
-    mkdir "$BENCHMARK_DIR/.data"
-fi
-
-echo "$JSON_RESULT" > "$BENCHMARK_DIR/.data/results.json"
-
-echo "$( node ./src/js/chart.mjs "$JSON_RESULT" )" > "$BENCHMARK_DIR/.data/chart.svg"
+    echo "$( node ./src/js/chart.mjs "$JSON_RESULT" )" > "$BENCHMARK_DIR/.data/chart.svg"
 
 
-echo "$( node ./src/js/readme.mjs "$JSON_RESULT" )" > "$BENCHMARK_DIR/README.md"
+    echo "$( node ./src/js/readme.mjs "$JSON_RESULT" )" > "$BENCHMARK_DIR/README.md"
 }
