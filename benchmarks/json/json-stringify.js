@@ -1,1 +1,1 @@
-JSON.stringify(obj)
+JSON.stringify(object)

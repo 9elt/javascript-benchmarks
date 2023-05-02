@@ -17,41 +17,41 @@
     },
     "results": {
         "for_key": {
-            "path": "/benchmarks/object-values-mapping/for-key.js",
+            "path": "/benchmarks//object-values-mapping/for-key.js",
             "code": "let values = [];\n\nfor (const key in object) {\n    values.push(object[key])\n}",
             "simple": {
-                "samples": 953,
-                "mean": 0.503281675130598,
-                "std": 0.039267508125131446
+                "samples": 780,
+                "mean": 0.46228197599068666,
+                "std": 0.0033496669913658434
             },
             "realistic": {
-                "samples": 980,
-                "mean": 0.7034392393365199,
-                "std": 0.07673536840426733
+                "samples": 773,
+                "mean": 0.627662145150741,
+                "std": 0.0062330487279222396
             },
             "edge_case": {
-                "samples": 880,
-                "mean": 2.0354402447288686,
-                "std": 0.07262825148857038
+                "samples": 873,
+                "mean": 1.9617525643635998,
+                "std": 0.015708189289821026
             }
         },
         "object_values": {
-            "path": "/benchmarks/object-values-mapping/object-values.js",
+            "path": "/benchmarks//object-values-mapping/object-values.js",
             "code": "let values = Object.values(object)",
             "simple": {
-                "samples": 961,
-                "mean": 1.481714493278162,
-                "std": 0.13013058885579987
+                "samples": 947,
+                "mean": 1.3694036794942435,
+                "std": 0.029367889656129572
             },
             "realistic": {
-                "samples": 963,
-                "mean": 1.851364647487985,
-                "std": 0.16050092016510414
+                "samples": 903,
+                "mean": 1.7488134921191143,
+                "std": 0.030630099937636313
             },
             "edge_case": {
-                "samples": 841,
-                "mean": 3.5266982046233912,
-                "std": 0.08411488361748111
+                "samples": 833,
+                "mean": 3.442146594069299,
+                "std": 0.03004452287499398
             }
         }
     }

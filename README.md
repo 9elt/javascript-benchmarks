@@ -5,10 +5,8 @@ A bash script to repeatedly and consistently benchmark javascript code
 
 ## benchmarks
 
-
 * [**Array concatenation**](/benchmarks/array-concatenation)
 * [**Array iteration**](/benchmarks/array-iteration)
-* [**Dynamic assignment**](/benchmarks/dynamic-assignment)
 * [**Json**](/benchmarks/json)
 * [**Object keys mapping**](/benchmarks/object-keys-mapping)
 * [**Object values mapping**](/benchmarks/object-values-mapping)
@@ -19,10 +17,10 @@ A bash script to repeatedly and consistently benchmark javascript code
 ```
 $ git clone https://github.com/9elt/js-benchmarks
 $ cd js-benchmarks
-$ mkdir benchmarks/my-benchmark
+$ bash benchmark --new my-benchmark
 ```
 
-create some **code snippets** inside *benchmarks/my-benchmark* and a `config` like in [**this example**](/benchmarks/example)
+create some **code snippets** inside *benchmarks/my-benchmark* and a `config` like in [**this example**](/benchmarks/string-manipulation)
 
 ```
 $ bash benchmark my-benchmark

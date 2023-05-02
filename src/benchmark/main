@@ -13,7 +13,8 @@ BENCHMARK_DIR="$BASE_DIR/$1"
 
 BENCHMARK_NAME=$( parse_dirname "$BENCHMARK_DIR" )
 
-echo -e "\nrunning $( cyan "$BENCHMARK_NAME" )\n"
+BENCHMARK_NAME_FORM="$( space "$BENCHMARK_NAME" " " )"
+echo -e "\nrunning $( cyan "${BENCHMARK_NAME_FORM^}" )\n"
 
 # load benchmark config
 source $( load_config_or_exit "$BENCHMARK_DIR" )

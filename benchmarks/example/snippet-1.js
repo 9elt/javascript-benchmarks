@@ -1,3 +1,0 @@
-/**
- * first snippet to benchmark
- */

@@ -1,0 +1,57 @@
+{
+    "metadata": {
+        "config": {
+            "name": "json",
+            "description": "testing JSON methods",
+            "related": [
+                ""
+            ],
+            "samples": 1000,
+            "iterations": 100000
+        },
+        "system": {
+            "node_version": "v19.8.1",
+            "cpu": "Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)"
+        }
+    },
+    "results": {
+        "json_parse": {
+            "path": "/benchmarks//json/json-parse.js",
+            "code": "JSON.parse(json)",
+            "simple": {
+                "samples": 961,
+                "mean": 30.730905999998395,
+                "std": 0.49565434159708505
+            },
+            "realistic": {
+                "samples": 924,
+                "mean": 151.10883375731382,
+                "std": 2.258240179387867
+            },
+            "edge_case": {
+                "samples": 913,
+                "mean": 380.847384527244,
+                "std": 3.2417821563889584
+            }
+        },
+        "json_stringify": {
+            "path": "/benchmarks//json/json-stringify.js",
+            "code": "JSON.stringify(object)",
+            "simple": {
+                "samples": 970,
+                "mean": 23.6677570264364,
+                "std": 0.3004910192458477
+            },
+            "realistic": {
+                "samples": 971,
+                "mean": 139.16540140079297,
+                "std": 0.7976496523417619
+            },
+            "edge_case": {
+                "samples": 936,
+                "mean": 384.94313428977614,
+                "std": 2.019047671411652
+            }
+        }
+    }
+}

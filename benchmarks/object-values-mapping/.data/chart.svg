@@ -1,9 +1,6 @@
 
 <svg class="chart" viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
   <style>
-    .chart .bg {
-      fill: #eee5;
-    }
     .chart .w {
       fill: none;
       stroke: #808080;
@@ -32,19 +29,9 @@
     }
   </style>
 
-  <!--<rect class="bg" width="128" height="32" rx="0.15"/>
-  <rect 
-    class="w"
-    x="0"
-    y="2"
-    width="73.5"
-    height="29"
-    rx="0.1"
-  />-->
-
-  <text class="un" x="74.5" y="7.5" >2.65 ms</text>
-  <text class="un" x="74.5" y="15" >1.76 ms</text>
-  <text class="un" x="74.5" y="22.5" >882 μs</text>
+  <text class="un" x="74.5" y="7.5" >2.58 ms</text>
+  <text class="un" x="74.5" y="15" >1.72 ms</text>
+  <text class="un" x="74.5" y="22.5" >861 μs</text>
 
   <path class="w" d="
     M0,0 0,30 73.5,30
@@ -62,8 +49,8 @@
   <rect 
     fill="#5b9cfb" 
     x="20" 
-    y="26.004226592118737" 
-    height="3.9957734078812637" 
+    y="26.239586265721186" 
+    height="3.760413734278812" 
     width="2" 
     rx="0.1"
   />
@@ -71,8 +58,8 @@
   <rect 
     fill="#2f81f7"
     x="22.25" 
-    y="24.415088119646494" 
-    height="5.584911880353506" 
+    y="24.894308076680673" 
+    height="5.105691923319327" 
     width="2"
     rx="0.1"
   />
@@ -80,8 +67,8 @@
   <rect 
     fill="#286aca"
     x="24.5" 
-    y="13.839749378698421" 
-    height="16.16025062130158"
+    y="14.042204391636977" 
+    height="15.957795608363023"
     width="2"
     rx="0.1"
   />
@@ -93,8 +80,8 @@
   <rect 
     fill="#5b9cfb" 
     x="46.75" 
-    y="18.23602037809783" 
-    height="11.76397962190217" 
+    y="18.86064205054398" 
+    height="11.139357949456022" 
     width="2" 
     rx="0.1"
   />
@@ -102,8 +89,8 @@
   <rect 
     fill="#2f81f7"
     x="49" 
-    y="15.301206079469656" 
-    height="14.698793920530344" 
+    y="15.774348523185127" 
+    height="14.225651476814873" 
     width="2"
     rx="0.1"
   />

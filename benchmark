@@ -27,9 +27,10 @@ then
     BENCHMARKS=()
     PATHS=(benchmarks/*)
 
-    for PATH in "${PATHS[@]}"
+    for P in "${PATHS[@]}"
     do
-        BENCHMARKS+=("$( echo "$PATH" | sed "s/benchmarks//g" )")
+        N="$( echo "$P" | sed -r "s/benchmarks//g" )"
+        BENCHMARKS+=("$N")
     done
 
 else
@@ -39,7 +40,7 @@ fi
 for BENCHMARK in "${BENCHMARKS[@]}"
 do
 
-    if [[ "$BENCHMARK" != "empty" ]]
+    if [ "$BENCHMARK" != "empty" ]
     then
         run "$BENCHMARK"
     fi

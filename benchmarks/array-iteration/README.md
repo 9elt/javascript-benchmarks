@@ -21,7 +21,7 @@ Comparing different ways of iterating arrays
 
 <td>
 
-[**filter**](/benchmarks/array-iteration/filter.js)
+[**filter**](/benchmarks//array-iteration/filter.js)
 
 ```javascript
 array.filter(v => {})
@@ -31,17 +31,17 @@ array.filter(v => {})
 
 <td>
     <b>42 μs </b><br>
-    (std. 0 μs, o. 6%)
+    (std. 0 μs, o. 8%)
 </td>
 
 <td>
-    <b>302 μs </b><br>
-    (std. 25 μs, o. 1%)
+    <b>315 μs </b><br>
+    (std. 0 μs, o. 48%)
 </td>
 
 <td>
-    <b>2.58 ms </b><br>
-    (std. 0 μs, o. 40%)
+    <b>2.59 ms </b><br>
+    (std. 20 μs, o. 12%)
 </td>
 
 </tr>
@@ -49,7 +49,7 @@ array.filter(v => {})
 
 <td>
 
-[**foreach**](/benchmarks/array-iteration/foreach.js)
+[**foreach**](/benchmarks//array-iteration/foreach.js)
 
 ```javascript
 array.forEach(v => {})
@@ -59,17 +59,17 @@ array.forEach(v => {})
 
 <td>
     <b>35 μs </b><br>
-    (std. 0 μs, o. 6%)
+    (std. 0 μs, o. 9%)
 </td>
 
 <td>
-    <b>314 μs </b><br>
-    (std. 0 μs, o. 24%)
+    <b>315 μs </b><br>
+    (std. 0 μs, o. 21%)
 </td>
 
 <td>
     <b>2.58 ms </b><br>
-    (std. 4 μs, o. 15%)
+    (std. 10 μs, o. 11%)
 </td>
 
 </tr>
@@ -77,7 +77,7 @@ array.forEach(v => {})
 
 <td>
 
-[**for in**](/benchmarks/array-iteration/for-in.js)
+[**for in**](/benchmarks//array-iteration/for-in.js)
 
 ```javascript
 // removed... too slow
@@ -87,17 +87,17 @@ array.forEach(v => {})
 
 <td>
     <b>8 μs </b><br>
-    (std. 0 μs, o. 8%)
+    (std. 0 μs, o. 18%)
 </td>
 
 <td>
     <b>8 μs </b><br>
-    (std. 0 μs, o. 4%)
+    (std. 0 μs, o. 6%)
 </td>
 
 <td>
     <b>8 μs </b><br>
-    (std. 0 μs, o. 23%)
+    (std. 0 μs, o. 10%)
 </td>
 
 </tr>
@@ -105,7 +105,7 @@ array.forEach(v => {})
 
 <td>
 
-[**for**](/benchmarks/array-iteration/for.js)
+[**for**](/benchmarks//array-iteration/for.js)
 
 ```javascript
 for (let i = 0; i < array.length; i++) {}
@@ -115,17 +115,17 @@ for (let i = 0; i < array.length; i++) {}
 
 <td>
     <b>44 μs </b><br>
-    (std. 2 μs, o. 4%)
+    (std. 2 μs, o. 2%)
 </td>
 
 <td>
     <b>267 μs </b><br>
-    (std. 0 μs, o. 19%)
+    (std. 0 μs, o. 23%)
 </td>
 
 <td>
-    <b>2.58 ms </b><br>
-    (std. 4 μs, o. 18%)
+    <b>2.59 ms </b><br>
+    (std. 15 μs, o. 16%)
 </td>
 
 </tr>
@@ -133,7 +133,7 @@ for (let i = 0; i < array.length; i++) {}
 
 <td>
 
-[**for of**](/benchmarks/array-iteration/for-of.js)
+[**for of**](/benchmarks//array-iteration/for-of.js)
 
 ```javascript
 for (const v of array) {}
@@ -142,18 +142,18 @@ for (const v of array) {}
 </td>
 
 <td>
-    <b>77 μs </b><br>
-    (std. 0 μs, o. 5%)
+    <b>76 μs </b><br>
+    (std. 0 μs, o. 14%)
 </td>
 
 <td>
-    <b>562 μs </b><br>
-    (std. 46 μs, o. 0%)
+    <b>528 μs </b><br>
+    (std. 2 μs, o. 9%)
 </td>
 
 <td>
-    <b>5.15 ms </b><br>
-    (std. 7 μs, o. 7%)
+    <b>5.20 ms </b><br>
+    (std. 55 μs, o. 14%)
 </td>
 
 </tr>
@@ -161,7 +161,7 @@ for (const v of array) {}
 
 <td>
 
-[**map**](/benchmarks/array-iteration/map.js)
+[**map**](/benchmarks//array-iteration/map.js)
 
 ```javascript
 array.map(v => {})
@@ -170,18 +170,18 @@ array.map(v => {})
 </td>
 
 <td>
-    <b>193 μs </b><br>
-    (std. 25 μs, o. 7%)
+    <b>183 μs </b><br>
+    (std. 23 μs, o. 4%)
 </td>
 
 <td>
-    <b>1.42 ms </b><br>
-    (std. 39 μs, o. 18%)
+    <b>1.41 ms </b><br>
+    (std. 21 μs, o. 16%)
 </td>
 
 <td>
-    <b>14.14 ms </b><br>
-    (std. 146 μs, o. 5%)
+    <b>14.26 ms </b><br>
+    (std. 269 μs, o. 5%)
 </td>
 
 </tr>
@@ -203,7 +203,7 @@ array.map(v => {})
 <br>
 <b>Normal distribution samples: </b> 1000
 <br>
-<b>Average outliers percentage: </b> 12%
+<b>Average outliers percentage: </b> 14%
 <br><br>
 <sup>results are measured over multiple iterations of a code snippet</sup>
 <br>

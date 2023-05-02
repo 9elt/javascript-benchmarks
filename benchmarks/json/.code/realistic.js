@@ -1,16 +1,10 @@
 /**
+ * the code in this file will be available
+ * to all snippets during "realistic" benchmark measurments
  * 
- * this code will be available to all code snippets
- * and will not be measured during the benchmark
- * 
+ * the code itself won't be measured during the benchmark
  */
-let obj = {
-    foo: "bar",
-}
-
-let json_obj = JSON.stringify(obj)
-
-let user = {
+let object = {
     name: "foo_bar",
     fullName: "Foo Bar",
     email: "foo@bar",
@@ -28,4 +22,4 @@ let user = {
     ]
 }
 
-let json_user = JSON.stringify(user)
+let json = JSON.stringify(object)

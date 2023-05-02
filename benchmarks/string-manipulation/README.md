@@ -1,7 +1,7 @@
 # String manipulation
 Comparing string manipulation methods
 
-
+> related: [**Object keys mapping**](/benchmarks/object-keys-mapping), [**Array iteration**](/benchmarks/array-iteration)
 
 ## Results
 
@@ -21,7 +21,7 @@ Comparing string manipulation methods
 
 <td>
 
-[**array join**](/benchmarks/string-manipulation/array-join.js)
+[**array join**](/benchmarks//string-manipulation/array-join.js)
 
 ```javascript
 let s = [string, other_string].join("")
@@ -31,17 +31,17 @@ let s = [string, other_string].join("")
 
 <td>
     <b>3.41 ms </b><br>
-    (std. 28 μs, o. 14%)
+    (std. 29 μs, o. 12%)
 </td>
 
 <td>
-    <b>3.48 ms </b><br>
-    (std. 4 μs, o. 21%)
+    <b>3.57 ms </b><br>
+    (std. 45 μs, o. 8%)
 </td>
 
 <td>
-    <b>3.99 ms </b><br>
-    (std. 21 μs, o. 4%)
+    <b>3.89 ms </b><br>
+    (std. 40 μs, o. 17%)
 </td>
 
 </tr>
@@ -49,7 +49,7 @@ let s = [string, other_string].join("")
 
 <td>
 
-[**backticks**](/benchmarks/string-manipulation/backticks.js)
+[**backticks**](/benchmarks//string-manipulation/backticks.js)
 
 ```javascript
 let s = `${string}${other_string}`
@@ -59,17 +59,17 @@ let s = `${string}${other_string}`
 
 <td>
     <b>231 μs </b><br>
-    (std. 0 μs, o. 23%)
-</td>
-
-<td>
-    <b>270 μs </b><br>
-    (std. 6 μs, o. 3%)
+    (std. 1 μs, o. 20%)
 </td>
 
 <td>
     <b>231 μs </b><br>
-    (std. 0 μs, o. 16%)
+    (std. 0 μs, o. 18%)
+</td>
+
+<td>
+    <b>242 μs </b><br>
+    (std. 24 μs, o. 1%)
 </td>
 
 </tr>
@@ -77,7 +77,7 @@ let s = `${string}${other_string}`
 
 <td>
 
-[**concatenation**](/benchmarks/string-manipulation/concatenation.js)
+[**concatenation**](/benchmarks//string-manipulation/concatenation.js)
 
 ```javascript
 let s = string + other_string
@@ -87,17 +87,17 @@ let s = string + other_string
 
 <td>
     <b>13 μs </b><br>
+    (std. 0 μs, o. 8%)
+</td>
+
+<td>
+    <b>16 μs </b><br>
+    (std. 0 μs, o. 7%)
+</td>
+
+<td>
+    <b>16 μs </b><br>
     (std. 0 μs, o. 3%)
-</td>
-
-<td>
-    <b>16 μs </b><br>
-    (std. 0 μs, o. 2%)
-</td>
-
-<td>
-    <b>16 μs </b><br>
-    (std. 0 μs, o. 9%)
 </td>
 
 </tr>

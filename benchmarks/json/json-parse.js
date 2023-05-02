@@ -1,1 +1,1 @@
-JSON.parse(json_obj)
+JSON.parse(json)

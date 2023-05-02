@@ -37,9 +37,6 @@ let end = (ng * goc) + ((ng + 1) * cs)
 let svg = `
 <svg class="chart" viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
   <style>
-    .chart .bg {
-      fill: #eee5;
-    }
     .chart .w {
       fill: none;
       stroke: #808080;
@@ -67,16 +64,6 @@ let svg = `
       stroke-linecap: round;
     }
   </style>
-
-  <!--<rect class="bg" width="128" height="32" rx="0.15"/>
-  <rect 
-    class="w"
-    x="0"
-    y="2"
-    width="${(values.length * 6.75) + ((values.length + 1) * cs)}"
-    height="29"
-    rx="0.1"
-  />-->
 
   <text class="un" x="${end + 1}" y="${qrt * 1}" >${unit(mx / 4 * 3)}</text>
   <text class="un" x="${end + 1}" y="${qrt * 2}" >${unit(mx / 4 * 2)}</text>

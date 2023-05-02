@@ -16,41 +16,41 @@
     },
     "results": {
         "for_key": {
-            "path": "/benchmarks/object-keys-mapping/for-key.js",
+            "path": "/benchmarks//object-keys-mapping/for-key.js",
             "code": "let keys = []\n\nfor (const key in object) {\n    keys.push(key)\n}",
             "simple": {
-                "samples": 763,
-                "mean": 0.24252460074768467,
-                "std": 0.00298958778085443
+                "samples": 760,
+                "mean": 0.24858267181798033,
+                "std": 0.0036069401785887322
             },
             "realistic": {
-                "samples": 606,
-                "mean": 0.3192022759528837,
-                "std": 0.0046991144020166725
+                "samples": 729,
+                "mean": 0.2670433998762008,
+                "std": 0.001812054935380106
             },
             "edge_case": {
-                "samples": 972,
-                "mean": 0.4484221888667762,
-                "std": 0.041118900542540936
+                "samples": 710,
+                "mean": 0.4847387397792977,
+                "std": 0.004497913347925097
             }
         },
         "object_keys": {
-            "path": "/benchmarks/object-keys-mapping/object-keys.js",
+            "path": "/benchmarks//object-keys-mapping/object-keys.js",
             "code": "let keys = Object.keys(object)",
             "simple": {
-                "samples": 966,
-                "mean": 0.12904935618611843,
-                "std": 0.017930443276585876
+                "samples": 919,
+                "mean": 0.10890030056659752,
+                "std": 0.015391005725873914
             },
             "realistic": {
-                "samples": 977,
-                "mean": 0.13641249291606422,
-                "std": 0.021178953237886027
+                "samples": 938,
+                "mean": 0.13146680580781722,
+                "std": 0.019275303019433275
             },
             "edge_case": {
-                "samples": 955,
-                "mean": 0.1993267556135567,
-                "std": 0.018950720504238638
+                "samples": 940,
+                "mean": 0.19864199313711614,
+                "std": 0.01811970915385352
             }
         }
     }

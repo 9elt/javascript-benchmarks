@@ -21,7 +21,7 @@ Mapping object values
 
 <td>
 
-[**for key**](/benchmarks/object-values-mapping/for-key.js)
+[**for key**](/benchmarks//object-values-mapping/for-key.js)
 
 ```javascript
 let values = [];
@@ -34,18 +34,18 @@ for (const key in object) {
 </td>
 
 <td>
-    <b>503 μs </b><br>
-    (std. 39 μs, o. 5%)
+    <b>462 μs </b><br>
+    (std. 3 μs, o. 22%)
 </td>
 
 <td>
-    <b>703 μs </b><br>
-    (std. 77 μs, o. 2%)
+    <b>628 μs </b><br>
+    (std. 6 μs, o. 23%)
 </td>
 
 <td>
-    <b>2.04 ms </b><br>
-    (std. 73 μs, o. 12%)
+    <b>1.96 ms </b><br>
+    (std. 16 μs, o. 13%)
 </td>
 
 </tr>
@@ -53,7 +53,7 @@ for (const key in object) {
 
 <td>
 
-[**object values**](/benchmarks/object-values-mapping/object-values.js)
+[**object values**](/benchmarks//object-values-mapping/object-values.js)
 
 ```javascript
 let values = Object.values(object)
@@ -62,18 +62,18 @@ let values = Object.values(object)
 </td>
 
 <td>
-    <b>1.48 ms </b><br>
-    (std. 130 μs, o. 4%)
+    <b>1.37 ms </b><br>
+    (std. 29 μs, o. 5%)
 </td>
 
 <td>
-    <b>1.85 ms </b><br>
-    (std. 161 μs, o. 4%)
+    <b>1.75 ms </b><br>
+    (std. 31 μs, o. 10%)
 </td>
 
 <td>
-    <b>3.53 ms </b><br>
-    (std. 84 μs, o. 16%)
+    <b>3.44 ms </b><br>
+    (std. 30 μs, o. 17%)
 </td>
 
 </tr>
@@ -95,7 +95,7 @@ let values = Object.values(object)
 <br>
 <b>Normal distribution samples: </b> 1000
 <br>
-<b>Average outliers percentage: </b> 7%
+<b>Average outliers percentage: </b> 15%
 <br><br>
 <sup>results are measured over multiple iterations of a code snippet</sup>
 <br>

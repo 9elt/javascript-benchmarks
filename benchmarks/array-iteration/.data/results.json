@@ -16,117 +16,117 @@
     },
     "results": {
         "filter": {
-            "path": "/benchmarks/array-iteration/filter.js",
+            "path": "/benchmarks//array-iteration/filter.js",
             "code": "array.filter(v => {})",
             "simple": {
-                "samples": 945,
-                "mean": 0.04173602477583305,
-                "std": 0.00009980919422846699
+                "samples": 918,
+                "mean": 0.04172203353807038,
+                "std": 0.00008123836097438593
             },
             "realistic": {
-                "samples": 991,
-                "mean": 0.30245260995043033,
-                "std": 0.025371072763790924
+                "samples": 517,
+                "mean": 0.3145160343015217,
+                "std": 0.00011342126920988115
             },
             "edge_case": {
-                "samples": 602,
-                "mean": 2.57579065834565,
-                "std": 0.0001352828042760206
+                "samples": 885,
+                "mean": 2.5910557571777515,
+                "std": 0.01980125959529126
             }
         },
         "foreach": {
-            "path": "/benchmarks/array-iteration/foreach.js",
+            "path": "/benchmarks//array-iteration/foreach.js",
             "code": "array.forEach(v => {})",
             "simple": {
-                "samples": 940,
-                "mean": 0.035403766276988574,
-                "std": 0.00006914385927174669
+                "samples": 911,
+                "mean": 0.03528625512358648,
+                "std": 0.0000667692594154597
             },
             "realistic": {
-                "samples": 757,
-                "mean": 0.31443379608769084,
-                "std": 0.00006960442632861261
+                "samples": 791,
+                "mean": 0.31450060013724035,
+                "std": 0.00008618684839142176
             },
             "edge_case": {
-                "samples": 848,
-                "mean": 2.578041951892511,
-                "std": 0.004396690310840172
+                "samples": 891,
+                "mean": 2.5827116380235564,
+                "std": 0.010155451693171034
             }
         },
         "for_in": {
-            "path": "/benchmarks/array-iteration/for-in.js",
+            "path": "/benchmarks//array-iteration/for-in.js",
             "code": "// removed... too slow",
             "simple": {
-                "samples": 918,
-                "mean": 0.00844518992895654,
-                "std": 0.00016015771677897452
+                "samples": 818,
+                "mean": 0.007804453227222694,
+                "std": 0.0001802633177904548
             },
             "realistic": {
-                "samples": 961,
-                "mean": 0.008322587246453229,
-                "std": 0.00014048045043976617
+                "samples": 941,
+                "mean": 0.00829895624572235,
+                "std": 0.00015289548607789032
             },
             "edge_case": {
-                "samples": 772,
-                "mean": 0.008481049167059863,
-                "std": 0.00016237302596788835
+                "samples": 905,
+                "mean": 0.008461829180216922,
+                "std": 0.0001456534859993566
             }
         },
         "for": {
-            "path": "/benchmarks/array-iteration/for.js",
+            "path": "/benchmarks//array-iteration/for.js",
             "code": "for (let i = 0; i < array.length; i++) {}",
             "simple": {
-                "samples": 962,
-                "mean": 0.04394625725220742,
-                "std": 0.00169297045667237
+                "samples": 976,
+                "mean": 0.04372930502305265,
+                "std": 0.001636329592523284
             },
             "realistic": {
-                "samples": 815,
-                "mean": 0.2667000840778,
-                "std": 0.0001337695442421331
+                "samples": 770,
+                "mean": 0.266665852843941,
+                "std": 0.00013690091272284936
             },
             "edge_case": {
-                "samples": 822,
-                "mean": 2.577858472392507,
-                "std": 0.003729334510691593
+                "samples": 840,
+                "mean": 2.587104942685082,
+                "std": 0.015405719018869678
             }
         },
         "for_of": {
-            "path": "/benchmarks/array-iteration/for-of.js",
+            "path": "/benchmarks//array-iteration/for-of.js",
             "code": "for (const v of array) {}",
             "simple": {
-                "samples": 947,
-                "mean": 0.07686721888363927,
-                "std": 0.0001358086460770742
+                "samples": 864,
+                "mean": 0.0760537921278565,
+                "std": 0.000059452396918737745
             },
             "realistic": {
-                "samples": 997,
-                "mean": 0.5619520803870505,
-                "std": 0.04591257802456612
+                "samples": 909,
+                "mean": 0.5278060514934779,
+                "std": 0.002319896382121167
             },
             "edge_case": {
-                "samples": 934,
-                "mean": 5.151076033743342,
-                "std": 0.00743068553133889
+                "samples": 865,
+                "mean": 5.196943649942475,
+                "std": 0.054530364942187375
             }
         },
         "map": {
-            "path": "/benchmarks/array-iteration/map.js",
+            "path": "/benchmarks//array-iteration/map.js",
             "code": "array.map(v => {})",
             "simple": {
-                "samples": 928,
-                "mean": 0.1931887757161568,
-                "std": 0.02546861260335374
+                "samples": 962,
+                "mean": 0.18308978665643325,
+                "std": 0.023251538637620767
             },
             "realistic": {
-                "samples": 818,
-                "mean": 1.4180670489891818,
-                "std": 0.038598280312265316
+                "samples": 840,
+                "mean": 1.4101141833123707,
+                "std": 0.020901448956853724
             },
             "edge_case": {
-                "samples": 951,
-                "mean": 14.140529868981314,
-                "std": 0.1464693514478654
+                "samples": 952,
+                "mean": 14.256398801543131,
+                "std": 0.26887055013790573
             }
         }
     }
