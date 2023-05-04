@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# number of normal distribution samples
+SAMPLES=1000
+
+# number of snippet iterations
+ITERATIONS=1000
+
+# benchmark description
+DESCRIPTION="Array dynamic allocation vs pre-allocation"
+
+# related benchmarks (separated by commas)
+RELATED=""

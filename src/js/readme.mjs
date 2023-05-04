@@ -19,7 +19,7 @@ actual_samples = Math.floor(actual_samples / results.length)
 let readme = `# ${c(n(data.metadata.config.name))}
 ${data.metadata.config.description}
 
-${data.metadata.config.related?.[0] != "" ?
+${data.metadata.config.related.length > 0 ?
         `> related: ${data.metadata.config.related.map(rel => `[**${c(n(rel))}**](/benchmarks/${rel})`).join(", ")}` : ""
     }
 

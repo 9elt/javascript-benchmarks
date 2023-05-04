@@ -5,6 +5,7 @@ A bash script to repeatedly and consistently benchmark javascript code
 
 ## benchmarks
 
+* [**Array allocation**](/benchmarks/array-allocation)
 * [**Array concatenation**](/benchmarks/array-concatenation)
 * [**Array iteration**](/benchmarks/array-iteration)
 * [**Json**](/benchmarks/json)

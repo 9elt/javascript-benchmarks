@@ -1,0 +1,55 @@
+{
+    "metadata": {
+        "config": {
+            "name": "array_allocation",
+            "description": "Array dynamic allocation vs pre-allocation",
+            "related": [],
+            "samples": 1000,
+            "iterations": 1000
+        },
+        "system": {
+            "node_version": "v19.8.1",
+            "cpu": "Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)"
+        }
+    },
+    "results": {
+        "dynamic": {
+            "path": "/benchmarks/array-allocation/dynamic.js",
+            "code": "let array = [];\n\nfor (let i = 0; i < size; i++) {\n    array.push(i)\n}",
+            "simple": {
+                "samples": 990,
+                "mean": 0.3903560393273529,
+                "std": 0.03495982838417688
+            },
+            "realistic": {
+                "samples": 994,
+                "mean": 4.541554395405489,
+                "std": 0.39364953850306783
+            },
+            "edge_case": {
+                "samples": 908,
+                "mean": 44.47162746143679,
+                "std": 1.0274108913291489
+            }
+        },
+        "pre_allocated": {
+            "path": "/benchmarks/array-allocation/pre-allocated.js",
+            "code": "let array = Array(size);\n\nfor (let i = 0; i < size; i++) {\n    array[i] = i\n}",
+            "simple": {
+                "samples": 991,
+                "mean": 0.13850088291035592,
+                "std": 0.018211538458259124
+            },
+            "realistic": {
+                "samples": 764,
+                "mean": 1.0121242591613875,
+                "std": 0.01698811135340981
+            },
+            "edge_case": {
+                "samples": 975,
+                "mean": 9.902109456396637,
+                "std": 0.014887479660589495
+            }
+        }
+    }
+}
