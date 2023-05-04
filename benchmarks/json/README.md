@@ -1,7 +1,7 @@
 # Json
 testing JSON methods
 
-
+> related: 
 
 ## Results
 
@@ -30,18 +30,18 @@ JSON.parse(json)
 </td>
 
 <td>
-    <b>30.73 ms </b><br>
-    (std. 496 μs, o. 4%)
+    <b>3.16 ms </b><br>
+    (std. 20 μs, o. 9%)
 </td>
 
 <td>
-    <b>151.11 ms </b><br>
-    (std. 2.26 ms, o. 8%)
+    <b>14.72 ms </b><br>
+    (std. 97 μs, o. 2%)
 </td>
 
 <td>
-    <b>380.85 ms </b><br>
-    (std. 3.24 ms, o. 9%)
+    <b>38.27 ms </b><br>
+    (std. 109 μs, o. 5%)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ JSON.stringify(object)
 </td>
 
 <td>
-    <b>23.67 ms </b><br>
-    (std. 300 μs, o. 3%)
+    <b>2.33 ms </b><br>
+    (std. 22 μs, o. 13%)
 </td>
 
 <td>
-    <b>139.17 ms </b><br>
-    (std. 798 μs, o. 3%)
+    <b>13.80 ms </b><br>
+    (std. 52 μs, o. 3%)
 </td>
 
 <td>
-    <b>384.94 ms </b><br>
-    (std. 2.02 ms, o. 6%)
+    <b>38.77 ms </b><br>
+    (std. 495 μs, o. 8%)
 </td>
 
 </tr>
@@ -91,14 +91,15 @@ JSON.stringify(object)
 <br>
 <b>Normal distribution samples: </b> 1000
 <br>
-<b>Average outliers percentage: </b> 6%
+<b>Average outliers percentage: </b> 7%
 <br><br>
 <sup>results are measured over multiple iterations of a code snippet</sup>
 <br>
-<b>Result measured over: </b> 100000 iterations
+<b>Result measured over: </b> 10000 iterations
 
 #### system
 
 <b>Node: </b> v19.8.1
 <br>
 <b>CPU: </b> Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)
+

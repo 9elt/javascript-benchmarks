@@ -3,9 +3,7 @@
         "config": {
             "name": "array_concatenation",
             "description": "Comparing ways to concatenate arrays",
-            "related": [
-                ""
-            ],
+            "related": [],
             "samples": 1000,
             "iterations": 10000
         },
@@ -16,60 +14,60 @@
     },
     "results": {
         "concat": {
-            "path": "/benchmarks/array-concatenation/concat.js",
+            "path": "/benchmarks//array-concatenation/concat.js",
             "code": "arr_1.concat(arr_2)",
             "simple": {
-                "samples": 928,
-                "mean": 3.8615054508735396,
-                "std": 0.012062993686314912
+                "samples": 921,
+                "mean": 4.059782750283678,
+                "std": 0.1396291721992377
             },
             "realistic": {
-                "samples": 953,
-                "mean": 12.665486646223918,
-                "std": 0.02680479898265444
+                "samples": 929,
+                "mean": 13.97057240474889,
+                "std": 0.7177516064756568
             },
             "edge_case": {
-                "samples": 873,
-                "mean": 64.01097591499556,
-                "std": 0.5736535464076524
+                "samples": 806,
+                "mean": 63.32340638338364,
+                "std": 0.19444817941501502
             }
         },
         "mutation": {
-            "path": "/benchmarks/array-concatenation/mutation.js",
+            "path": "/benchmarks//array-concatenation/mutation.js",
             "code": "for (let i = 0; i < arr_2.length; i++) {\n    arr_1.push(arr_2[i])\n}",
             "simple": {
-                "samples": 957,
-                "mean": 0.006669218388221605,
-                "std": 0.0000372202609381246
+                "samples": 938,
+                "mean": 0.006646214287354748,
+                "std": 0.000034780507219012514
             },
             "realistic": {
-                "samples": 959,
-                "mean": 0.006642639450534666,
-                "std": 0.00003152717939248127
+                "samples": 956,
+                "mean": 0.0067788274056632776,
+                "std": 0.00006362703813167378
             },
             "edge_case": {
-                "samples": 937,
-                "mean": 0.0066723876981623275,
-                "std": 0.000036945668819503326
+                "samples": 920,
+                "mean": 0.0067589380383572505,
+                "std": 0.00006163127386627638
             }
         },
         "spread": {
-            "path": "/benchmarks/array-concatenation/spread.js",
+            "path": "/benchmarks//array-concatenation/spread.js",
             "code": "[...arr_1, ...arr_2]",
             "simple": {
-                "samples": 851,
-                "mean": 2.473581346305641,
-                "std": 0.01574004795940903
+                "samples": 903,
+                "mean": 2.503996947959709,
+                "std": 0.021159230823846964
             },
             "realistic": {
-                "samples": 866,
-                "mean": 8.683291088901546,
-                "std": 0.08177415486474074
+                "samples": 968,
+                "mean": 8.879243218998063,
+                "std": 0.042483983156607744
             },
             "edge_case": {
-                "samples": 964,
-                "mean": 55.841024374071495,
-                "std": 0.065646527224886
+                "samples": 956,
+                "mean": 56.885397452911725,
+                "std": 0.11556669149724895
             }
         }
     }

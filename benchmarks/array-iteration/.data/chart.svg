@@ -1,39 +1,43 @@
 
-<svg class="chart" viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
+
   <style>
-    .chart .w {
+
+    path {
       fill: none;
       stroke: #808080;
       stroke-width: 0.075;
+      stroke-linejoin: round;
+      stroke-linecap: round;
     }
-    .chart .t {
+
+    text {
       font-size: 1.4px;
       font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+        Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
+    }
+
+    .names {
       fill: #808080;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
       transform: rotate(90deg);
       transform-box: fill-box;
       transform-origin: left;
     }
-    .chart .un {
-      font-size: 1.4px;
-      font-weight: bold;
+
+    .labels {
       fill: #2f81f7;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
     }
-    .chart path {
-      fill: none;
-      stroke: #2f81f7;
-      stroke-linejoin: round;
-      stroke-linecap: round;
-    }
+
   </style>
 
-  <text class="un" x="83.5" y="7.5" >10.69 ms</text>
-  <text class="un" x="83.5" y="15" >7.13 ms</text>
-  <text class="un" x="83.5" y="22.5" >3.56 ms</text>
+  <!-- chart labels -->
+  <text class="labels" x="83.5" y="7.5">10.51 ms</text>
+  <text class="labels" x="83.5" y="15">7.01 ms</text>
+  <text class="labels" x="83.5" y="22.5">3.50 ms</text>
 
-  <path class="w" d="
+  <!-- chart axis -->
+  <path d="
     M0,0 0,30 82.5,30
     M0,7.5 82.5,7.5
     M0,15 82.5,15
@@ -42,183 +46,231 @@
 
   
 
-  <text x="3.75" y="1" class="t">
+  <!-- benchmark name -->
+  <text 
+    class="names"
+    x="3.75" 
+    y="1"
+  >
     filter
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
     x="6" 
-    y="29.918056659656607" 
-    height="0.08194334034339172" 
+    y="29.91661051102088" 
+    height="0.0833894889791199" 
     width="2" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
     x="8.25" 
-    y="29.3822809614803" 
-    height="0.6177190385196987" 
+    y="29.371602222405798" 
+    height="0.6283977775942035" 
     width="2"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
     x="10.5" 
-    y="24.911087841262958" 
-    height="5.088912158737042"
+    y="24.847291094342445" 
+    height="5.152708905657557"
     width="2"
     rx="0.1"
   />
 
-  <text x="16.5" y="1" class="t">
+  <!-- benchmark name -->
+  <text 
+    class="names"
+    x="16.5" 
+    y="1"
+  >
     foreach
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
     x="18.75" 
-    y="29.93069672382106" 
-    height="0.06930327617893779" 
+    y="29.929475400121134" 
+    height="0.0705245998788653" 
     width="2" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
     x="21" 
-    y="29.382311274647456" 
-    height="0.6176887253525453" 
+    y="29.468270465178872" 
+    height="0.5317295348211285" 
     width="2"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
     x="23.25" 
-    y="24.92747594456799" 
-    height="5.072524055432008"
+    y="24.85215379847806" 
+    height="5.14784620152194"
     width="2"
     rx="0.1"
   />
 
-  <text x="29.25" y="1" class="t">
+  <!-- benchmark name -->
+  <text 
+    class="names"
+    x="29.25" 
+    y="1"
+  >
     for in
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
     x="31.5" 
-    y="29.98467181695713" 
-    height="0.015328183042872092" 
+    y="29.983121462405908" 
+    height="0.016878537594091577" 
     width="2" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
     x="33.75" 
-    y="29.983700598018128" 
-    height="0.016299401981871724" 
+    y="29.983114480889892" 
+    height="0.016885519110108178" 
     width="2"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
     x="36" 
-    y="29.983380710630765" 
-    height="0.016619289369235943"
+    y="29.98316337552526" 
+    height="0.01683662447474239"
     width="2"
     rx="0.1"
   />
 
-  <text x="42" y="1" class="t">
+  <!-- benchmark name -->
+  <text 
+    class="names"
+    x="42" 
+    y="1"
+  >
     for
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
     x="44.25" 
-    y="29.91411431752927" 
-    height="0.08588568247073317" 
+    y="29.914316760799966" 
+    height="0.0856832392000345" 
     width="2" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
     x="46.5" 
-    y="29.47626017035788" 
-    height="0.5237398296421217" 
+    y="29.370133738522927" 
+    height="0.6298662614770731" 
     width="2"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
     x="48.75" 
-    y="24.91884736085375" 
-    height="5.081152639146249"
+    y="24.847692305798006" 
+    height="5.152307694201996"
     width="2"
     rx="0.1"
   />
 
-  <text x="54.75" y="1" class="t">
+  <!-- benchmark name -->
+  <text 
+    class="names"
+    x="54.75" 
+    y="1"
+  >
     for of
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
     x="57" 
-    y="29.850628043643848" 
-    height="0.14937195635615086" 
+    y="29.8699051805167" 
+    height="0.1300948194833009" 
     width="2" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
     x="59.25" 
-    y="28.963372893285104" 
-    height="1.036627106714897" 
+    y="28.947642541731238" 
+    height="1.0523574582687631" 
     width="2"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
     x="61.5" 
-    y="19.793044918002813" 
-    height="10.206955081997188"
+    y="19.6972672104762" 
+    height="10.302732789523802"
     width="2"
     rx="0.1"
   />
 
-  <text x="67.5" y="1" class="t">
+  <!-- benchmark name -->
+  <text 
+    class="names"
+    x="67.5" 
+    y="1"
+  >
     map
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
     x="69.75" 
-    y="29.640406101306226" 
-    height="0.35959389869377323" 
+    y="29.631478061083904" 
+    height="0.3685219389160969" 
     width="2" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
     x="72" 
-    y="27.230492939880957" 
-    height="2.7695070601190444" 
+    y="27.21306573721704" 
+    height="2.78693426278296" 
     width="2"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
     x="74.25" 

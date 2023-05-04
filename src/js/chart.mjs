@@ -13,7 +13,7 @@ let max = Math.max(...values.map(
 let ch = 32
 /** chart bottom margin */
 let bm = 2
-/** chart actula height */
+/** chart actual height */
 let ah = ch - bm
 /** quarter chart height */
 let qrt = ah / 4

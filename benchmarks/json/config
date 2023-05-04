@@ -4,7 +4,7 @@
 SAMPLES=1000
 
 # number of snippet iterations
-ITERATIONS=100000
+ITERATIONS=10000
 
 # benchmark description
 DESCRIPTION="testing JSON methods"

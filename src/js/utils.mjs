@@ -1,6 +1,8 @@
 export const rnd = (f, p = 1) => (f).toFixed(p)
 
-export const pct = (n, d) => rnd((n / d) * 100,0)
+export const pct = (n, d) => rnd((n / d) * 100, 0)
+
+export const unit_ns = (ms) => unit(ms).replace(" ", "")
 
 export const unit = (ms) => {
     if (ms < 1) {
@@ -21,42 +23,11 @@ export const output = (...args) => {
 
 export const node_args = (as = (v) => v) => process.argv.slice(2).map(v => as(v))
 
-export const parse_results = () => {
-    let results = node_args(JSON.parse)
-
-    let r = {
-        metadata: {
-            config: results[0],
-            system: results[1]
-        },
-        results: {}
-    }
-
-    r.metadata.config.related = r.metadata.config.related.split(",")
-
-    results.forEach((res, i) => {
-        if (i < 2) { return /* config and system */ }
-
-        if (res.name in r.results) {
-            r.results[res.name][res.version] = res.result
-        } else {
-            r.results[res.name] = {
-                path: res.file_path,
-                code: res.code,
-                [res.version]: res.result,
-            }
-        }
-
-    })
-
-    return r
-}
-
 export const _outliers = (array) => {
     let arr = [...array]
     arr.sort((a, b) => a - b)
 
-    let q1 = arr[Math.floor((arr.length / 4))]; 
+    let q1 = arr[Math.floor((arr.length / 4))];
     let q3 = arr[Math.ceil((arr.length * (3 / 4)))];
     let iqr = q3 - q1;
 
@@ -78,6 +49,6 @@ export const _snd = (arr) => {
     }
 }
 
-export const map = (arr, f) => arr.map((v, i) => f(v, i)).join("") 
+export const map = (arr, f) => arr.map((v, i) => f(v, i)).join("")
 
 export const name = (str) => str.replaceAll("-", " ").replaceAll("_", " ")

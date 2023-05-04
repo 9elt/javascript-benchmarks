@@ -1,39 +1,43 @@
 
-<svg class="chart" viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
+
   <style>
-    .chart .w {
+
+    path {
       fill: none;
       stroke: #808080;
       stroke-width: 0.075;
+      stroke-linejoin: round;
+      stroke-linecap: round;
     }
-    .chart .t {
+
+    text {
       font-size: 1.4px;
       font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+        Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
+    }
+
+    .names {
       fill: #808080;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
       transform: rotate(90deg);
       transform-box: fill-box;
       transform-origin: left;
     }
-    .chart .un {
-      font-size: 1.4px;
-      font-weight: bold;
+
+    .labels {
       fill: #2f81f7;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
     }
-    .chart path {
-      fill: none;
-      stroke: #2f81f7;
-      stroke-linejoin: round;
-      stroke-linecap: round;
-    }
+
   </style>
 
-  <text class="un" x="73.25" y="7.5" >2.92 ms</text>
-  <text class="un" x="73.25" y="15" >1.95 ms</text>
-  <text class="un" x="73.25" y="22.5" >973 μs</text>
+  <!-- chart labels -->
+  <text class="labels" x="73.25" y="7.5">2.96 ms</text>
+  <text class="labels" x="73.25" y="15">1.97 ms</text>
+  <text class="labels" x="73.25" y="22.5">986 μs</text>
 
-  <path class="w" d="
+  <!-- chart axis -->
+  <path d="
     M0,0 0,30 72.25,30
     M0,7.5 72.25,7.5
     M0,15 72.25,15
@@ -42,28 +46,36 @@
 
   
 
-  <text x="10.75" y="1" class="t">
+  <!-- benchmark name -->
+  <text 
+    class="names"
+    x="10.75" 
+    y="1"
+  >
     array join
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
     x="13" 
-    y="5.432456772401338" 
-    height="24.567543227598662" 
+    y="5.160160383256866" 
+    height="24.839839616743134" 
     width="2" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
     x="15.25" 
-    y="4.341291157135881" 
-    height="25.65870884286412" 
+    y="4.389340397939382" 
+    height="25.61065960206062" 
     width="2"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
     x="17.5" 
@@ -73,64 +85,80 @@
     rx="0.1"
   />
 
-  <text x="30.5" y="1" class="t">
+  <!-- benchmark name -->
+  <text 
+    class="names"
+    x="30.5" 
+    y="1"
+  >
     backticks
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
     x="32.75" 
-    y="28.335083713983447" 
-    height="1.664916286016554" 
+    y="28.26761465336807" 
+    height="1.7323853466319274" 
     width="2" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
     x="35" 
-    y="28.336623164867998" 
-    height="1.663376835132002" 
+    y="28.270392291186255" 
+    height="1.7296077088137445" 
     width="2"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
     x="37.25" 
-    y="28.255883746377414" 
-    height="1.7441162536225858"
+    y="28.26762168321235" 
+    height="1.732378316787649"
     width="2"
     rx="0.1"
   />
 
-  <text x="50.25" y="1" class="t">
+  <!-- benchmark name -->
+  <text 
+    class="names"
+    x="50.25" 
+    y="1"
+  >
     concatenation
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
     x="52.5" 
-    y="29.905317016038722" 
-    height="0.09468298396127667" 
+    y="29.906787105105074" 
+    height="0.09321289489492449" 
     width="2" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
     x="54.75" 
-    y="29.888125733357082" 
-    height="0.1118742666429178" 
+    y="29.906753552829716" 
+    height="0.09324644717028421" 
     width="2"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
     x="57" 
-    y="29.888397861608077" 
-    height="0.11160213839192336"
+    y="29.889755716787302" 
+    height="0.1102442832126958"
     width="2"
     rx="0.1"
   />

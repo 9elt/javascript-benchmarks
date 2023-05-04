@@ -1,39 +1,43 @@
 
-<svg class="chart" viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
+
   <style>
-    .chart .w {
+
+    path {
       fill: none;
       stroke: #808080;
       stroke-width: 0.075;
+      stroke-linejoin: round;
+      stroke-linecap: round;
     }
-    .chart .t {
+
+    text {
       font-size: 1.4px;
       font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+        Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
+    }
+
+    .names {
       fill: #808080;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
       transform: rotate(90deg);
       transform-box: fill-box;
       transform-origin: left;
     }
-    .chart .un {
-      font-size: 1.4px;
-      font-weight: bold;
+
+    .labels {
       fill: #2f81f7;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
     }
-    .chart path {
-      fill: none;
-      stroke: #2f81f7;
-      stroke-linejoin: round;
-      stroke-linecap: round;
-    }
+
   </style>
 
-  <text class="un" x="74.5" y="7.5" >2.58 ms</text>
-  <text class="un" x="74.5" y="15" >1.72 ms</text>
-  <text class="un" x="74.5" y="22.5" >861 μs</text>
+  <!-- chart labels -->
+  <text class="labels" x="74.5" y="7.5">2.57 ms</text>
+  <text class="labels" x="74.5" y="15">1.71 ms</text>
+  <text class="labels" x="74.5" y="22.5">856 μs</text>
 
-  <path class="w" d="
+  <!-- chart axis -->
+  <path d="
     M0,0 0,30 73.5,30
     M0,7.5 73.5,7.5
     M0,15 73.5,15
@@ -42,59 +46,75 @@
 
   
 
-  <text x="17.75" y="1" class="t">
+  <!-- benchmark name -->
+  <text 
+    class="names"
+    x="17.75" 
+    y="1"
+  >
     for key
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
     x="20" 
-    y="26.239586265721186" 
-    height="3.760413734278812" 
+    y="26.15667557168478" 
+    height="3.843324428315222" 
     width="2" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
     x="22.25" 
-    y="24.894308076680673" 
-    height="5.105691923319327" 
+    y="24.357302702262174" 
+    height="5.642697297737826" 
     width="2"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
     x="24.5" 
-    y="14.042204391636977" 
-    height="15.957795608363023"
+    y="15.466242412947562" 
+    height="14.533757587052438"
     width="2"
     rx="0.1"
   />
 
-  <text x="44.5" y="1" class="t">
+  <!-- benchmark name -->
+  <text 
+    class="names"
+    x="44.5" 
+    y="1"
+  >
     object values
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
     x="46.75" 
-    y="18.86064205054398" 
-    height="11.139357949456022" 
+    y="18.9003593329056" 
+    height="11.099640667094398" 
     width="2" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
     x="49" 
-    y="15.774348523185127" 
-    height="14.225651476814873" 
+    y="15.671272149295497" 
+    height="14.328727850704503" 
     width="2"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
     x="51.25" 

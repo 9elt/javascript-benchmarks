@@ -3,11 +3,9 @@
         "config": {
             "name": "json",
             "description": "testing JSON methods",
-            "related": [
-                ""
-            ],
+            "related": [],
             "samples": 1000,
-            "iterations": 100000
+            "iterations": 10000
         },
         "system": {
             "node_version": "v19.8.1",
@@ -19,38 +17,38 @@
             "path": "/benchmarks//json/json-parse.js",
             "code": "JSON.parse(json)",
             "simple": {
-                "samples": 961,
-                "mean": 30.730905999998395,
-                "std": 0.49565434159708505
+                "samples": 909,
+                "mean": 3.16315309128471,
+                "std": 0.020491186003604025
             },
             "realistic": {
-                "samples": 924,
-                "mean": 151.10883375731382,
-                "std": 2.258240179387867
+                "samples": 976,
+                "mean": 14.72382267621884,
+                "std": 0.09705469461778193
             },
             "edge_case": {
-                "samples": 913,
-                "mean": 380.847384527244,
-                "std": 3.2417821563889584
+                "samples": 951,
+                "mean": 38.267629310194906,
+                "std": 0.10926197746403932
             }
         },
         "json_stringify": {
             "path": "/benchmarks//json/json-stringify.js",
             "code": "JSON.stringify(object)",
             "simple": {
-                "samples": 970,
-                "mean": 23.6677570264364,
-                "std": 0.3004910192458477
+                "samples": 868,
+                "mean": 2.325420735029435,
+                "std": 0.021788130187791584
             },
             "realistic": {
                 "samples": 971,
-                "mean": 139.16540140079297,
-                "std": 0.7976496523417619
+                "mean": 13.799228961885467,
+                "std": 0.05224093183410906
             },
             "edge_case": {
-                "samples": 936,
-                "mean": 384.94313428977614,
-                "std": 2.019047671411652
+                "samples": 918,
+                "mean": 38.77092768624729,
+                "std": 0.4951557917491301
             }
         }
     }

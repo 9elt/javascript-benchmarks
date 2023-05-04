@@ -1,39 +1,43 @@
 
-<svg class="chart" viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 96 32" xmlns="http://www.w3.org/2000/svg">
+
   <style>
-    .chart .w {
+
+    path {
       fill: none;
       stroke: #808080;
       stroke-width: 0.075;
+      stroke-linejoin: round;
+      stroke-linecap: round;
     }
-    .chart .t {
+
+    text {
       font-size: 1.4px;
       font-weight: bold;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+        Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
+    }
+
+    .names {
       fill: #808080;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
       transform: rotate(90deg);
       transform-box: fill-box;
       transform-origin: left;
     }
-    .chart .un {
-      font-size: 1.4px;
-      font-weight: bold;
+
+    .labels {
       fill: #2f81f7;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Costartr Emoji", "Segoe UI Emoji";
     }
-    .chart path {
-      fill: none;
-      stroke: #2f81f7;
-      stroke-linejoin: round;
-      stroke-linecap: round;
-    }
+
   </style>
 
-  <text class="un" x="74.5" y="7.5" >288.71 ms</text>
-  <text class="un" x="74.5" y="15" >192.47 ms</text>
-  <text class="un" x="74.5" y="22.5" >96.24 ms</text>
+  <!-- chart labels -->
+  <text class="labels" x="74.5" y="7.5">29.08 ms</text>
+  <text class="labels" x="74.5" y="15">19.39 ms</text>
+  <text class="labels" x="74.5" y="22.5">9.69 ms</text>
 
-  <path class="w" d="
+  <!-- chart axis -->
+  <path d="
     M0,0 0,30 73.5,30
     M0,7.5 73.5,7.5
     M0,15 73.5,15
@@ -42,64 +46,80 @@
 
   
 
-  <text x="17.75" y="1" class="t">
+  <!-- benchmark name -->
+  <text 
+    class="names"
+    x="17.75" 
+    y="1"
+  >
     json parse
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
     x="20" 
-    y="27.76469485658571" 
-    height="2.235305143414292" 
+    y="27.71560053262825" 
+    height="2.2843994673717485" 
     width="2" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
     x="22.25" 
-    y="19.00864317787844" 
-    height="10.991356822121562" 
+    y="19.366593488028258" 
+    height="10.633406511971742" 
     width="2"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
     x="24.5" 
-    y="2.2979167132373632" 
-    height="27.702083286762637"
+    y="2.363477362303758" 
+    height="27.636522637696242"
     width="2"
     rx="0.1"
   />
 
-  <text x="44.5" y="1" class="t">
+  <!-- benchmark name -->
+  <text 
+    class="names"
+    x="44.5" 
+    y="1"
+  >
     json stringify
   </text>
 
+  <!-- simple -->
   <rect 
     fill="#5b9cfb" 
     x="46.75" 
-    y="28.278454302184393" 
-    height="1.7215456978156063" 
+    y="28.320602975824062" 
+    height="1.6793970241759377" 
     width="2" 
     rx="0.1"
   />
 
+  <!-- realistic -->
   <rect 
     fill="#2f81f7"
     x="49" 
-    y="19.877384756032793" 
-    height="10.122615243967207" 
+    y="20.034326388588113" 
+    height="9.965673611411885" 
     width="2"
     rx="0.1"
   />
 
+  <!-- edge case -->
   <rect 
     fill="#286aca"
     x="51.25" 
-    y="2" 
-    height="28"
+    y="2.0000000000000036" 
+    height="27.999999999999996"
     width="2"
     rx="0.1"
   />

@@ -3,15 +3,23 @@
 # dir_exists_or_exit() {
 #     if [[ ! -d "$1" ]]
 #     then
-#         echo "$1 directory does not exist" 
+#         echo "$1 directory does not exist"
 #         exit 1
 #     fi
 # }
 
+create_dir_if_not_exists() {
+    DIRS=("$@")
+    for DIR in "${DIRS[@]}"; do
+        if [[ ! -d "$DIR" ]]; then
+            mkdir -p "$DIR"
+        fi
+    done
+}
+
 load_config_or_exit() {
-    if [[ ! -f "$1/config" ]]
-    then
-        echo "missing config in $1" 
+    if [[ ! -f "$1/config" ]]; then
+        echo "missing config in $1"
         exit 1
     else
         echo "$1/config"
@@ -20,10 +28,9 @@ load_config_or_exit() {
 
 available_code_or_exit() {
     if [[ ! -f "$1/.code/simple.js" ]] ||
-    [[ ! -f "$1/.code/realistic.js" ]] || 
-    [[ ! -f "$1/.code/edge-case.js" ]]
-    then
-        echo "missing config in $1" 
+        [[ ! -f "$1/.code/realistic.js" ]] ||
+        [[ ! -f "$1/.code/edge-case.js" ]]; then
+        echo "missing config in $1"
         exit 1
     fi
 }
@@ -39,41 +46,41 @@ space() {
 parse_filename() {
     CHAR=" "
 
-    if [[ "$2" ]]
-    then
+    if [[ "$2" ]]; then
         CHAR="$2"
     fi
 
-    echo "$1" | sed -r "s/.+\/(.+)\..+/\1/"  | tr "-" "$CHAR"
+    echo "$1" | sed -r "s/.+\/(.+)\..+/\1/" | tr "-" "$CHAR"
 }
 
 parse_dirname() {
-    echo $(basename "$1")
+    basename "$1"
 }
 
 # colors
 black() {
-    echo -ne "\x1b[1;90m${@}\x1b[0m"
+    echo -ne "\x1b[1;90m$*\x1b[0m"
 }
 
 cyan() {
-    echo -ne "\x1b[1;38;5;39m${@}\x1b[0m"
+    echo -ne "\x1b[1;38;5;39m$*\x1b[0m"
 }
 
 green() {
-    echo -ne "\x1b[1;38;5;25m${@}\x1b[0m"
+    echo -ne "\x1b[1;38;5;25m$*\x1b[0m"
+    # echo -ne "\x1b[1;32m$*\x1b[0m"
 }
 
 yellow() {
-    echo -ne "\x1b[1;33m${@}\x1b[0m"
+    echo -ne "\x1b[1;33m$*\x1b[0m"
 }
 
 bold() {
-    echo -ne "\x1b[1m${@}\x1b[0m"
+    echo -ne "\x1b[1m$*\x1b[0m"
 }
 
 gray() {
-    echo -ne "\x1b[1;38;5;244m${@}\x1b[0m"
+    echo -ne "\x1b[1;38;5;244m$*\x1b[0m"
 }
 
 # progress indicator
@@ -81,25 +88,78 @@ gray() {
 # $1 => snippet name
 # $2 => version
 show_progress() {
-    if [[ "$2" = "simple" ]]
-    then
+    # echo "${RES[@]}"
+    # echo "$S"
 
-        echo -ne "> $( yellow "$1" ) > $( yellow "[simple]" ) $( black "[realistic]" ) $( black "[edge case]" )\\r"
+    S="$3"
+    R="$((S + 1))"
+    E="$((S + 2))"
 
-    elif [[ "$2" = "realistic" ]]
-    then
+    echo -ne "\033[1K\\r"
+    # echo "$S $R $E"
 
-        echo -ne "> $( yellow "$1" ) > $( cyan "[simple]" ) $( yellow "[realistic]" ) $( black "[edge case]" )\\r"
+    if [[ "$2" = "simple" ]]; then
 
-    elif [[ "$2" = "edge-case" ]]
-    then
+        echo -ne "$(yellow "$1") > $(yellow "simple") | $(black "realistic") | $(black "edge case")"
 
-        echo -ne "> $( yellow "$1" ) > $( cyan "[simple]" ) $( cyan "[realistic]" ) $( yellow "[edge case]" )\\r"
+    elif [[ "$2" = "realistic" ]]; then
 
-    else
+        echo -ne "$(yellow "$1") > $(cyan "${PARTIAL[$S]}") | $(yellow "realistic") | $(black "edge case")"
 
-        echo -ne "> $( gray "$1 >" ) $( green "[simple]" ) $( green "[realistic]" ) $( green "[edge case]" )\\r"
+    elif [[ "$2" = "edge-case" ]]; then
+
+        echo -ne "$(yellow "$1") > $(cyan "${PARTIAL[$S]}") | $(cyan "${PARTIAL[$R]}") | $(yellow "edge case")"
+
+    elif [[ "$2" = "done" ]]; then
+
+        echo -ne "$(gray "$1 >") $(cyan "${PARTIAL[$S]}") | $(cyan "${PARTIAL[$R]}") | $(cyan "${PARTIAL[$E]}")"
         echo ""
 
     fi
+}
+
+option() {
+    if [[ "$1" ]]; then
+        echo "$1"
+    else
+        echo "n/a"
+    fi
+}
+
+is_even() {
+    [ $(("$1" % 2)) -eq 0 ] && echo "true"
+}
+
+is_number() {
+    [[ "$1" =~ ^-?[0-9]+$ ]] && echo "true"
+}
+
+# convert array to json
+to_json() {
+    PARAMS=("$@")
+
+    echo -n "{"
+
+    for i in "${!PARAMS[@]}"; do
+        if [[ $(is_even "$i") ]]; then
+
+            v=$(("$i" + 1))
+            n=$(("$i" + 2))
+
+            if [[ "${PARAMS[$n]}" ]]; then
+                SEP=","
+            else
+                SEP=""
+            fi
+
+            if [[ $(is_number "${PARAMS[$v]}") ]]; then
+                echo -n "\"${PARAMS[$i]}\": ${PARAMS[$v]}$SEP"
+            else
+                echo -n "\"${PARAMS[$i]}\": \"${PARAMS[$v]}\"$SEP"
+            fi
+
+        fi
+    done
+
+    echo -n "}"
 }

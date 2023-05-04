@@ -34,18 +34,18 @@ for (const key in object) {
 </td>
 
 <td>
-    <b>462 μs </b><br>
-    (std. 3 μs, o. 22%)
+    <b>470 μs </b><br>
+    (std. 3 μs, o. 23%)
 </td>
 
 <td>
-    <b>628 μs </b><br>
-    (std. 6 μs, o. 23%)
+    <b>690 μs </b><br>
+    (std. 59 μs, o. 1%)
 </td>
 
 <td>
-    <b>1.96 ms </b><br>
-    (std. 16 μs, o. 13%)
+    <b>1.78 ms </b><br>
+    (std. 18 μs, o. 17%)
 </td>
 
 </tr>
@@ -62,18 +62,18 @@ let values = Object.values(object)
 </td>
 
 <td>
-    <b>1.37 ms </b><br>
-    (std. 29 μs, o. 5%)
+    <b>1.36 ms </b><br>
+    (std. 22 μs, o. 19%)
 </td>
 
 <td>
     <b>1.75 ms </b><br>
-    (std. 31 μs, o. 10%)
+    (std. 23 μs, o. 2%)
 </td>
 
 <td>
-    <b>3.44 ms </b><br>
-    (std. 30 μs, o. 17%)
+    <b>3.43 ms </b><br>
+    (std. 22 μs, o. 2%)
 </td>
 
 </tr>
@@ -95,7 +95,7 @@ let values = Object.values(object)
 <br>
 <b>Normal distribution samples: </b> 1000
 <br>
-<b>Average outliers percentage: </b> 15%
+<b>Average outliers percentage: </b> 11%
 <br><br>
 <sup>results are measured over multiple iterations of a code snippet</sup>
 <br>
@@ -106,3 +106,4 @@ let values = Object.values(object)
 <b>Node: </b> v19.8.1
 <br>
 <b>CPU: </b> Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)
+

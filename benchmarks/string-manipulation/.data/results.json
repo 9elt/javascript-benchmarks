@@ -20,57 +20,57 @@
             "path": "/benchmarks//string-manipulation/array-join.js",
             "code": "let s = [string, other_string].join(\"\")",
             "simple": {
-                "samples": 879,
-                "mean": 3.4145940386258973,
-                "std": 0.028929236860338336
+                "samples": 870,
+                "mean": 3.4989592149436217,
+                "std": 0.019635584138329845
             },
             "realistic": {
-                "samples": 920,
-                "mean": 3.566252980284069,
-                "std": 0.044562356585117466
+                "samples": 888,
+                "mean": 3.6075375202911077,
+                "std": 0.05099053468056371
             },
             "edge_case": {
-                "samples": 834,
-                "mean": 3.891664388082582,
-                "std": 0.03996445921670409
+                "samples": 883,
+                "mean": 3.9441018754559423,
+                "std": 0.04536749239832465
             }
         },
         "backticks": {
             "path": "/benchmarks//string-manipulation/backticks.js",
             "code": "let s = `${string}${other_string}`",
             "simple": {
-                "samples": 803,
-                "mean": 0.23140340783676205,
-                "std": 0.000813685483420539
+                "samples": 802,
+                "mean": 0.2440251533808349,
+                "std": 0.00012527006848885662
             },
             "realistic": {
-                "samples": 816,
-                "mean": 0.23118944261588303,
-                "std": 0.00013586493929123095
+                "samples": 758,
+                "mean": 0.24363389314769088,
+                "std": 0.002490510506647726
             },
             "edge_case": {
-                "samples": 991,
-                "mean": 0.24241125403210806,
-                "std": 0.024323403778020176
+                "samples": 803,
+                "mean": 0.24402416315147768,
+                "std": 0.00011208655629649059
             }
         },
         "concatenation": {
             "path": "/benchmarks//string-manipulation/concatenation.js",
             "code": "let s = string + other_string",
             "simple": {
-                "samples": 919,
-                "mean": 0.01315979988712481,
-                "std": 0.000058707626885326234
+                "samples": 971,
+                "mean": 0.013130041198991048,
+                "std": 0.00011078737085386889
             },
             "realistic": {
-                "samples": 930,
-                "mean": 0.015549182122753512,
-                "std": 0.00007724602326753888
+                "samples": 976,
+                "mean": 0.013134767398711477,
+                "std": 0.00009881446780320559
             },
             "edge_case": {
-                "samples": 968,
-                "mean": 0.015511359557632573,
-                "std": 0.00012758915043659214
+                "samples": 970,
+                "mean": 0.015529095863481772,
+                "std": 0.0001105991246900436
             }
         }
     }

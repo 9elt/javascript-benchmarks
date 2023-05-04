@@ -11,13 +11,23 @@ run() {
     # benchmark directory
     BENCHMARK_DIR="$BASE_DIR/$1"
 
-    BENCHMARK_NAME=$( parse_dirname "$BENCHMARK_DIR" )
+    BENCHMARK_NAME=$(parse_dirname "$BENCHMARK_DIR")
 
-    BENCHMARK_NAME_FORM="$( space "$BENCHMARK_NAME" " " )"
-    echo -e "\nrunning $( cyan "${BENCHMARK_NAME_FORM^}" )\n"
+    BENCHMARK_NAME_FORM="$(space "$BENCHMARK_NAME" " ")"
+    echo -e "\nrunning $(cyan "${BENCHMARK_NAME_FORM^}")\n"
 
     # load benchmark config
-    source $( load_config_or_exit "$BENCHMARK_DIR" )
+    source "$(load_config_or_exit "$BENCHMARK_DIR")"
+
+    CONF=(
+        "name" "$(space "$BENCHMARK_NAME" "_")"
+        "description" "$DESCRIPTION"
+        "related" "$RELATED"
+        "samples" "$SAMPLES"
+        "iterations" "$ITERATIONS"
+    )
+
+    JSON_CONFIG=$(to_json "${CONF[@]}")
 
     # check for available code
     available_code_or_exit "$BENCHMARK_DIR"
@@ -29,64 +39,53 @@ run() {
 
     VERSIONS=("simple" "realistic" "edge-case")
 
-    RESULTS_simple=()
-    RESULTS_realistic=()
-    RESULTS_edge_case=()
-
     RESULTS=()
 
-    TESTS=$( cat "$BENCHMARK_DIR/.code/tests.js" )
+    TESTS=$(cat "$BENCHMARK_DIR/.code/tests.js")
+    i=0
 
-    for SNIPPET in ${SNIPPETS[@]}
-    do
+    for SNIPPET in "${SNIPPETS[@]}"; do
 
-        CODE=$( cat "$SNIPPET" )
+        CODE=$(cat "$SNIPPET")
 
-        NAME=$( parse_filename "$SNIPPET" "_" )
-        SNIPPET_NAMES+=("$( parse_filename "$SNIPPET" )")
+        NAME=$(parse_filename "$SNIPPET" "_")
+        SNIPPET_NAMES+=("$(parse_filename "$SNIPPET")")
 
-        for VERSION in ${VERSIONS[@]}
-        do
+        for VERSION in "${VERSIONS[@]}"; do
 
-            show_progress "$( parse_filename "$SNIPPET" " " )" "$VERSION"
+            RES="$(node ./src/js/single-result.mjs "$JSON_CONFIG" "${RESULTS[@]}")"
+            IFS=',' read -r -a PARTIAL <<<"$RES"
+            show_progress "$(parse_filename "$SNIPPET" " ")" "$VERSION" "$i"
 
             # parse available code
-            AVAILABLE_CODE=$( cat "$BENCHMARK_DIR/.code/$VERSION.js" )
+            AVAILABLE_CODE=$(cat "$BENCHMARK_DIR/.code/$VERSION.js")
 
-            BENCHMARK=$( 
-                benchmark "$CODE" "$AVAILABLE_CODE" "$TESTS" "$SAMPLES" "$ITERATIONS" "$( space $VERSION "_" )" "$NAME" "$SNIPPET"
+            BENCHMARK=$(
+                benchmark "$CODE" "$AVAILABLE_CODE" "$TESTS" "$SAMPLES" "$ITERATIONS" "$(space "$VERSION" "_")" "$NAME" "$SNIPPET"
             )
 
-            RESULT=$( node -e "$BENCHMARK" )
+            RESULTS+=("$(node -e "$BENCHMARK")")
 
-            RESULTS+=("$RESULT")
         done
 
-        show_progress "$NAME"
+        RES="$(node ./src/js/single-result.mjs "$JSON_CONFIG" "${RESULTS[@]}")"
+        IFS=',' read -r -a PARTIAL <<<"$RES"
+        show_progress "$(parse_filename "$SNIPPET" " ")" "done" "$i"
+
+        ((i += 3))
 
     done
 
     echo ""
 
-    CONF="{
-        \"name\": \"$( space $BENCHMARK_NAME "_" )\",
-        \"description\": \"$DESCRIPTION\",
-        \"related\": \"$RELATED\",
-        \"samples\": $SAMPLES,
-        \"iterations\": "$ITERATIONS"
-    }"
+    METADATA=$(parse_metadata)
 
-    JSON_RESULT=$( node ./src/js/to-json.mjs "$CONF" "$MEDATADA" "${RESULTS[@]}" )
+    JSON_RESULT=$(node ./src/js/results-to-json.mjs "$JSON_CONFIG" "$METADATA" "${RESULTS[@]}")
 
-    if [[ ! -d "$BENCHMARK_DIR/.data" ]]
-    then
-        mkdir "$BENCHMARK_DIR/.data"
-    fi
+    create_dir_if_not_exists "$BENCHMARK_DIR/.data"
 
-    echo "$JSON_RESULT" > "$BENCHMARK_DIR/.data/results.json"
+    echo "$JSON_RESULT" >"$BENCHMARK_DIR/.data/results.json"
 
-    echo "$( node ./src/js/chart.mjs "$JSON_RESULT" )" > "$BENCHMARK_DIR/.data/chart.svg"
-
-
-    echo "$( node ./src/js/readme.mjs "$JSON_RESULT" )" > "$BENCHMARK_DIR/README.md"
+    node ./src/js/chart.mjs "$JSON_RESULT" >"$BENCHMARK_DIR/.data/chart.svg"
+    node ./src/js/readme.mjs "$JSON_RESULT" >"$BENCHMARK_DIR/README.md"
 }

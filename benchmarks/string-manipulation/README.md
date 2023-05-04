@@ -30,18 +30,18 @@ let s = [string, other_string].join("")
 </td>
 
 <td>
-    <b>3.41 ms </b><br>
-    (std. 29 μs, o. 12%)
+    <b>3.50 ms </b><br>
+    (std. 20 μs, o. 13%)
 </td>
 
 <td>
-    <b>3.57 ms </b><br>
-    (std. 45 μs, o. 8%)
+    <b>3.61 ms </b><br>
+    (std. 51 μs, o. 11%)
 </td>
 
 <td>
-    <b>3.89 ms </b><br>
-    (std. 40 μs, o. 17%)
+    <b>3.94 ms </b><br>
+    (std. 45 μs, o. 12%)
 </td>
 
 </tr>
@@ -58,18 +58,18 @@ let s = `${string}${other_string}`
 </td>
 
 <td>
-    <b>231 μs </b><br>
-    (std. 1 μs, o. 20%)
+    <b>244 μs </b><br>
+    (std. 0 μs, o. 20%)
 </td>
 
 <td>
-    <b>231 μs </b><br>
-    (std. 0 μs, o. 18%)
+    <b>244 μs </b><br>
+    (std. 2 μs, o. 24%)
 </td>
 
 <td>
-    <b>242 μs </b><br>
-    (std. 24 μs, o. 1%)
+    <b>244 μs </b><br>
+    (std. 0 μs, o. 20%)
 </td>
 
 </tr>
@@ -87,12 +87,12 @@ let s = string + other_string
 
 <td>
     <b>13 μs </b><br>
-    (std. 0 μs, o. 8%)
+    (std. 0 μs, o. 3%)
 </td>
 
 <td>
-    <b>16 μs </b><br>
-    (std. 0 μs, o. 7%)
+    <b>13 μs </b><br>
+    (std. 0 μs, o. 2%)
 </td>
 
 <td>
@@ -119,7 +119,7 @@ let s = string + other_string
 <br>
 <b>Normal distribution samples: </b> 1000
 <br>
-<b>Average outliers percentage: </b> 11%
+<b>Average outliers percentage: </b> 12%
 <br><br>
 <sup>results are measured over multiple iterations of a code snippet</sup>
 <br>
@@ -130,3 +130,4 @@ let s = string + other_string
 <b>Node: </b> v19.8.1
 <br>
 <b>CPU: </b> Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)
+

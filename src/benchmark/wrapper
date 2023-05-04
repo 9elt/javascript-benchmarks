@@ -5,7 +5,7 @@ escape_backticks() {
 }
 
 sanitize() {
-    echo "$( escape_backticks "${@}" )" | sed 's/\$/\\$/g'
+    escape_backticks "${@}" | sed 's/\$/\\$/g'
 }
 
 # Generate the javascript benchmark code
@@ -21,11 +21,7 @@ sanitize() {
 # $7 => benchmark name
 # $8 => file path
 benchmark() {
-    echo "
-import('./src/js/utils.mjs').then(({
-    _outliers,
-    _snd
-}) => {
+echo "import('./src/js/utils.mjs').then(({_outliers, _snd}) => {
 
     $2
 

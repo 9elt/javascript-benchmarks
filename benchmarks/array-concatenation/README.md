@@ -1,7 +1,7 @@
 # Array concatenation
 Comparing ways to concatenate arrays
 
-
+> related: 
 
 ## Results
 
@@ -21,7 +21,7 @@ Comparing ways to concatenate arrays
 
 <td>
 
-[**concat**](/benchmarks/array-concatenation/concat.js)
+[**concat**](/benchmarks//array-concatenation/concat.js)
 
 ```javascript
 arr_1.concat(arr_2)
@@ -30,18 +30,18 @@ arr_1.concat(arr_2)
 </td>
 
 <td>
-    <b>3.86 ms </b><br>
-    (std. 12 μs, o. 7%)
+    <b>4.06 ms </b><br>
+    (std. 140 μs, o. 8%)
 </td>
 
 <td>
-    <b>12.67 ms </b><br>
-    (std. 27 μs, o. 5%)
+    <b>13.97 ms </b><br>
+    (std. 718 μs, o. 7%)
 </td>
 
 <td>
-    <b>64.01 ms </b><br>
-    (std. 574 μs, o. 13%)
+    <b>63.32 ms </b><br>
+    (std. 194 μs, o. 19%)
 </td>
 
 </tr>
@@ -49,7 +49,7 @@ arr_1.concat(arr_2)
 
 <td>
 
-[**mutation**](/benchmarks/array-concatenation/mutation.js)
+[**mutation**](/benchmarks//array-concatenation/mutation.js)
 
 ```javascript
 for (let i = 0; i < arr_2.length; i++) {
@@ -61,17 +61,17 @@ for (let i = 0; i < arr_2.length; i++) {
 
 <td>
     <b>7 μs </b><br>
-    (std. 0 μs, o. 4%)
-</td>
-
-<td>
-    <b>7 μs </b><br>
-    (std. 0 μs, o. 4%)
-</td>
-
-<td>
-    <b>7 μs </b><br>
     (std. 0 μs, o. 6%)
+</td>
+
+<td>
+    <b>7 μs </b><br>
+    (std. 0 μs, o. 4%)
+</td>
+
+<td>
+    <b>7 μs </b><br>
+    (std. 0 μs, o. 8%)
 </td>
 
 </tr>
@@ -79,7 +79,7 @@ for (let i = 0; i < arr_2.length; i++) {
 
 <td>
 
-[**spread**](/benchmarks/array-concatenation/spread.js)
+[**spread**](/benchmarks//array-concatenation/spread.js)
 
 ```javascript
 [...arr_1, ...arr_2]
@@ -88,18 +88,18 @@ for (let i = 0; i < arr_2.length; i++) {
 </td>
 
 <td>
-    <b>2.47 ms </b><br>
-    (std. 16 μs, o. 15%)
+    <b>2.50 ms </b><br>
+    (std. 21 μs, o. 10%)
 </td>
 
 <td>
-    <b>8.68 ms </b><br>
-    (std. 82 μs, o. 13%)
+    <b>8.88 ms </b><br>
+    (std. 42 μs, o. 3%)
 </td>
 
 <td>
-    <b>55.84 ms </b><br>
-    (std. 66 μs, o. 4%)
+    <b>56.89 ms </b><br>
+    (std. 116 μs, o. 4%)
 </td>
 
 </tr>
@@ -132,3 +132,4 @@ for (let i = 0; i < arr_2.length; i++) {
 <b>Node: </b> v19.8.1
 <br>
 <b>CPU: </b> Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz, 3900 MHz (12)
+

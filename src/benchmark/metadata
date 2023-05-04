@@ -1,19 +1,23 @@
 #!/bin/bash
 
-# node version
-NODE_VERSION=$( node --version || echo "N/A" )
+cpu_name() {
+    option "$(lscpu | grep -i name | sed 's/Model name://g' | sed 's/  //g')"
+}
 
-# cpu info
-CPU_NAME=$( lscpu | grep -i name | sed 's/Model name://g' | sed 's/  //g' )
-CPU_THREADS=$( cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq | wc -l )
-CPU_SPEED=$( cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq | awk 'NR == 1' )
-CPU_SPEED=$(( $CPU_SPEED / 1000 ))
+cpu_threads() {
+    option "$(cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq | wc -l)"
+}
 
-CPU_INFO="N/A"
+cpu_speed() {
+    S="$(cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq | awk 'NR == 1')"
+    option "$((S / 1000))"
+}
 
-if [[ CPU_NAME && CPU_THREADS && CPU_SPEED ]]
-then
-    CPU_INFO="$CPU_NAME, $CPU_SPEED MHz ($CPU_THREADS)"
-fi
+parse_metadata() {
+    METADATA=(
+        "node_version" "$(node --version || option)"
+        "cpu" "$(cpu_name), $(cpu_speed) MHz ($(cpu_threads))"
+    )
 
-MEDATADA="{\"node_version\": \"$NODE_VERSION\", \"cpu\": \"$CPU_INFO\"}"
+    to_json "${METADATA[@]}"
+}

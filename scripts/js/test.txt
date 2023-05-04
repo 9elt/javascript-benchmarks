@@ -1,0 +1,4 @@
+I'm inserting some text and i don't care about errors
+as I'll go back and fix them later on
+
+I hope this is a good lesson.
